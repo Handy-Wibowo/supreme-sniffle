@@ -286,7 +286,7 @@ AVAILABILITY_NEW = (
     "OMITTED_ARTIFACTS.csv, dengan status INCLUDED, WORKSPACE_ONLY, MISSING, OMITTED_SIZE, "
     "OMITTED_LICENSE_PRIVACY, atau NOT_REQUIRED. Karena itu paket ini adalah bundel bukti yang dapat diaudit, bukan "
     "bundel yang dapat direproduksi penuh di lingkungan bersih tanpa mengambil data dari penyedia aslinya. "
-    "Salinan paket tersedia pada repositori publik https://github.com/Handy-Wibowo/supreme-sniffle pada tag v1.0.0, dengan MANIFEST.sha256 untuk verifikasi independen; salinan arsip ber-DOI diterbitkan dari rilis yang sama. "
+    "Salinan paket tersedia pada repositori publik https://github.com/Handy-Wibowo/supreme-sniffle dan diarsipkan dengan DOI konsep 10.5281/zenodo.23847784, dengan MANIFEST.sha256 untuk verifikasi independen; DOI konsep tersebut selalu menunjuk rilis terbaru. "
     "Penghitungan ulang artefak yang dikecualikan memerlukan run_temporal.py, design.json, dan seed yang tercatat."
 )
 
@@ -300,7 +300,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 15
-WORD_WORDS = 9769
+WORD_WORDS = 9771
 
 
 # --------------------------------------------------------------------------- #
