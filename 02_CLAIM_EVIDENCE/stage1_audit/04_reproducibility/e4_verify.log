@@ -1,0 +1,43 @@
+
+[1] TEST partition: re-derive from raw shards
+  stored test rows=168035 raw matched=168035
+  [PASS] test_row_ids_all_present: 168035 of 168035
+  [PASS] test_label_fidelity: mismatches=0
+  [PASS] test_date_fidelity: mismatches=0
+  [PASS] test_canonical_hash: mismatches=0
+  [PASS] test_domain_fidelity: mismatches=0
+
+[2] TEST features recomputed
+  [PASS] test_feature_columns: 18 columns
+  [PASS] test_features_finite: all finite
+  [PASS] no_target_encoding_column: absent
+
+[3] TRAIN partition: re-derive
+  sample 40000: rows=40000 raw matched=40000
+  [PASS] train_row_ids_all_present: 40000 of 40000
+  [PASS] train_label_fidelity: mismatches=0
+  [PASS] train_date_fidelity: mismatches=0
+  [PASS] train_canonical_hash: mismatches=0
+  [PASS] train_domain_fidelity: mismatches=0
+  [PASS] train_feature_columns: 18 columns
+
+[4] domain_seen must be computed from the TRAIN domain set
+  [PASS] test_domain_seen_from_train: mismatches=0
+
+[5] Probabilities reproduced from the saved models on recomputed features
+  [PASS] seed_13_probabilities_reproduce: max |dp| = 0.000e+00
+  [PASS] seed_42_probabilities_reproduce: max |dp| = 0.000e+00
+  [PASS] seed_2024_probabilities_reproduce: max |dp| = 0.000e+00
+  [PASS] seed_777_probabilities_reproduce: max |dp| = 0.000e+00
+  [PASS] seed_31415_probabilities_reproduce: max |dp| = 0.000e+00
+
+[6] Threshold 0.5 reproduces the stored confusion matrix
+  [PASS] seed_13_confusion_matrix: recomputed=(85629, 5630, 21636, 55140) stored=(85629, 5630, 21636, 55140)
+  [PASS] seed_42_confusion_matrix: recomputed=(85710, 5549, 21731, 55045) stored=(85710, 5549, 21731, 55045)
+  [PASS] seed_2024_confusion_matrix: recomputed=(85620, 5639, 21775, 55001) stored=(85620, 5639, 21775, 55001)
+  [PASS] seed_777_confusion_matrix: recomputed=(85647, 5612, 21977, 54799) stored=(85647, 5612, 21977, 54799)
+  [PASS] seed_31415_confusion_matrix: recomputed=(85659, 5600, 21890, 54886) stored=(85659, 5600, 21890, 54886)
+
+=== checks: 25 | passed: 25 | failed: 0
+
+report: E:\Kuliah\Tugas Akhir\phishing\revision_v9_stage1_audit\04_reproducibility\e4_end_to_end_report.json

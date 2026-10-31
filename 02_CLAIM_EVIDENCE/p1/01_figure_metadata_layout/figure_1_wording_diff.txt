@@ -1,0 +1,13 @@
+FIGURE 1 WORDING CORRECTION
+source : E:\Kuliah\Tugas Akhir\phishing\manuscript_v8_work\figure_1_research_pipeline_v8.svg
+src sha256 : 64f4c8855a655cc50fb525d5acca178b87419726dde810dea3b214e5ebc18f15
+output : E:\Kuliah\Tugas Akhir\phishing\revision_v10_p1\01_figure_metadata_layout\figure_1_research_pipeline_v10.svg
+out sha256 : 6854571054674a37f066b9fafdb308a9df990461a8785b8f09afe05681086add
+
+BEFORE:
+  <text class="ts" x="215" y="437" text-anchor="middle">ceiling effect, paired domain bootstrap,</text>
+AFTER :
+  <text class="ts" x="215" y="437" text-anchor="middle">saturasi benchmark, bootstrap domain berpasangan,</text>
+
+all other SVG bytes identical: True
+rendered PNG: 279757 bytes, sha256 bf7befe28c1cfd807e6403a2750c018a9629e1673c8ade3d9cb32fb5af4717c5

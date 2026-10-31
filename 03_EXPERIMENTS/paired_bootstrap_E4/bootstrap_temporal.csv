@@ -1,0 +1,13 @@
+metric,estimate,lower95,upper95,valid_replicates,replicates,seed,unit,dataset,protocol,config,model
+f1_phish,0.8017681357509487,0.7276968002481586,0.8496208729074821,1000,1000,13,registrable_domain,phreshphish,temporal,A2,lightgbm
+recall_phish,0.7181931853704283,0.6076966905340976,0.7981589554306796,1000,1000,13,registrable_domain,phreshphish,temporal,A2,lightgbm
+mcc,0.6806316036297466,0.5741777155198605,0.7543523409995803,1000,1000,13,registrable_domain,phreshphish,temporal,A2,lightgbm
+fpr_benign,0.061692545392783175,0.05455805872155868,0.06860131373468296,1000,1000,13,registrable_domain,phreshphish,temporal,A2,lightgbm
+precision_phish,0.9073556030936317,0.895661891272345,0.9179908486488373,1000,1000,13,registrable_domain,phreshphish,temporal,A2,lightgbm
+accuracy,0.837736185913649,0.7674350777452814,0.8816688503273844,1000,1000,13,registrable_domain,phreshphish,temporal,A2,lightgbm
+f1_phish,0.7996285490746631,0.7260608210915571,0.8475422687202516,1000,1000,13,registrable_domain,phreshphish,temporal,A2,xgboost
+recall_phish,0.7121887048035844,0.6039848912223662,0.7915549748518442,1000,1000,13,registrable_domain,phreshphish,temporal,A2,xgboost
+mcc,0.6800259699219686,0.5748021346453572,0.7534342301654772,1000,1000,13,registrable_domain,phreshphish,temporal,A2,xgboost
+fpr_benign,0.0581422106312802,0.05144261196032801,0.0650766427631949,1000,1000,13,registrable_domain,phreshphish,temporal,A2,xgboost
+precision_phish,0.9115445528048679,0.8999811858127215,0.9222411941686801,1000,1000,13,registrable_domain,phreshphish,temporal,A2,xgboost
+accuracy,0.8369208795786592,0.766654925059851,0.8809169825127364,1000,1000,13,registrable_domain,phreshphish,temporal,A2,xgboost

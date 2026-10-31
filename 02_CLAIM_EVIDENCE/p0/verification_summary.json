@@ -1,0 +1,382 @@
+{
+  "source": "E:\\Kuliah\\Tugas Akhir\\phishing\\BITS_Draft_Phishing_URL_Leakage_v8_final.docx",
+  "source_sha256_before": "65c8909be07a17427a0367306d3c9502cbe27ee36705e92c2234d61fc6896ccf",
+  "source_sha256_after": "65c8909be07a17427a0367306d3c9502cbe27ee36705e92c2234d61fc6896ccf",
+  "source_unchanged": true,
+  "output": "E:\\Kuliah\\Tugas Akhir\\phishing\\BITS_Draft_Phishing_URL_Leakage_v9_P0.docx",
+  "output_sha256": "16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec",
+  "source_structure": {
+    "paragraphs": 180,
+    "tables": 9,
+    "table_shapes": [
+      {
+        "rows": 6,
+        "cols": 4
+      },
+      {
+        "rows": 4,
+        "cols": 4
+      },
+      {
+        "rows": 5,
+        "cols": 7
+      },
+      {
+        "rows": 4,
+        "cols": 8
+      },
+      {
+        "rows": 9,
+        "cols": 6
+      },
+      {
+        "rows": 7,
+        "cols": 4
+      },
+      {
+        "rows": 5,
+        "cols": 9
+      },
+      {
+        "rows": 5,
+        "cols": 9
+      },
+      {
+        "rows": 6,
+        "cols": 7
+      }
+    ],
+    "inline_shapes": 2,
+    "sections": 1,
+    "styles": 83
+  },
+  "output_structure": {
+    "paragraph_count": 181,
+    "table_count": 9,
+    "table_shapes": [
+      {
+        "rows": 6,
+        "cols": 4
+      },
+      {
+        "rows": 4,
+        "cols": 4
+      },
+      {
+        "rows": 5,
+        "cols": 7
+      },
+      {
+        "rows": 4,
+        "cols": 8
+      },
+      {
+        "rows": 9,
+        "cols": 6
+      },
+      {
+        "rows": 7,
+        "cols": 4
+      },
+      {
+        "rows": 5,
+        "cols": 9
+      },
+      {
+        "rows": 5,
+        "cols": 9
+      },
+      {
+        "rows": 6,
+        "cols": 7
+      }
+    ],
+    "inline_shape_count": 2,
+    "section_count": 1,
+    "style_count": 83,
+    "sections": [
+      {
+        "page_width": 7560310,
+        "page_height": 10692130,
+        "top_margin": 1080135,
+        "bottom_margin": 540385,
+        "left_margin": 1080135,
+        "right_margin": 540385,
+        "header_distance": 269875,
+        "footer_distance": 144145,
+        "header_linked": false,
+        "footer_linked": false,
+        "header_text": [
+          "Building of Informatics, Technology and Science (BITS) ",
+          "ISSN 2684-8910 (media cetak), ISSN 2685-3310 (media online)",
+          "Volume 99, No 99, Bulan 2023 Page: 999−999\t",
+          "DOI 10.47065/bits.v9i9.999",
+          "https://ejurnal.seminar-id.com/index.php/bits"
+        ],
+        "footer_text": [
+          "Copyright © 2026 The Author(s). Published by Forum Kerjasama Pendidikan Tinggi. Page 1",
+          "This work is licensed under a Creative Commons Attribution 4.0 International License."
+        ]
+      }
+    ],
+    "paragraph_order_preserved_except_inserted_A12_note": true
+  },
+  "body_text_matches_expected_projection": true,
+  "table_text_matches_expected_projection": true,
+  "section_page_setup_headers_footers_unchanged": true,
+  "style_names_unchanged": true,
+  "docx_package_parts_unchanged": true,
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "media_parts_unchanged": {
+    "word/media/image1.png": true,
+    "word/media/image2.png": true,
+    "word/media/image3.png": true,
+    "word/media/image4.png": true
+  },
+  "relationship_count": 24,
+  "missing_relationship_targets": [],
+  "output_reproducibility": {
+    "part_level_deterministic": true,
+    "package_members_compared": 27,
+    "note": "Every package member is byte-identical between runs. python-docx stamps wall-clock time into the zip container, so the whole-file SHA-256 changes between builds; the published file is not rewritten to force byte equality."
+  },
+  "package_validation": {
+    "deterministic_check": {
+      "script": "verify_package_relationships.py",
+      "report": {
+        "ok": true,
+        "issues": []
+      },
+      "note": "exit=0",
+      "seed_independent": true
+    },
+    "official_docx_validate": {
+      "available": true,
+      "path": "C:\\Users\\NITRO 5\\.agents\\skills\\docx\\scripts\\docx_validate.py",
+      "runs": [
+        {
+          "PYTHONHASHSEED": 0,
+          "exit": 1,
+          "report": {
+            "ok": false,
+            "issues": [
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId13 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId14 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId9 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId10 with no relationship"
+              }
+            ]
+          }
+        },
+        {
+          "PYTHONHASHSEED": 1,
+          "exit": 0,
+          "report": {
+            "ok": true,
+            "issues": []
+          }
+        },
+        {
+          "PYTHONHASHSEED": 2,
+          "exit": 0,
+          "report": {
+            "ok": true,
+            "issues": []
+          }
+        },
+        {
+          "PYTHONHASHSEED": 3,
+          "exit": 1,
+          "report": {
+            "ok": false,
+            "issues": [
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId13 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId14 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId9 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId10 with no relationship"
+              }
+            ]
+          }
+        },
+        {
+          "PYTHONHASHSEED": 4,
+          "exit": 1,
+          "report": {
+            "ok": false,
+            "issues": [
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId13 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId14 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId9 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId10 with no relationship"
+              }
+            ]
+          }
+        },
+        {
+          "PYTHONHASHSEED": 5,
+          "exit": 1,
+          "report": {
+            "ok": false,
+            "issues": [
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId13 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId14 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId9 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId10 with no relationship"
+              }
+            ]
+          }
+        },
+        {
+          "PYTHONHASHSEED": 6,
+          "exit": 0,
+          "report": {
+            "ok": true,
+            "issues": []
+          }
+        },
+        {
+          "PYTHONHASHSEED": 7,
+          "exit": 1,
+          "report": {
+            "ok": false,
+            "issues": [
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId13 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId14 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId9 with no relationship"
+              },
+              {
+                "severity": "error",
+                "code": "unresolved-reference",
+                "detail": "document.xml references rId10 with no relationship"
+              }
+            ]
+          }
+        }
+      ],
+      "runs_executed": 8,
+      "runs_ok": 3,
+      "runs_not_ok": 5,
+      "deterministic": false,
+      "note": "Seed-dependent by construction: the validator maps all word/_rels/*.rels to source part 'word', so header1/footer1 relationships overwrite document.xml relationships, and the survivor depends on PYTHONHASHSEED."
+    },
+    "authoritative_source": "deterministic_check + failed-reference XML inspection; see VALIDATOR_CORRECTION.md"
+  },
+  "applied_change_rows": 57,
+  "absent_disposition_rows": 5,
+  "action_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12"
+  ],
+  "action_notes": {
+    "A01": "Applied: source PhiUSIIL polarity and current E5–E8 phishing-positive semantics stated; no legacy E3 result is retained or relabeled.",
+    "A02": "Applied: title, abstracts, keywords, contribution, results, discussion, caption and conclusion use descriptive saturation wording; no cause is asserted.",
+    "A03": "Applied: bootstrap RNG 42 is distinct from model seed 13 in methods/captions; Table 5 precision lower limit is rounded to the supported value.",
+    "A04": "Applied: unverified E8 platform-cluster interval is removed from inference; the descriptive proportion remains bounded and cluster uncertainty is marked unverified.",
+    "A05": "Applied: the temporal test is identified as previously inspected and not blind/prospective; future prospective claims require a new cohort and access controls.",
+    "A06": "Applied: Section 5.2 distinguishes the documented review package from workspace artifacts and enumerates omissions; no new Table 9 was added.",
+    "A07": "Applied: notebook DROP_COLS and cleaned-schema/retained-column account are stated.",
+    "A08": "Applied: 85 is scoped to selected reported fits and excludes the 10-fit parity rerun; E3 temporal is identified as a stub/dry run.",
+    "A09": "Applied: shared-domain and site-disjoint interpretation are bounded; no strict no-overlap result is presented as proof of leakage or inflation.",
+    "A10": "Applied: no side-effect narrative was inserted; existing artifact-verification wording is bounded to manifest fields checked.",
+    "A11": "Applied: A2 is defined as the shared ordered extractor contract, not equality with similarly named precomputed source values.",
+    "A12": "Applied: current A0/A1 provenance remains unknown; target-encoding evidence is explicitly limited to historical probes."
+  },
+  "action_locations": {
+    "A01": "P0040; P0058; P0063",
+    "A02": "P0000–P0001; P0009–P0013; P0025; P0027; P0073; P0083; P0094; P0107; P0120; P0127–P0129; P0133",
+    "A03": "P0059; P0064; P0099; T005 R3 C2",
+    "A04": "P0009; P0012; P0125; P0135; T008 R1 C6",
+    "A05": "P0009; P0012; P0023; P0066; P0136",
+    "A06": "P0136; P0156",
+    "A07": "P0041",
+    "A08": "P0035; P0089",
+    "A09": "P0047; P0074; P0075; P0085; P0098",
+    "A10": "P0034; P0063 (bounded existing wording only)",
+    "A11": "P0053; P0063; P0096; T001 R3 C2",
+    "A12": "P0041; inserted after P0053; P0073–P0075; P0127–P0128"
+  },
+  "verification": "PASS"
+}

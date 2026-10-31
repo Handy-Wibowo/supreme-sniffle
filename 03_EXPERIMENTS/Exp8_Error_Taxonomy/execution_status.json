@@ -1,0 +1,66 @@
+{
+  "task": "Experiment 8 - PhreshPhish Error Taxonomy (seed 13) notebook provenance",
+  "generated_utc": "20261026T064947Z",
+  "environment": {
+    "python": "3.14.7",
+    "pandas": "3.1.0",
+    "numpy": "2.5.3",
+    "pyarrow": "26.0.0"
+  },
+  "execution_status": {
+    "sequential_execution_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "error_outputs": 0,
+    "executed_via": "nbclient (jupyter kernel python3), restart-run-all"
+  },
+  "confusion_verified": {
+    "tn": 85629,
+    "fp": 5630,
+    "fn": 21636,
+    "tp": 55140
+  },
+  "inputs_sha256": {
+    "experiment4/predictions_seed_13.csv.gz": "aeba432c65cab939f5f893ba181d1da8df2497da726e5e09ae075997afd915f6",
+    "experiment4/split_test.csv.gz": "b05907450beb66d5e697055b16a9204036b437344e483c417e8bbc0fb01abd04",
+    "raw_corpus/test-000.parquet": "9ae7908b64cc75669e4be4cbd0fec884ac2b3f4984211eacfbf013a2ada12851",
+    "raw_corpus/test-001.parquet": "bb122ccb309436b92e7edf11792d53efdbde46c4b5d2ad7d39a7d48b50d2b00f",
+    "raw_corpus/test-002.parquet": "da3e9b1fb7e537ea951bb6e9ac68ae5a0c48e6590714f2b90ecf5dd96276d894",
+    "raw_corpus/test-003.parquet": "c6157aeddfc5eff2728e88ccc61186464e4e6861bee0ae841a830be9ebc7cf17",
+    "raw_corpus/test-004.parquet": "b20de434400f3030dd711a1e4f6e012397d1c2889d575b21aa747f8c5ae04df1",
+    "raw_corpus/test-005.parquet": "19b0ecd6a657a11a3fb43dcb22e260eb5b5c8d7a0dcee880b4705a9ee2ef1c6f",
+    "raw_corpus/test-006.parquet": "a34c4ad85cf863af950cad8251717cba3642ae0c0e7bd8ab245a29a63139d187",
+    "raw_corpus/test-007.parquet": "f91281ac9a8bbf39fe9146e115be5e74cf3d59719c2f06bb38178fbaa9d6719b",
+    "raw_corpus/test-008.parquet": "82e7216cef17bd78f83ee3339a980d0e09ef864c83f3e8222ef809b961821252",
+    "raw_corpus/test-009.parquet": "a18e27d35f3a06983c1734f875093f45dbd041ea39e796f8d762f5712f800be6",
+    "raw_corpus/test-010.parquet": "b5d9ca33207b70e2c22aeef6cdec1f294a7ce5f843c6033e208c6f520c85cfdd",
+    "raw_corpus/test-011.parquet": "585cf9cfa0ddb54421bfccedb26590dd87426908e814f1290b1986c2e750f0e5",
+    "raw_corpus/test-012.parquet": "3bbffccd4269ac723febeacc01905b2d52d1f98242f5bf18a82093cc4f4cdf97",
+    "raw_corpus/test-013.parquet": "81daa4b68fca7b2df4d144145e80a09355d963e290d277c9976fb5a988b5e1f3",
+    "raw_corpus/test-014.parquet": "8e30a3b2419604ce578f341392bd6e3878abdae38d7b3e38adb107bf2f557c03",
+    "raw_corpus/test-015.parquet": "9d2589e528116c862aba4eed4ce0b4778172e8b82f2ac3c4157153666bb68adc",
+    "raw_corpus/test-016.parquet": "3d9f97863ee0c88448487d4a13c4947951d62e65e571ed695e8bb69108995ba7",
+    "raw_corpus/test-017.parquet": "66b916bc81a28f172ee807acedb497096993f64266459af8d785bc09d4d127d1",
+    "raw_corpus/test-018.parquet": "aaa23d30b1c242b94000b5243dfb855f715f95fdbc0fd345f9ec4d30aeda36b1",
+    "raw_corpus/test-019.parquet": "c7169aa4564a95e4950f05bc3281a66fe58f2b31eb1594b62a693de65da7508c",
+    "raw_corpus/test-020.parquet": "77d312fe7dc92fc3b2ed208ab55b148b2032345091ad44d513b479241013d18e"
+  },
+  "outputs_sha256": {
+    "error_taxonomy.ipynb": "51296a0b5b3e6c8a4df5507419cef9da8b69303290a3e609c8a1531bfc5ae2ac",
+    "category_error_table.csv": "ec2596e7b9f995b50ed91fb0c83344ff847c1c8a6d0442ab3fed8693437bcac7",
+    "redacted_examples.csv": "4d29b894d2511181dc4411c335d0783de3ab13bb70ffa2f61db385f0acd9b03d",
+    "error_taxonomy.py": "efd07a5b2d4b3a04d24ea52adbf26588d54fa6b986bbdbe315a3c232e5022253"
+  }
+}

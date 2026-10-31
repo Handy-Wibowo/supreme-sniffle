@@ -1,0 +1,9 @@
+item_id,question,verdict,evidence_locator,detail
+A14-01,Who produced TLDLegitimateProb / URLCharProb / CharContinuationRate,PARTIAL,"dataset/PhiUSIIL Phishing/PhiUSIIL_Phishing_URL_Dataset.csv (header positions 9-11)","The three fields are shipped as columns of the public distribution; they are not computed in this workspace"
+A14-02,Is a derivation script published with the distribution,NO,"dataset/PhiUSIIL Phishing/phiusiil+phishing+url+dataset.zip","Archive contains exactly one member: PhiUSIIL_Phishing_URL_Dataset.csv; no code, readme, or data dictionary"
+A14-03,What is the reference population for those statistics,UNKNOWN,"revision_v9_stage1_audit/02_label_feature_provenance/FEATURE_PROVENANCE_MATRIX.csv","No source states the population; not inferable from column names or correlations"
+A14-04,When were the values computed,UNKNOWN,"same as A14-03","No timestamp, release note, or code artefact available"
+A14-05,Were labels used in computing them,UNKNOWN,"revision_v9_stage1_audit/02_label_feature_provenance/LEAKAGE_RISK_REGISTER.md","Historical probe evidence shows leakage existed in probe implementations only; it does not certify the stored values either way"
+A14-06,Train/test fitting scope of those statistics,UNKNOWN,"same as A14-05","No fitting-scope documentation exists"
+A14-07,Does the ablation loader recompute them,NO,"Experiment/5 - PhiUSIIL Focused Ablation/src/data.py line 40","Names appear only in a feature-name schema list"
+A14-08,Manuscript change proposed,NO,"05_integrated_manuscript/CHANGE_REGISTER.csv","Recovered fact narrows origin but resolves none of the four listed unknowns; no edit made"

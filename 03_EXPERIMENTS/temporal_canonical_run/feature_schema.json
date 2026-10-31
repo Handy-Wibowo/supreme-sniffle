@@ -1,0 +1,27 @@
+{
+  "names": [
+    "URLLength",
+    "DomainLength",
+    "TLDLength",
+    "NoOfSubDomain",
+    "NoOfObfuscatedChar",
+    "ObfuscationRatio",
+    "NoOfLettersInURL",
+    "LetterRatioInURL",
+    "NoOfDegitsInURL",
+    "DegitRatioInURL",
+    "NoOfEqualsInURL",
+    "NoOfQMarkInURL",
+    "NoOfAmpersandInURL",
+    "NoOfOtherSpecialCharsInURL",
+    "SpacialCharRatioInURL",
+    "IsHTTPS",
+    "HasObfuscation",
+    "IsDomainIP"
+  ],
+  "count": 18,
+  "source": "deterministic URL-only; no target encoding",
+  "semantics": "New extractor; not asserted identical to PhiUSIIL precomputed columns",
+  "train_extract_s": 21.470650799994473,
+  "test_extract_s": 7.513479599998391
+}

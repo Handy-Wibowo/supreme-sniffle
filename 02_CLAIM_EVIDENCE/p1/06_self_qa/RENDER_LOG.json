@@ -1,0 +1,38 @@
+{
+  "docx": "E:\\Kuliah\\Tugas Akhir\\phishing\\BITS_Draft_Phishing_URL_Leakage_v10_P1_candidate.docx",
+  "docx_sha256_before_metadata_refresh": "597916561c2fc152b17c7709f84927b37ce562408c496a9df87e001f77729bcb",
+  "docx_sha256_after": "597916561c2fc152b17c7709f84927b37ce562408c496a9df87e001f77729bcb",
+  "word_stats_before": {
+    "pages": 15,
+    "words": 9769,
+    "paragraphs": 607
+  },
+  "word_stats_after": {
+    "pages": 15,
+    "words": 9769,
+    "paragraphs": 607
+  },
+  "app_xml_replacements": {
+    "skipped": "docProps/app.xml already current"
+  },
+  "pdf": "E:\\Kuliah\\Tugas Akhir\\phishing\\revision_v10_p1\\06_self_qa\\rendered_candidate.pdf",
+  "pdf_sha256": "2ba74e5ba3dc90428d1f74a57b317de56dd3fa84a9863b7bb56815638a8ff2ba",
+  "pdf_pages": 15,
+  "page_pngs": [
+    "page_01.png",
+    "page_02.png",
+    "page_03.png",
+    "page_04.png",
+    "page_05.png",
+    "page_06.png",
+    "page_07.png",
+    "page_08.png",
+    "page_09.png",
+    "page_10.png",
+    "page_11.png",
+    "page_12.png",
+    "page_13.png",
+    "page_14.png",
+    "page_15.png"
+  ]
+}

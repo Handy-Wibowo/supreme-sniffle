@@ -1,0 +1,32 @@
+{
+  "gpt-6-luna": {
+    "status": "OK",
+    "elapsed_s": 80.3,
+    "usage": {
+      "completion_tokens": 3683,
+      "prompt_tokens": 20795,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 24478
+    },
+    "overall": "BLOCK",
+    "criteria": {},
+    "chars": 6910
+  },
+  "glm-5-3-flash": {
+    "status": "OK",
+    "elapsed_s": 52.9,
+    "usage": {
+      "completion_tokens": 3782,
+      "prompt_tokens": 23756,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 27538
+    },
+    "overall": "APPROVE",
+    "criteria": {},
+    "chars": 4619
+  }
+}

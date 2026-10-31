@@ -1,0 +1,19 @@
+action_id,priority,action,owner_type,acceptance_criterion,dependency
+A01,P0,Correct E3 polarity interpretation and remove legacy phishing metrics,manuscript-only,E3 excluded or independently recomputed and relabeled; E5-E8 mapping stated correctly,02_label_feature_provenance/LABEL_FLOW.md; WORKER_REPORT.md
+A02,P0,Limit ceiling-effect language to descriptive saturation,manuscript-only,No causal mechanism asserted,02_label_feature_provenance/WORKER_REPORT.md; 01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv C-005 C-045
+A03,P0,Correct Table 5 bootstrap seed prose,manuscript-only,Identify bootstrap RNG seed 42 separately from model seed 13,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv C-022 C-060; E5 summary_manifest.json
+A04,P0,Remove or qualify E8 platform-cluster CI,manuscript-only,Unverified cluster interval absent or explicitly qualified,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv C-043; E8 README/code/output
+A05,P0,Remove blind or prospective evaluation assertions,manuscript-only,No extant temporal test described as blind or prospective,04_reproducibility/REPRODUCIBILITY_AUDIT.md §§Overall finding/E4-E8
+A06,P0,Correct section 5.2 package availability inventory,manuscript-only,Statement matches package tree and distinguishes package from workspace,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv C-054; package inventory
+A07,P0,Correct E1 DROP_COLS account,manuscript-only,Notebook and cleaned schema consistently described; retained LineOfCode and NoOfExternalRef identified,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv C-003/C-004; E1 notebook
+A08,P0,Qualify 85 fit count and E3 temporal status,manuscript-only,85 identified as selected fits excluding 10 parity reruns; E3 temporal called stub/dry run,C-017; 04_reproducibility/REPRODUCIBILITY_AUDIT.md §E3/E5
+A09,P0,Limit strict no-overlap interpretation,manuscript-only,Only sensitivity analysis; no leakage/inflation proof; prevalence/shared-hosting confounds noted,03_cross_corpus_overlap/OVERLAP_AUDIT.md §§Overlap results/Known limits
+A10,P0,Bound E6 verifier side-effect statement,manuscript-only,Package-relative numerical invariance and manifest command-field change only; immediate pre-run bytes unavailable,04_reproducibility/SIDE_EFFECT_AUDIT.md
+A11,P0,Clarify A2 contract versus source equality,manuscript-only,A2 described as URL-only representation,02_label_feature_provenance/WORKER_REPORT.md; FEATURE_PROVENANCE_MATRIX.csv
+A12,P0,Preserve A0/A1 producer unknown and probe-only evidence,manuscript-only,No assertion stored current fields were target encoded or leakage-free,02_label_feature_provenance/WORKER_REPORT.md; LEAKAGE_RISK_REGISTER.md
+A13,P1,Correct package inventory and evidence links,evidence packaging,Reviewer package statement matches included files; evidence links resolve,A06; actual package tree
+A14,P1,Investigate stored A0/A1 producer provenance,provenance investigation,Recover producer/version/derivation/population/timing/label-dependency evidence or retain unknown,FEATURE_PROVENANCE_MATRIX.csv rows 17-19 and page-derived rows; producer evidence
+A15,P1,Resolve E8 platform cluster uncertainty if retaining interval,provenance investigation,Locate computation or reproduce with specified cluster unit and settings; else remove interval,A04; saved E8 predictions
+A16,P1,Check external references and bound comparative novelty,evidence packaging,Primary sources checked and comparative claims bounded,C-048/C-049; cited papers
+A17,P2,Run blind prospective evaluation only if desired,rerun required,New uninspected cohort with documented custody and prospective protocol,Independent future cohort and controlled access
+A18,P2,Test causal ceiling mechanism only if causal claim desired,rerun required,Design isolates candidate cause and supports causal attribution,Defined mechanism and producer/data access

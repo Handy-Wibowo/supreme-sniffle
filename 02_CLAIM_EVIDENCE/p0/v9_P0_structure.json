@@ -1,0 +1,71 @@
+{
+  "paragraph_count": 181,
+  "table_count": 9,
+  "table_shapes": [
+    {
+      "rows": 6,
+      "cols": 4
+    },
+    {
+      "rows": 4,
+      "cols": 4
+    },
+    {
+      "rows": 5,
+      "cols": 7
+    },
+    {
+      "rows": 4,
+      "cols": 8
+    },
+    {
+      "rows": 9,
+      "cols": 6
+    },
+    {
+      "rows": 7,
+      "cols": 4
+    },
+    {
+      "rows": 5,
+      "cols": 9
+    },
+    {
+      "rows": 5,
+      "cols": 9
+    },
+    {
+      "rows": 6,
+      "cols": 7
+    }
+  ],
+  "inline_shape_count": 2,
+  "section_count": 1,
+  "style_count": 83,
+  "sections": [
+    {
+      "page_width": 7560310,
+      "page_height": 10692130,
+      "top_margin": 1080135,
+      "bottom_margin": 540385,
+      "left_margin": 1080135,
+      "right_margin": 540385,
+      "header_distance": 269875,
+      "footer_distance": 144145,
+      "header_linked": false,
+      "footer_linked": false,
+      "header_text": [
+        "Building of Informatics, Technology and Science (BITS) ",
+        "ISSN 2684-8910 (media cetak), ISSN 2685-3310 (media online)",
+        "Volume 99, No 99, Bulan 2023 Page: 999−999\t",
+        "DOI 10.47065/bits.v9i9.999",
+        "https://ejurnal.seminar-id.com/index.php/bits"
+      ],
+      "footer_text": [
+        "Copyright © 2026 The Author(s). Published by Forum Kerjasama Pendidikan Tinggi. Page 1",
+        "This work is licensed under a Creative Commons Attribution 4.0 International License."
+      ]
+    }
+  ],
+  "paragraph_order_preserved_except_inserted_A12_note": true
+}

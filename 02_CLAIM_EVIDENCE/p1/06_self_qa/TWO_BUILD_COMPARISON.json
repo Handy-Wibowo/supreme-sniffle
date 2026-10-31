@@ -1,0 +1,30 @@
+{
+  "build_a_sha256": "b9c3909188f98f4344b558c99c159943cd9717ec665384aaf23e7201adf66196",
+  "build_b_sha256": "b9c3909188f98f4344b558c99c159943cd9717ec665384aaf23e7201adf66196",
+  "byte_identical": true,
+  "package_members_identical": true,
+  "media_identical": true,
+  "text_identical": true,
+  "paragraphs": [
+    200,
+    200
+  ],
+  "tables": [
+    9,
+    9
+  ],
+  "text_sha256": "9df7d4a291bcc1111ea63010fcbb53bbcb25acd8b7dd5120ebdb5faefe5ae390",
+  "delivered_candidate_sha256": "b9c3909188f98f4344b558c99c159943cd9717ec665384aaf23e7201adf66196",
+  "delivered_text_identical_to_build": true,
+  "delivered_members_identical_to_build": true,
+  "delivered_media_identical_to_build": true,
+  "delivered_app_stats": {
+    "pages": "13",
+    "words": "8588"
+  },
+  "build_app_stats": {
+    "pages": "13",
+    "words": "8588"
+  },
+  "restored_build_sha256": "b9c3909188f98f4344b558c99c159943cd9717ec665384aaf23e7201adf66196"
+}

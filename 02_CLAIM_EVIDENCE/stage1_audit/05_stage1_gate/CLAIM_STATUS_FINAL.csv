@@ -1,0 +1,31 @@
+claim_id,final_status,source_artifact,source_locator,required_disposition
+RQ1,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,RQ1 row; §1 lines 55-57 §3.2 Table 2,Retain as descriptive protocol comparison; no causal improvement
+RQ2,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,RQ2 row; §3.4 Tables 3-4,Retain grouped six-feature effect only; no individual-feature attribution
+RQ3,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,RQ3 C-022 C-060; §3.5 Table 5,Retain point metrics; correct CI RNG seed to 42 and distinguish model seed 13
+RQ4,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,RQ4 C-024-C-027; §3.7 Table 6,Retain bounded frozen one-direction transfer; no causal drift explanation
+RQ5,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,RQ5 C-043-C-044/C-061-C-062; Tables 7-8,Retain validation threshold and descriptive taxonomy; remove/qualify unsupported platform cluster CI
+C-003,contradicted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-003; E1 notebook DROP_COLS and cleaned schema,Correct generated report contradiction; describe actual retained/removed columns
+C-005,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-005; 02_label_feature_provenance/WORKER_REPORT.md §13,Only descriptive saturation; causal ceiling mechanism unproven
+C-017,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-017; E5 run_registry and E4 results,Scope 85 as selected reported fits; disclose excluded 10-fit parity rerun
+C-019,limited,02_label_feature_provenance/WORKER_REPORT.md,§Bottom line; LABEL_FLOW.md E3 and E5-E8,Current E5-E8 mapping passes; legacy E3 polarity invalid for phishing metrics
+C-022,contradicted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-022; E5 bootstrap_temporal.csv and summary_manifest.json,Correct Table 5 bootstrap RNG seed to 42; seed 13 is model seed
+C-043,unsupported/unverifiable,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-043; E8 README and category_error_table.csv,Remove cluster interval or label unverified absent located computation
+C-045,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-045; 02_label_feature_provenance/WORKER_REPORT.md §13,High separability supports description only; no causal ceiling explanation
+C-047,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,"C-047; E5 summary rows 8,12 and feature provenance",Describe A2-A0 as representation contrast rather than causal feature effect
+C-048,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-048; manuscript scope claims,Retain bounded evaluative novelty; no SOTA/zero-day/causal drift/deployment readiness claims
+C-049,unsupported/unverifiable,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-049; external cited primary sources not in audits,Independently verify references; do not imply locally validated
+C-054,contradicted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-054; package file inventory §5.2,Correct availability statement to actual review package contents and omissions
+C-060,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-060; E4 seed13 point / E5 temporal bootstrap,Point metrics supported; correct bootstrap seed attribution
+C-063,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-063; conclusion crosswalk,Keep bounded conclusion; correct Table 5 provenance and omit unsupported E8 interval
+C-064,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,"C-064; E5 summary rows 2-3,8-9",Retain values if cohort/model/seed context preserved
+C-065,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,"C-065; E5 summary rows 8,10,12",Retain metrics; state A2 is reimplementation
+C-066,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-066; paired_bootstrap.csv rows 2-9,Retain paired group estimates with seed42/domain-bootstrap context
+C-067,accepted,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,C-067; E7 test_metrics_primary_seed.csv rows 2-5,Retain values with validation-selected threshold/test distinction
+C-068,limited,01_claim_inventory/CLAIM_EVIDENCE_MATRIX.csv,"C-068; E8 category table rows 8,10-11,15,21",Descriptive overlapping categories; do not infer causality or cluster generality
+X-OVERLAP,limited,03_cross_corpus_overlap/OVERLAP_AUDIT.md,"§§9-26; OVERLAP_RESULTS.json",Describe overlap by key level; strict subset sensitivity only; confounded by prevalence/shared hosting
+X-NO-BLIND,unsupported/unverifiable,04_reproducibility/REPRODUCIBILITY_AUDIT.md,§§12-16 and E4-E8 sections,No blind/prospective claim; test cohort previously inspected
+X-E3-TEMPORAL,contradicted,04_reproducibility/REPRODUCIBILITY_AUDIT.md,§E3 and REPRODUCIBILITY_MATRIX.csv E3 row,Call E3 temporal a stub/dry run and exclude as completed result
+X-E6-SIDE-EFFECT,limited,04_reproducibility/SIDE_EFFECT_AUDIT.md,§§3-4 and §46-50,No numerical change against package snapshot; only command-field manifest difference; pre-invocation bytes unavailable
+X-FEATURE-PROVENANCE,unsupported/unverifiable,02_label_feature_provenance/WORKER_REPORT.md,§§11 and 44-51; FEATURE_PROVENANCE_MATRIX.csv rows 17-19,Current A0/A1 producer unresolved; historical probe does not establish current-field provenance
+X-A2-EQUALITY,limited,02_label_feature_provenance/WORKER_REPORT.md,§9; FEATURE_PROVENANCE_MATRIX.csv rows 2-22,Ordered contract passes; source value equality/semantic identity does not
+X-FITS,limited,04_reproducibility/REPRODUCIBILITY_MATRIX.csv,E5 row; 01_claim_inventory C-017,85 excludes 10 parity rerun fits; state counting scope

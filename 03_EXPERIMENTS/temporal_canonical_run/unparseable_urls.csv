@@ -1,0 +1,2 @@
+row_id,partition,label,date,parser_error,url
+train:train-020.parquet:8668,train,phish,2024-08-08 00:00:00+00:00,ValueError: 'npaiaajvaxrjmmhagh.𝕧𝕚𝕣𝕡𝕞𝕠𝕛.cn' does not appear to be an IPv4 or IPv6 address,https://npaiaajvaxrjmmhagh.com∕[-randomstring1-]∕[-randomstring2-]∕[-randomstring3-]@npaiaajvaxrjmmhagh.𝕧𝕚𝕣𝕡𝕞𝕠𝕛.cn/caonima=[-randomstring4-].co.jp/

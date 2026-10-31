@@ -1,0 +1,130 @@
+{
+  "candidate_sha256": "d2ffef6726f50f9f174fec11901a02d32a6c63605adbce5a02f07d628e3f86f1",
+  "baseline_sha256": "16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec",
+  "paragraphs_v9": 181,
+  "paragraphs_v10": 206,
+  "checks": [
+    {
+      "check": "paragraph count",
+      "verdict": "PASS",
+      "detail": "v9=181 v10=206 delta=25"
+    },
+    {
+      "check": "table count",
+      "verdict": "PASS",
+      "detail": "v9=9 v10=11 (Tabel 10 + Tabel A1 added in P1)"
+    },
+    {
+      "check": "inline shapes",
+      "verdict": "PASS",
+      "detail": "v9=2 v10=2"
+    },
+    {
+      "check": "sections",
+      "verdict": "PASS",
+      "detail": "v9=1 v10=1"
+    },
+    {
+      "check": "styles",
+      "verdict": "PASS",
+      "detail": "v9=83 v10=83"
+    },
+    {
+      "check": "table captions present",
+      "verdict": "PASS",
+      "detail": "main captions=10 appendix=1 tables=11"
+    },
+    {
+      "check": "caption numbering ascending",
+      "verdict": "PASS",
+      "detail": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+    },
+    {
+      "check": "in-text table refs resolve",
+      "verdict": "PASS",
+      "detail": "referenced=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10] captions=10"
+    },
+    {
+      "check": "reference count",
+      "verdict": "PASS",
+      "detail": "list=24"
+    },
+    {
+      "check": "reference numbering contiguous",
+      "verdict": "PASS",
+      "detail": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]"
+    },
+    {
+      "check": "no dangling citation",
+      "verdict": "PASS",
+      "detail": "cited=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24] max_ref=24"
+    },
+    {
+      "check": "no uncited reference",
+      "verdict": "PASS",
+      "detail": "uncited=[]"
+    },
+    {
+      "check": "prohibited wording absent (affirmative)",
+      "verdict": "PASS",
+      "detail": "{}"
+    },
+    {
+      "check": "figure 1 raster replaced",
+      "verdict": "PASS",
+      "detail": "bf7befe28c1cfd807e6403a2750c018a9629e1673c8ade3d9cb32fb5af4717c5"
+    },
+    {
+      "check": "picture name no v8",
+      "verdict": "PASS",
+      "detail": "figure_1_research_pipeline_v10.png"
+    },
+    {
+      "check": "package members",
+      "verdict": "PASS",
+      "detail": "v9=27 v10=27"
+    },
+    {
+      "check": "no ceiling effect in OOXML",
+      "verdict": "PASS",
+      "detail": "document.xml clean"
+    },
+    {
+      "check": "document.xml well-formed",
+      "verdict": "PASS",
+      "detail": "304136 bytes"
+    },
+    {
+      "check": "title metadata current",
+      "verdict": "PASS",
+      "detail": "Audit Generalisasi Deteksi Phishing URL: Saturasi Benchmark pada PhiUSIIL, Evaluasi Temporal, dan Transfer Lintas-Korpus ke PhreshPhish"
+    },
+    {
+      "check": "subject metadata current",
+      "verdict": "PASS",
+      "detail": "Manuskrip v10 P1 dengan transfer lintas-korpus, evaluasi ambang, dan taksonomi galat"
+    },
+    {
+      "check": "description metadata current",
+      "verdict": "PASS",
+      "detail": "v10 P1: koreksi kata pada Gambar 1, pembaruan metadata versi, perluasan related work dan v"
+    },
+    {
+      "check": "new section 1.2 present",
+      "verdict": "PASS",
+      "detail": "1.2 Tinjauan Tematik: Waktu, Representasi, dan Ambang Operasional"
+    },
+    {
+      "check": "Table 1 rows",
+      "verdict": "PASS",
+      "detail": "rows=11"
+    },
+    {
+      "check": "config caption present",
+      "verdict": "PASS",
+      "detail": "Tabel 2 caption"
+    }
+  ],
+  "passed": 24,
+  "failed": 0
+}

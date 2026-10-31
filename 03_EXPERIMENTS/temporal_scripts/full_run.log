@@ -1,0 +1,51 @@
+Output: E:\Kuliah\Tugas Akhir\Experiment\4 - PhreshPhish Temporal Audit\outputs\20261022T170935017991Z
+Fits planned: 5 ; no duration estimate copied from another corpus.
+
+[C3] loading partitions ...
+  loaded train=498255 test=168060 in 63.2s
+[C3] purging the seam and duplicate URLs ...
+  excluded 1 unparseable train row(s) (0.000201%, cap 0.010000%): ['train:train-020.parquet:8668']
+  canonicalised train: 497573 rows
+  canonicalised test: 168060 rows
+                        stage   rows  benign  phish                  min_date                  max_date
+                    train_raw 498255  276729 221526 2024-07-02 00:00:00+00:00 2025-09-08 00:00:00+00:00
+                     test_raw 168060   91260  76800 2025-09-08 00:00:00+00:00 2025-12-16 00:00:00+00:00
+   train_after_boundary_purge 497574  276316 221258 2024-07-02 00:00:00+00:00 2025-09-07 00:00:00+00:00
+train_after_unparseable_purge 497573  276316 221257 2024-07-02 00:00:00+00:00 2025-09-07 00:00:00+00:00
+                 train_unique 497359  276315 221044 2024-07-02 00:00:00+00:00 2025-09-07 00:00:00+00:00
+    test_after_seen_url_purge 168057   91259  76798 2025-09-08 00:00:00+00:00 2025-12-16 00:00:00+00:00
+                  test_unique 168035   91259  76776 2025-09-08 00:00:00+00:00 2025-12-16 00:00:00+00:00
+Unparseable rows excluded: 1 (policy=exclude, cap=0.010000% per partition).
+Sizes after cleaning are new results; do not copy raw sizes into the results table.
+
+[C4] extracting deterministic URL features ...
+  train features (497359, 18) in 21.5s
+  test features (168035, 18) in 7.5s
+Features: 18
+ y_phish  size   sum     mean
+       0 91259 62363 0.683363
+       1 76776 33868 0.441127
+Exposure above uses training domains, not corpus-wide domain frequency.
+
+[C5] fitting per seed ...
+Finished seed 13 fit_s= 7.21
+Finished seed 42 fit_s= 6.33
+Finished seed 2024 fit_s= 6.06
+Finished seed 777 fit_s= 6.79
+Finished seed 31415 fit_s= 6.93
+               f1_phish                               precision_phish                               recall_phish                               fpr_benign                               miss_phish                                 roc_auc                               average_precision                                     mcc                              
+                   mean       std       min       max            mean       std       min       max         mean       std       min       max       mean       std       min       max       mean       std       min       max      mean       std       min       max              mean       std       min       max      mean       std       min       max
+stratum                                                                                                                                                                                                                                                                                                                                                         
+all            0.800461  0.001184  0.798895  0.801768        0.907461  0.000564  0.907009  0.908423     0.716034  0.001744  0.713752  0.718193   0.061430  0.000387  0.060805  0.061791   0.283966  0.001744  0.281807  0.286248  0.913960  0.000815  0.912810  0.914974          0.915500  0.000554  0.914738  0.916175  0.679127  0.001552  0.677106  0.680698
+seen_domain    0.740741  0.001334  0.739580  0.742405        0.877821  0.001105  0.876333  0.879005     0.640693  0.001994  0.638361  0.643292   0.048429  0.000541  0.047721  0.049100   0.359307  0.001994  0.356708  0.361639  0.904765  0.001608  0.902232  0.906481          0.867546  0.001256  0.865532  0.868859  0.647393  0.001477  0.646029  0.649014
+unseen_domain  0.844880  0.001227  0.842930  0.845954        0.927894  0.000908  0.926400  0.928852     0.775501  0.001579  0.773259  0.777314   0.089486  0.001096  0.088282  0.091224   0.224499  0.001579  0.222686  0.226741  0.914293  0.000408  0.913663  0.914663          0.947561  0.000202  0.947290  0.947795  0.672827  0.002352  0.668925  0.674666
+Between-seed SD is not cross-period uncertainty. Do not call it a temporal CI.
+
+[C6] domain-cluster bootstrap on the primary seed ...
+         metric  estimate  lower95  upper95  valid_replicates
+       f1_phish  0.801768 0.731138 0.849622              1000
+precision_phish  0.907356 0.896520 0.917853              1000
+   recall_phish  0.718193 0.611474 0.798910              1000
+     fpr_benign  0.061693 0.054385 0.068172              1000
+CI is a domain resampling on one test period and one fixed model; it is not a guarantee of temporal generalisation.
+Done. Review row_ledger.csv, results_per_seed.csv, cluster_bootstrap_primary_seed.csv, actual_test_domain_exposure.csv, design.json, feature_schema.json and both manifests.

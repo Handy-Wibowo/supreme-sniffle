@@ -1,0 +1,350 @@
+{
+  "generated_utc": "2026-10-31T17:01:06.283910+00:00",
+  "python": "3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]",
+  "expected_hashes": {
+    "v8_final": "65c8909be07a17427a0367306d3c9502cbe27ee36705e92c2234d61fc6896ccf",
+    "v9_P0": "16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec"
+  },
+  "baseline": {
+    "path": "E:\\Kuliah\\Tugas Akhir\\phishing\\BITS_Draft_Phishing_URL_Leakage_v9_P0.docx",
+    "sha256": "16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec",
+    "bytes": 320391,
+    "paragraphs": 181,
+    "tables": 9,
+    "table_shapes": [
+      [
+        6,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "inline_shapes": 2,
+    "sections": 1,
+    "styles": 83,
+    "package_members": 27,
+    "package_member_list": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "customXml/_rels/item1.xml.rels",
+      "customXml/item1.xml",
+      "customXml/itemProps1.xml",
+      "docProps/app.xml",
+      "docProps/core.xml",
+      "docProps/custom.xml",
+      "docProps/thumbnail.emf",
+      "word/_rels/document.xml.rels",
+      "word/_rels/footer1.xml.rels",
+      "word/_rels/header1.xml.rels",
+      "word/document.xml",
+      "word/endnotes.xml",
+      "word/fontTable.xml",
+      "word/footer1.xml",
+      "word/footnotes.xml",
+      "word/header1.xml",
+      "word/media/image1.png",
+      "word/media/image2.png",
+      "word/media/image3.png",
+      "word/media/image4.png",
+      "word/numbering.xml",
+      "word/settings.xml",
+      "word/styles.xml",
+      "word/theme/theme1.xml",
+      "word/webSettings.xml"
+    ],
+    "media_sha256": {
+      "word/media/image1.png": "3c3d9930b8b1f8c344c5548d0dbca756b20af7ea11bf56b90344a00eb52d0d66",
+      "word/media/image2.png": "616bcfd26d950776e0bab882295ef44d0a7808dd8c765d2ed30809da118f6bdf",
+      "word/media/image3.png": "221d628fd0be38a08d0ca45bd7279e5a8774ff2b446c9a4c2511a78c3eae2004",
+      "word/media/image4.png": "7256ea990dd4551571191eef3ecf24ee0bea8a1b017187c28a6a7168023bb4fe"
+    },
+    "rels_sha256": {
+      "_rels/.rels": "fd8e40b742a51ae032198f5af1e7f70b9087c4e229ac75b3710b6ddbbf76fecf",
+      "word/_rels/document.xml.rels": "2afc451bc0496307aa85e8f80671750912c010ab308c74dcf3e18b587e557b16",
+      "customXml/_rels/item1.xml.rels": "1ca6c9a64edcebe24ee703a54403611b322d96da33371779e742d2d3f7ed7a6c",
+      "word/_rels/footer1.xml.rels": "ebcd4fe3721967888a2ab86936d48f274f6ed0b80575a6f8e20bc5e7bcb55069",
+      "word/_rels/header1.xml.rels": "7512f6ac3da9952b6982581bc5c46f808438b3ef2fa07883da59b5cdabd48dad"
+    },
+    "header_footer_sha256": {
+      "word/footer1.xml": "32015de2c6de86e06dde95bddd394f18c50332ba29ac86125dac6408f84b3be9",
+      "word/header1.xml": "109a6a02d8bc38f01aee03ed5375e3237747a0a780acd5b0103424873f2fc128"
+    },
+    "figure_alt_text": [
+      "Pipeline audit generalisasi PhiUSIIL dan PhreshPhish dengan jembatan transfer zero-shot yang dibekukan.",
+      "Perbandingan F1 dan FPR pada tiga konteks evaluasi serta trade-off recall dan FPR untuk ambang berbasis validasi."
+    ],
+    "figure_pic_names": [
+      "figure_1_research_pipeline_v8.png",
+      "figure_2_generalization_thresholds_v8.png"
+    ],
+    "figure_extent_emu": [
+      [
+        "5472000",
+        "5217488"
+      ],
+      [
+        "5544000",
+        "2232784"
+      ]
+    ],
+    "citations": [
+      {
+        "paragraph": 15,
+        "token": "[3]"
+      },
+      {
+        "paragraph": 15,
+        "token": "[5]"
+      },
+      {
+        "paragraph": 15,
+        "token": "[6]"
+      },
+      {
+        "paragraph": 15,
+        "token": "[4]"
+      },
+      {
+        "paragraph": 15,
+        "token": "[7]"
+      },
+      {
+        "paragraph": 15,
+        "token": "[8]"
+      },
+      {
+        "paragraph": 16,
+        "token": "[3]"
+      },
+      {
+        "paragraph": 16,
+        "token": "[5]"
+      },
+      {
+        "paragraph": 17,
+        "token": "[9]"
+      },
+      {
+        "paragraph": 17,
+        "token": "[2]"
+      },
+      {
+        "paragraph": 17,
+        "token": "[11]"
+      },
+      {
+        "paragraph": 17,
+        "token": "[12]"
+      },
+      {
+        "paragraph": 23,
+        "token": "[1]"
+      },
+      {
+        "paragraph": 23,
+        "token": "[2]"
+      },
+      {
+        "paragraph": 40,
+        "token": "[1]"
+      },
+      {
+        "paragraph": 42,
+        "token": "[2]"
+      },
+      {
+        "paragraph": 56,
+        "token": "[10]"
+      },
+      {
+        "paragraph": 84,
+        "token": "[3]"
+      },
+      {
+        "paragraph": 84,
+        "token": "[5]"
+      },
+      {
+        "paragraph": 84,
+        "token": "[6]"
+      },
+      {
+        "paragraph": 128,
+        "token": "[2]"
+      },
+      {
+        "paragraph": 128,
+        "token": "[3]"
+      },
+      {
+        "paragraph": 128,
+        "token": "[5]"
+      },
+      {
+        "paragraph": 128,
+        "token": "[6]"
+      },
+      {
+        "paragraph": 128,
+        "token": "[9]"
+      },
+      {
+        "paragraph": 169,
+        "token": "[1]"
+      },
+      {
+        "paragraph": 170,
+        "token": "[2]"
+      },
+      {
+        "paragraph": 171,
+        "token": "[3]"
+      },
+      {
+        "paragraph": 172,
+        "token": "[4]"
+      },
+      {
+        "paragraph": 173,
+        "token": "[5]"
+      },
+      {
+        "paragraph": 174,
+        "token": "[6]"
+      },
+      {
+        "paragraph": 175,
+        "token": "[7]"
+      },
+      {
+        "paragraph": 176,
+        "token": "[8]"
+      },
+      {
+        "paragraph": 177,
+        "token": "[9]"
+      },
+      {
+        "paragraph": 178,
+        "token": "[10]"
+      },
+      {
+        "paragraph": 179,
+        "token": "[11]"
+      },
+      {
+        "paragraph": 180,
+        "token": "[12]"
+      }
+    ],
+    "citation_count": 37,
+    "distinct_citation_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "core_properties": {
+      "title": "Audit Generalisasi Deteksi Phishing URL pada PhiUSIIL dan PhreshPhish — v8",
+      "subject": "Manuskrip v8 dengan transfer lintas-korpus, evaluasi ambang, dan taksonomi galat",
+      "author": "Mesran.M.Kom",
+      "last_modified_by": "Mesran Mesran",
+      "keywords": "Building of Informatics, Technology and Science (BITS)",
+      "comments": "v8 menambahkan eksperimen transfer zero-shot, pemilihan ambang berbasis validasi, taksonomi galat, dan dua gambar; v7 tidak diubah.",
+      "created": "2026-08-17T17:32:00+00:00",
+      "modified": "2026-08-18T08:55:00+00:00",
+      "revision": 268
+    },
+    "core_xml_sha256": "8ec28574a9e92996dbd06d0111df3409ae95d44b0bf4638e631e5242c94c1f12",
+    "app_xml_pages": "4",
+    "app_xml_words": "1998",
+    "page_size": {
+      "width_emu": 7560310,
+      "height_emu": 10692130,
+      "left_margin": 1080135,
+      "right_margin": 540385,
+      "top_margin": 1080135,
+      "bottom_margin": 540385
+    },
+    "anchor_paragraphs": {
+      "A01_source_polarity_p40": "PhiUSIIL [1] memuat 235.795 baris dan 56 kolom. Pada sumber, label legitim dikodekan 1 (134.850 baris) dan phishing 0 (100.945 baris); tidak ada kolom kosong. Pembersihan menghapus 425 duplikat persis berdasarkan pasangan (URL, label), tanpa menemukan URL yang berkonflik label, sehingga tersisa 235.370 baris. Analisis E5 saat ini memetakan label hasil pembersihan menjadi phishing=1 dan legitim=0. Tidak ada hasil metrik E3 yang digunakan sebagai metrik positif-phishing dalam artikel ini.",
+      "A02_abstract_id_p9": "Kami menguji bagaimana hasil deteksi phishing URL berubah ketika unit pembagian, waktu, dan korpus berbeda menggunakan dua dataset phishing URL. Desain mencakup audit keterpulihan label, pembagian acak dan site-disjoint, ablasi kelompok fitur, evaluasi temporal dalam-korpus pada PhreshPhish, transfer A2 zero-shot tanpa adaptasi, pemilihan ambang hanya pada validasi, dan analisis galat deskriptif. Pada PhiUSIIL, A0/LightGBM mencapai F1 0,999623 pada pembagian site-disjoint; dua fitur yang dipertahankan masing-masing memiliki AUC tunggal di atas 0,988, konsisten dengan saturasi benchmark deskriptif tetapi tidak mengidentifikasi penyebabnya. Pada PhreshPhish, A2/LightGBM mencapai rerata F1 temporal 0,800461. A2/LightGBM yang dilatih hanya pada PhiUSIIL mencapai F1 0,599064, FPR benign 0,986478, ROC-AUC 0,382566, dan MCC −0,146445 pada 168.035 URL PhreshPhish, dibandingkan F1 sumber 0,995985. Temuan ini menggambarkan portabilitas pada pasangan yang diuji dan tidak menentukan penyebab temporal. Partisi uji temporal telah diperiksa dalam pekerjaan eksploratif sebelumnya sehingga bukan holdout buta atau prospektif. Dalam refit temporal terpisah, ambang 0,884705 yang dipilih untuk memenuhi FPR validasi ≤1% menghasilkan FPR uji 1,1352% dan recall 0,5440, dibandingkan 7,6497% dan 0,7380 pada ambang 0,5. Analisis galat menemukan 37,1% dari seluruh FN pada kategori host platform dan FPR 21,8% pada URL benign ≤30 karakter; kategori tumpang tindih ini bersifat deskriptif dan ketidakpastian klaster platform tidak terverifikasi. Kontribusi artikel adalah perbandingan yang dapat diaudit atas saturasi benchmark, evaluasi temporal, transfer lintas-korpus satu arah, trade-off ambang, dan pola galat deskriptif; bukan model baru atau klaim state-of-the-art.",
+      "A02_abstract_en_p12": "We examine how phishing URL detection results vary across split unit, time, and corpus using two phishing-URL datasets. The study combines a label-recoverability audit, random and site-disjoint splits, grouped feature ablation, within-corpus temporal evaluation on PhreshPhish, frozen A2 zero-shot transfer, validation-only threshold selection, and descriptive error analysis. On PhiUSIIL, A0/LightGBM achieved site-disjoint F1 0.999623; two retained features each had single-feature AUC above 0.988, consistent with descriptive benchmark saturation but not identifying its cause. PhreshPhish temporal A2/LightGBM achieved mean F1 0.800461. A2/LightGBM trained only on PhiUSIIL achieved F1 0.599064, benign FPR 0.986478, ROC-AUC 0.382566, and MCC −0.146445 on 168,035 PhreshPhish URLs, compared with source-domain F1 0.995985. These results describe portability on the tested pair and do not identify a temporal cause. The temporal test partition had previously been inspected in exploratory work and was not a blind or prospective holdout. In a separate temporal refit, threshold 0.884705 selected to meet validation FPR ≤1% yielded test FPR 1.1352% and recall 0.5440, compared with 7.6497% and 0.7380 at threshold 0.5. Error analysis found 37.1% of all false negatives in the hosting-platform category and 21.8% FPR among benign URLs ≤30 characters; these overlapping categories are descriptive, and platform-cluster uncertainty was not verified. The contribution is an auditable comparison of benchmark saturation, temporal evaluation, one-direction cross-corpus transfer, threshold trade-offs, and descriptive error patterns, not a new model or state-of-the-art claim.",
+      "A02_caption_p119": "Menurunkan FPR uji dari 7,65% menjadi 1,14% mengurangi alarm palsu dari 765 menjadi 114 per 10.000 URL benign, tetapi recall turun dari 0,738 menjadi 0,544. Target validasi 0,5% menghasilkan FPR uji 0,585% dan recall 0,475. Pola lima seed konsisten: aturan 1% menghasilkan rerata F1 0,700739, recall 0,546658, dan FPR 0,011365; aturan 0,5% menghasilkan rerata F1 0,646167, recall 0,480645, dan FPR 0,005843. Ambang tidak memperbaiki diskriminasi model; ambang hanya memindahkan biaya antara FP dan FN.",
+      "A03_seeds_p57": "Ambang keputusan tetap 0,5 pada benchmark PhiUSIIL, evaluasi temporal utama, dan transfer lintas-korpus. Eksperimen operasional tambahan pada PhreshPhish membandingkan ambang 0,5 dengan tiga ambang yang dipilih hanya dari periode validasi; seluruh ambang kemudian dibekukan sebelum evaluasi pada periode uji.",
+      "A04_conclusion_p134": "Penelitian ini menunjukkan mengapa kinerja benchmark, evaluasi temporal dalam-korpus, dan portabilitas lintas-korpus perlu dibedakan pada deteksi phishing URL. Pada PhiUSIIL, F1 site-disjoint adalah 0,999623 bersama dua fitur yang dipertahankan dengan AUC tunggal di atas 0,988. Kontras kelompok A1−A0 sekitar seperseribu F1. Temuan ini menggambarkan saturasi pada benchmark tersebut; penelitian tidak menetapkan penyebabnya.",
+      "A05_extant_cohort_p21": "",
+      "A05_extant_cohort_p65": "Lima seed model (13, 42, 777, 2024, 31415) mengukur variasi prosedur pelatihan; seluruhnya menggunakan partisi sumber dan target yang sama. Seed 42 ditetapkan sebagai hasil utama. Ketidakpastian target dihitung dengan 1.000 replikasi bootstrap pada unit registrable domain dengan seed RNG bootstrap 42, mencakup 65.288 registrable domain. Karena waktu, vendor, dan populasi berbeda bersama korpus, eksperimen ini menguji portabilitas pada pasangan korpus tersebut, bukan mengidentifikasi faktor penyebab kegagalan transfer.",
+      "A06_package_p155": "Seluruh penulis telah membaca dan menyetujui versi manuskrip yang telah diterbitkan.",
+      "A12_provenance_insert_p54": "A0 dan A1 menggunakan fitur tersimpan yang diwarisi dari dataset hasil pembersihan. Untuk fitur statistik dan fitur halaman/konten tersimpan, termasuk TLDLegitimateProb, URLCharProb, dan CharContinuationRate, producer hulu, populasi referensi, waktu komputasi, dan ketergantungan terhadap label belum diketahui. Probe target-encoding historis membuktikan kebocoran pada implementasi probe tersebut saja, yang menghitung rerata turunan-label sebelum pemisahan lanjutan. Bukti yang tersedia tidak menetapkan bahwa probe itu menghasilkan nilai A0/A1 yang tersimpan saat ini; fitting estimator saat ini pada baris latih juga tidak mensertifikasi provenance fitur hulu sebagai bebas kebocoran. A2 tidak mencakup TLDLegitimateProb atau URLCharProb."
+    }
+  },
+  "baseline_v8": {
+    "sha256": "65c8909be07a17427a0367306d3c9502cbe27ee36705e92c2234d61fc6896ccf",
+    "bytes": 319294
+  },
+  "hash_check": {
+    "v9_P0_matches": true,
+    "v8_final_matches": true
+  },
+  "p0_verifier": {
+    "cmd": [
+      "E:\\Kuliah\\Tugas Akhir\\.venv_p1\\Scripts\\python.exe",
+      "apply_p0_revisions.py",
+      "--verify-only"
+    ],
+    "cwd": "E:\\Kuliah\\Tugas Akhir\\phishing\\revision_v9_p0\\04_integrated_manuscript",
+    "exit": 0,
+    "stdout_tail": "{\"status\": \"PASS\", \"source_sha256\": \"65c8909be07a17427a0367306d3c9502cbe27ee36705e92c2234d61fc6896ccf\", \"output\": \"E:\\\\Kuliah\\\\Tugas Akhir\\\\phishing\\\\BITS_Draft_Phishing_URL_Leakage_v9_P0.docx\", \"output_sha256\": \"16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec\", \"paragraphs\": 181, \"tables\": 9, \"inline_shapes\": 2, \"sections\": 1, \"actions\": 12, \"applied_rows\": 57, \"absent_rows\": 5, \"package_check\": true, \"official_docx_validate_ok_runs\": \"3/8\"}",
+    "stderr_tail": ""
+  },
+  "p0_relationship_check": {
+    "cmd": [
+      "E:\\Kuliah\\Tugas Akhir\\.venv_p1\\Scripts\\python.exe",
+      "verify_package_relationships.py",
+      "E:\\Kuliah\\Tugas Akhir\\phishing\\BITS_Draft_Phishing_URL_Leakage_v9_P0.docx"
+    ],
+    "cwd": "E:\\Kuliah\\Tugas Akhir\\phishing\\revision_v9_p0\\04_integrated_manuscript",
+    "exit": 0,
+    "stdout_tail": "{\"ok\": true, \"issues\": []}",
+    "stderr_tail": ""
+  }
+}

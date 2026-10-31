@@ -1,0 +1,139 @@
+{
+  "protocol": "A2 zero-shot PhiUSIIL train \u2192 cleaned PhreshPhish temporal test",
+  "threshold": 0.5,
+  "positive_label": "phishing=1; benign=0",
+  "seeds": [
+    13,
+    42,
+    2024,
+    777,
+    31415
+  ],
+  "primary_seed": 42,
+  "feature_order": [
+    "URLLength",
+    "DomainLength",
+    "TLDLength",
+    "NoOfSubDomain",
+    "NoOfObfuscatedChar",
+    "ObfuscationRatio",
+    "NoOfLettersInURL",
+    "LetterRatioInURL",
+    "NoOfDegitsInURL",
+    "DegitRatioInURL",
+    "NoOfEqualsInURL",
+    "NoOfQMarkInURL",
+    "NoOfAmpersandInURL",
+    "NoOfOtherSpecialCharsInURL",
+    "SpacialCharRatioInURL",
+    "IsHTTPS",
+    "HasObfuscation",
+    "IsDomainIP"
+  ],
+  "model_params": {
+    "lightgbm": {
+      "n_estimators": 300,
+      "learning_rate": 0.05,
+      "num_leaves": 63,
+      "verbose": -1
+    },
+    "xgboost": {
+      "n_estimators": 300,
+      "learning_rate": 0.05,
+      "max_depth": 8,
+      "eval_metric": "logloss",
+      "tree_method": "hist"
+    }
+  },
+  "threads": 4,
+  "bootstrap": {
+    "unit": "registrable domain",
+    "replicates": 1000,
+    "rng_seed": 42
+  },
+  "input_hashes": {
+    "Experiment\\1 - PhiUSIIL Cleaning + Leakage-Audit Notebook\\phiusill_clean\\phiusiil_clean.parquet": "4c86b580ddc694c1a6bd2b0f249b43550508b2935be85c09b34dbaf67273468f",
+    "Experiment\\1 - PhiUSIIL Cleaning + Leakage-Audit Notebook\\phiusill_clean\\split_random.csv": "9520d9bd891c2fe443732a64d0484d52f32c434afa1cc61bd1c21f669a117ab3",
+    "Experiment\\4 - PhreshPhish Temporal Audit\\outputs\\20261022T170935017991Z\\split_test.csv.gz": "b05907450beb66d5e697055b16a9204036b437344e483c417e8bbc0fb01abd04",
+    "dataset\\PhreshPhish\\data\\test-000.parquet": "9ae7908b64cc75669e4be4cbd0fec884ac2b3f4984211eacfbf013a2ada12851",
+    "dataset\\PhreshPhish\\data\\test-001.parquet": "bb122ccb309436b92e7edf11792d53efdbde46c4b5d2ad7d39a7d48b50d2b00f",
+    "dataset\\PhreshPhish\\data\\test-002.parquet": "da3e9b1fb7e537ea951bb6e9ac68ae5a0c48e6590714f2b90ecf5dd96276d894",
+    "dataset\\PhreshPhish\\data\\test-003.parquet": "c6157aeddfc5eff2728e88ccc61186464e4e6861bee0ae841a830be9ebc7cf17",
+    "dataset\\PhreshPhish\\data\\test-004.parquet": "b20de434400f3030dd711a1e4f6e012397d1c2889d575b21aa747f8c5ae04df1",
+    "dataset\\PhreshPhish\\data\\test-005.parquet": "19b0ecd6a657a11a3fb43dcb22e260eb5b5c8d7a0dcee880b4705a9ee2ef1c6f",
+    "dataset\\PhreshPhish\\data\\test-006.parquet": "a34c4ad85cf863af950cad8251717cba3642ae0c0e7bd8ab245a29a63139d187",
+    "dataset\\PhreshPhish\\data\\test-007.parquet": "f91281ac9a8bbf39fe9146e115be5e74cf3d59719c2f06bb38178fbaa9d6719b",
+    "dataset\\PhreshPhish\\data\\test-008.parquet": "82e7216cef17bd78f83ee3339a980d0e09ef864c83f3e8222ef809b961821252",
+    "dataset\\PhreshPhish\\data\\test-009.parquet": "a18e27d35f3a06983c1734f875093f45dbd041ea39e796f8d762f5712f800be6",
+    "dataset\\PhreshPhish\\data\\test-010.parquet": "b5d9ca33207b70e2c22aeef6cdec1f294a7ce5f843c6033e208c6f520c85cfdd",
+    "dataset\\PhreshPhish\\data\\test-011.parquet": "585cf9cfa0ddb54421bfccedb26590dd87426908e814f1290b1986c2e750f0e5",
+    "dataset\\PhreshPhish\\data\\test-012.parquet": "3bbffccd4269ac723febeacc01905b2d52d1f98242f5bf18a82093cc4f4cdf97",
+    "dataset\\PhreshPhish\\data\\test-013.parquet": "81daa4b68fca7b2df4d144145e80a09355d963e290d277c9976fb5a988b5e1f3",
+    "dataset\\PhreshPhish\\data\\test-014.parquet": "8e30a3b2419604ce578f341392bd6e3878abdae38d7b3e38adb107bf2f557c03",
+    "dataset\\PhreshPhish\\data\\test-015.parquet": "9d2589e528116c862aba4eed4ce0b4778172e8b82f2ac3c4157153666bb68adc",
+    "dataset\\PhreshPhish\\data\\test-016.parquet": "3d9f97863ee0c88448487d4a13c4947951d62e65e571ed695e8bb69108995ba7",
+    "dataset\\PhreshPhish\\data\\test-017.parquet": "66b916bc81a28f172ee807acedb497096993f64266459af8d785bc09d4d127d1",
+    "dataset\\PhreshPhish\\data\\test-018.parquet": "aaa23d30b1c242b94000b5243dfb855f715f95fdbc0fd345f9ec4d30aeda36b1",
+    "dataset\\PhreshPhish\\data\\test-019.parquet": "c7169aa4564a95e4950f05bc3281a66fe58f2b31eb1594b62a693de65da7508c",
+    "dataset\\PhreshPhish\\data\\test-020.parquet": "77d312fe7dc92fc3b2ed208ab55b148b2032345091ad44d513b479241013d18e",
+    "Experiment\\5 - PhiUSIIL Focused Ablation\\src\\features.py": "81822b4fac8b50cdf93371651e3c94680628ef189d64c32429ec15cc51cd48e6",
+    "Experiment\\5 - PhiUSIIL Focused Ablation\\src\\data.py": "3212e581b47f5626125203c6bcbf9c622b89ae9485740f5346bb505975db1108",
+    "Experiment\\5 - PhiUSIIL Focused Ablation\\src\\run_experiment.py": "9aebb54cf92b78efb82a00db454732bd6578c0cce3b26c07a94d08d7f1410d3c",
+    "Experiment\\6 - Cross-Corpus Transfer\\create_notebook.py": "29f3f6782886764c482a27e74a40ff325d68fd36311eb22ecf5f4a57525d00e1"
+  },
+  "output_hashes": {
+    "metrics.csv": "e0f2e6861f99f8204b2285d8d1c2a47a1a33b7eccb6f82f8a27520ba7e0a67d4",
+    "primary_seed_domain_bootstrap.csv": "03ef7e76dfadc36cdae113dd1455c201b7bcdb07dd2791fb2dc0c47582937cda",
+    "independent_metrics_check.csv": "9bac0a3fd018d5d7f8fa3340b49f9732b9aa76effe4a4dcdb5f2aaeef6a39a42",
+    "predictions_phreshphish_temporal_test_lightgbm_seed13.csv.gz": "657044572d7e473823b5add2fb53f0bda0fac3ceaabdda36868fdcfa18b34b9b",
+    "predictions_phiusiil_random_test_reference_lightgbm_seed13.csv.gz": "cffe927bcd0899b7c785f23aa337fadb866cfa576788c689c382b12252d6ce11",
+    "predictions_phreshphish_temporal_test_lightgbm_seed42.csv.gz": "84c329719faa895e79ef1d61956434238eab7fc605b380585ce8a17b9ec4e785",
+    "predictions_phiusiil_random_test_reference_lightgbm_seed42.csv.gz": "7e10164557399753a7c33b40f0f420d36e3a51da04db9895bd9b44db51ea440d",
+    "predictions_phreshphish_temporal_test_lightgbm_seed2024.csv.gz": "b498cac11f5c09cea6f657855007845f40e93a0fd7282d00445bbd89fc79f123",
+    "predictions_phiusiil_random_test_reference_lightgbm_seed2024.csv.gz": "b2618bf15c923f9c9d6a8bb13a3d016581a7f06588d14d9e98867eed5194243c",
+    "predictions_phreshphish_temporal_test_lightgbm_seed777.csv.gz": "88a3994580afcbb1e6cd15ce91306ced7f4171d880b41c26754579bd1a0c615e",
+    "predictions_phiusiil_random_test_reference_lightgbm_seed777.csv.gz": "4a2567485b9cd9147c13c347b851d950752ab884a29ae7a3fc5eced8a55b9b19",
+    "predictions_phreshphish_temporal_test_lightgbm_seed31415.csv.gz": "8c985781e728f0c585b3670517335f927c0317be3919f3d3796f441277112250",
+    "predictions_phiusiil_random_test_reference_lightgbm_seed31415.csv.gz": "5b94532399ef9c473015ec4e487c225e30b1946dcf6c3b49ab8c85b4dbfc8e19",
+    "predictions_phreshphish_temporal_test_xgboost_seed13.csv.gz": "e5afff48926f9afe9d5535c116f38fba81231b0826f587344d4a2500b51e7e72",
+    "predictions_phiusiil_random_test_reference_xgboost_seed13.csv.gz": "a58182c58f7a298424ef872bf58ca12dbd868492c0f9e990ad5c096360382495",
+    "predictions_phreshphish_temporal_test_xgboost_seed42.csv.gz": "2760cb277f1017670f5eb0754bd1724da7a79f294feae8717f7ba015a7c34484",
+    "predictions_phiusiil_random_test_reference_xgboost_seed42.csv.gz": "777942b2f512437eaccddc4a4ff442d1e0dc51afbeede97e688f71b259ab628f",
+    "predictions_phreshphish_temporal_test_xgboost_seed2024.csv.gz": "5a091f371bd910119a1f6337ae174b9eb59d8832b301b8a7efcf2fb28aef780a",
+    "predictions_phiusiil_random_test_reference_xgboost_seed2024.csv.gz": "b79006f48b62baf719fb00d79cf2dfd3ea36204f45f691466316483fc28289c1",
+    "predictions_phreshphish_temporal_test_xgboost_seed777.csv.gz": "840790d10c0e1a784faee3d98697a0c453881f1fe5da7aa58d7dec3214055f98",
+    "predictions_phiusiil_random_test_reference_xgboost_seed777.csv.gz": "0c1c2b00a847933f079217c88632722c819a889782ae0d0bcc7d39f6de431646",
+    "predictions_phreshphish_temporal_test_xgboost_seed31415.csv.gz": "7283b8d79d730b66861c3826674798f60948477c3a498f1852bdd9a6f2b37772",
+    "predictions_phiusiil_random_test_reference_xgboost_seed31415.csv.gz": "7785030161c1b15743cc11628afff90623bc569fd795d159a8fc08f33ad0b907",
+    "execution_status.json": "26bbf50c77b7837e75b5fc29b2fe095d8b96e3c05f7e9bf45c6eb7540c88b019",
+    "transfer.ipynb": "26301de0861646b2461c3c03e30c3051bc31ac2e4061c41922e4aeac949b1a1e"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "lightgbm": "4.7.0",
+      "xgboost": "3.4.1",
+      "pyarrow": "26.0.0",
+      "tldextract": "5.4.0",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0"
+    }
+  },
+  "rows": {
+    "phiusiil_train": 141222,
+    "phiusiil_reference_test": 47074,
+    "phreshphish_temporal_test": 168035
+  },
+  "independent_prediction_metric_checks": 260,
+  "independent_verification": {
+    "command": "\"E:\\Kuliah\\Tugas Akhir\\Experiment\\5 - PhiUSIIL Focused Ablation\\.venv\\Scripts\\python.exe\" \"Experiment/6 - Cross-Corpus Transfer/verify_predictions.py\"",
+    "script_sha256": "565c34f66d982d793febeac351e51f5df6f4914e3d06635648335feeac260337",
+    "checks": 260,
+    "all_passed": true,
+    "method": "Independent row-level confusion calculations plus scikit-learn metrics from saved prediction CSVs; original output hashes revalidated."
+  },
+  "executed_notebook_sha256": "26301de0861646b2461c3c03e30c3051bc31ac2e4061c41922e4aeac949b1a1e"
+}

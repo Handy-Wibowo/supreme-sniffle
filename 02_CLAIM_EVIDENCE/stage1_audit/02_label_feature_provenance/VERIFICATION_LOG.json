@@ -1,0 +1,59 @@
+{
+  "audit": "PhiUSIIL and PhreshPhish label mapping, A0/A1/A2 provenance and E1-E8 end-to-end integrity",
+  "timestamp_utc": "2026-10-27",
+  "scope": {
+    "local_code": ["Experiment", "phishing/AI_Review_SINTA2_Package_v8"],
+    "raw_data_read_only": ["dataset/PhiUSIIL Phishing/PhiUSIIL_Phishing_URL_Dataset.csv", "Experiment/1 - PhiUSIIL Cleaning + Leakage-Audit Notebook/phiusill_clean/phiusiil_clean.parquet", "dataset/PhreshPhish/data/train-*.parquet", "dataset/PhreshPhish/data/test-*.parquet"],
+    "output_only": "phishing/revision_v9_stage1_audit/02_label_feature_provenance",
+    "notebook_execution": "No notebook executed or modified in this audit; existing executed notebooks inspected for execution counts/outputs. A2 extractor smoke-run was executed from the real shared features.py module."
+  },
+  "conclusions": {
+    "label_integrity": {"status": "PASS_WITH_SCOPE_LIMIT", "reason": "Current pipeline mapping verified: PhiUSIIL y_phish=1-label; PhreshPhish benign=0/phish=1. The mapping is verified against stored source values, not independent adjudication of source ground truth.", "evidence": ["Experiment/5 - PhiUSIIL Focused Ablation/src/data.py:128-132", "Experiment/5 - PhiUSIIL Focused Ablation/src/run_experiment.py:245-260", "Experiment/4 - PhreshPhish Temporal Audit/04_PhreshPhish_Temporal_Audit.ipynb:201-210", "Experiment/3.1 - evaluation pipeline v2/03_evaluation_pipeline_v2_run_complete.ipynb:47-53,83-105"]},
+    "A2_identity": {"status": "PASS_FOR_ORDERED_CONTRACT_FAIL_FOR_SAME_SOURCE_SEMANTICS", "reason": "Current 18-name feature list/order is asserted and used for PhiUSIIL and PhreshPhish; deterministic raw URL extractor smoke test returned 18 ordered fields. Same-name equality with precomputed columns is not supported: sample exact agreement is 0% for NoOfLettersInURL, LetterRatioInURL, NoOfOtherSpecialCharsInURL, SpacialCharRatioInURL; DomainLength exact agreement 6.555%.", "evidence": ["Experiment/5 - PhiUSIIL Focused Ablation/src/features.py:30-54,57-67,80-121", "Experiment/5 - PhiUSIIL Focused Ablation/src/data.py:53-62,91-110", "Experiment/5 - PhiUSIIL Focused Ablation/outputs/audit/audit_20261024T214912326638Z/a2_vs_source_agreement.csv:2-19", "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp6_Cross_Corpus/transfer.executed.ipynb:55-65"]},
+    "train_test_isolation": {"status": "PASS_FOR_ESTIMATOR_FIT_AND_A2_TRANSFORM_WITH_UPSTREAM_A0_A1_PROVENANCE_RISK", "reason": "Current E5 fit passes selected train X/y to model.fit and test data only to prediction; A2 values are deterministic per-row URL computations. E6 fits only source train and predicts source test and target. A0/A1 are inherited stored features; the upstream creation scope cannot be verified, and random-row split has canonical URL overlap.", "evidence": ["Experiment/5 - PhiUSIIL Focused Ablation/src/run_experiment.py:173-219,227-338", "Experiment/5 - PhiUSIIL Focused Ablation/src/features.py:92-121", "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp6_Cross_Corpus/transfer.executed.ipynb:55-104", "Experiment/5 - PhiUSIIL Focused Ablation/README.md:145-155"]},
+    "causal_ceiling_effect_support": {"status": "FAIL_AS_CAUSAL_SUPPORT_DESCRIPTIVE_SATURATION_ONLY", "reason": "Full-data high solo AUCs and near-ceiling in-corpus metrics show separability/saturation, but the feature producer/label provenance is unknown and no design identifies that it caused the ceiling. A1-A0 estimates only a small six-feature group contrast; no causal mechanism is isolated.", "evidence": ["Experiment/1 - PhiUSIIL Cleaning + Leakage-Audit Notebook/01_phiusiil_cleaning_audit.ipynb:49-71", "Experiment/5 - PhiUSIIL Focused Ablation/src/data.py:43-55", "Experiment/5 - PhiUSIIL Focused Ablation/outputs/summary_20261025T051222767276Z/paired_bootstrap.csv:1-9", "phishing/AI_Review_SINTA2_Package_v8/01_Draft/BITS_Draft_Phishing_URL_Leakage_v8_final.docx:155-161,200-221"]}
+  },
+  "direct_runtime_checks": [
+    {"check": "raw_phiusiil_csv_schema_and_labels", "result": "PASS", "method": "pandas.read_csv direct local read", "observed": {"rows": 235795, "columns": 56, "label_counts": {"0": 100945, "1": 134850}, "y_phish_counts_after_1_minus_label": {"0": 134850, "1": 100945}}, "evidence": "dataset/PhiUSIIL Phishing/PhiUSIIL_Phishing_URL_Dataset.csv; E1 notebook lines 30-33 prints same label names/counts"},
+    {"check": "clean_phiusiil_schema_and_labels", "result": "PASS", "method": "pandas.read_parquet direct read", "observed": {"rows": 235370, "columns": 55, "source_label_counts": {"0": 100520, "1": 134850}, "y_phish_counts": {"0": 134850, "1": 100520}, "duplicates_removed": 425}, "evidence": "Experiment/1 - PhiUSIIL Cleaning + Leakage-Audit Notebook/phiusill_clean/phiusiil_clean.parquet; outputs/audit/audit_20261024T214912326638Z/audit_summary.json:12-22"},
+    {"check": "raw_phreshphish_parquet_schema", "result": "PASS", "method": "pyarrow.read_schema direct read of local train-000/test-000", "observed": {"train_fields": ["sha256", "url", "label", "target", "date", "lang", "lang_score", "html"], "test_fields": ["sha256", "url", "label", "target", "date", "lang", "lang_score", "html"]}, "evidence": "dataset/PhreshPhish/data/train-000.parquet and test-000.parquet; data/README.md:17-27 describes corpus and split counts"},
+    {"check": "current_a2_url_feature_extractor_smoke", "result": "PASS", "method": "Imported the actual Experiment/5 src.features.url_features and evaluated representative https URL and IP/http URL", "observed": "18 keys equal FEATURE_ORDER in exact order; deterministic numeric output; no label inputs or target encoders in function", "evidence": "Experiment/5 - PhiUSIIL Focused Ablation/src/features.py:92-121; returned outputs recorded in worker console"},
+    {"check": "direct_raw_feature_auc_recomputation", "result": "PASS", "method": "Read all 235795 raw rows; roc_auc_score on y_phish=1-label then direction-free max(AUC,1-AUC)", "observed": {"URLSimilarityIndex": 0.9961068, "LineOfCode": 0.9902547, "NoOfExternalRef": 0.9880213, "DomainTitleMatchScore": 0.792286, "URLTitleMatchScore": 0.7707086, "TLDLegitimateProb": 0.6088554, "URLCharProb": 0.7678514, "CharContinuationRate": 0.7438507}, "scope": "Descriptive screen on whole labeled raw data; not a train-only estimate or proof of leakage", "evidence": "dataset/PhiUSIIL Phishing/PhiUSIIL_Phishing_URL_Dataset.csv; E1 notebook lines 49-64"},
+    {"check": "clean_tld_target_encoding_candidate_formula", "result": "FAIL_TO_MATCH_EXACT_FORMULA", "method": "Computed clean y_phish mean grouped by clean TLDLength and compared to stored TLDLegitimateProb", "observed": {"exact_tolerance_matches": 0, "rows": 235370, "groups": 12, "max_absolute_delta": 0.9999977}, "interpretation": "Does not establish other-provenance or remove risk; refutes only this exact formula as source of current stored column", "evidence": "Experiment/1 - PhiUSIIL Cleaning + Leakage-Audit Notebook/phiusill_clean/phiusiil_clean.parquet; `TLDLegitimateProb` column"}
+  ],
+  "metric_semantics": {
+    "current": {"positive_label": "phishing=1", "negative_label": "benign=0", "probability": "P(phishing) selected from model.classes_ value 1", "confusion_matrix_labels": [0, 1], "ravel_order": ["TN", "FP", "FN", "TP"], "fpr": "FP/(FP+TN) among benign", "phishing_f1": "2*TP/(2*TP+FP+FN)"},
+    "legacy_e3": {"input_label": "source PhiUSIIL: phish=0, benign=1", "default_sklearn_pos_label": 1, "reported_precision_recall_f1": "benign-positive metrics", "reported_fp_over_fp_plus_tn": "phishing miss-rate given the source matrix order", "probability_column_1": "P(benign)", "evidence": "Experiment/3.1 - evaluation pipeline v2/03_evaluation_pipeline_v2_run_complete.ipynb:47-76,83-105"}
+  },
+  "feature_scope": {
+    "A0": {"count": 47, "source": "precomputed columns of cleaned PhiUSIIL parquet", "feature_names_and_membership_evidence": "Experiment/5 - PhiUSIIL Focused Ablation/src/data.py:35-53"},
+    "A1": {"count": 41, "source": "A0 minus LineOfCode, NoOfExternalRef, NoOfImage, NoOfSelfRef, NoOfJS, NoOfCSS", "evidence": "Experiment/5 - PhiUSIIL Focused Ablation/src/data.py:51-60"},
+    "A2": {"count": 18, "source": "shared deterministic URL-only extractor", "evidence": "Experiment/5 - PhiUSIIL Focused Ablation/src/features.py:34-54,92-121"},
+    "A2_is_pure_subset_ablation": false,
+    "A2_same_names_mean_same_computation_as_source": false
+  },
+  "feature_screen_and_fitting_scope": {
+    "E1_single_feature_auc_screen": "whole dataset; before split; target labels used to calculate AUC for descriptive audit",
+    "historical_probe_TLDLegitimateProb": "whole PhiUSIIL labels before experiment split; original Phresh train-partition labels before a later resplit; proven leakage in those probes only",
+    "current_E5_A0_A1_fit": "model estimator train IDs and labels only; stored upstream feature-generation information scope unknown",
+    "current_E5_A2_fit": "feature extraction URL-only and row-local; estimator fit uses train fold only",
+    "E6_transfer_fit": "PhiUSIIL random seed-42 train fold only; no target fit/adaptation; target feature transform is deterministic row-local A2",
+    "E7_threshold_selection": "validation labels/scores; frozen before test; E7 package documents validation-only but code location in package imports local implementation",
+    "E8_error_analysis": "consumes saved E4 test predictions; no model refit/tuning"
+  },
+  "notebook_execution_history_inspected": [
+    {"path": "Experiment/4 - PhreshPhish Temporal Audit/04_PhreshPhish_Temporal_Audit.ipynb", "code_cells": 7, "executed_cells": 7, "error_outputs": 0, "counts": [1,2,3,4,5,6,7]},
+    {"path": "Experiment/5 - PhiUSIIL Focused Ablation/notebooks/02_phiusiil_ablation.executed.ipynb", "code_cells": 8, "executed_cells": 8, "error_outputs": 0, "counts": [1,2,3,4,5,6,7,8]},
+    {"path": "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp6_Cross_Corpus/transfer.executed.ipynb", "code_cells": 5, "executed_cells": 5, "error_outputs": 0, "counts": [1,2,3,4,5]},
+    {"path": "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp7_Operational_Threshold/01_operational_thresholds.executed.ipynb", "code_cells": 8, "executed_cells": 8, "error_outputs": 0, "counts": [1,2,3,4,5,6,7,8]},
+    {"path": "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp8_Error_Taxonomy/error_taxonomy.executed.ipynb", "code_cells": 13, "executed_cells": 13, "error_outputs": 0, "counts": [1,2,3,4,5,6,7,8,9,10,11,12,13]}
+  ],
+  "caveats": [
+    "No producer source or provenance metadata for most precomputed PhiUSIIL columns was found in local executable files; feature provenance is unknown, not assumed safe or leaky.",
+    "Current feature screen and model fitting are different stages: AUC screen uses all labels for description; model fits use selected train folds. Whole-data screening may inform post-hoc narrative but it did not automatically fit or mutate model features.",
+    "E5 A0/A1 stored columns may embed corpus or label-dependent signals even though current estimator fitting is train-only.",
+    "E1 cleaning-report table is inconsistent with actual drop code and actual dropped list; rely on executable code for what current pipeline actually drops.",
+    "The v8 manuscript has some numbers from the v8 E5 results, but older E3 CSV metrics cannot be interpreted as phishing-positive without label transformation/recalculation.",
+    "Legacy target-encoding probe is a separate exploratory code path, not evidence the current stored source column is generated by that exact formula."
+  ]
+}

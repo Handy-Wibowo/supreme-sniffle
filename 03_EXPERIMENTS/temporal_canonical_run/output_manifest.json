@@ -1,0 +1,142 @@
+[
+  {
+    "file": "actual_test_domain_exposure.csv",
+    "sha256": "c617c1f5b9e4ba0a9da3d7b08edad5e61b100362d4c287e2c0dca4b885b06b34",
+    "bytes": 92
+  },
+  {
+    "file": "cluster_bootstrap_primary_seed.csv",
+    "sha256": "ec5eec81e3bd2012a569c35793bdd4db3c8c9f1e18b921bf8b523291f29f2cd9",
+    "bytes": 356
+  },
+  {
+    "file": "design.json",
+    "sha256": "6f6b23f06fab4c7e726faab16d2553a9d0b8a05a82b4c6fd724ba75f7ab693c3",
+    "bytes": 1469
+  },
+  {
+    "file": "excluded_rows.csv",
+    "sha256": "7aa0faa37b883f28d59870f229c71297b01128e27672d9bd7832796edbb74e3d",
+    "bytes": 49296
+  },
+  {
+    "file": "feature_schema.json",
+    "sha256": "53449ff2c6231210d87be8b6a0402e00eea649aeea636c391c8253bdb7e43ae4",
+    "bytes": 694
+  },
+  {
+    "file": "input_manifest.json",
+    "sha256": "d400944c98ec67f5cc56c43d0afa67c50512576fba9f3285637a3b6075c5b305",
+    "bytes": 13145
+  },
+  {
+    "file": "model_params_seed_13.json",
+    "sha256": "cab3bc147007ee3a3d8674c290dced5514a2209e55a3d39f5a343c34535741b8",
+    "bytes": 492
+  },
+  {
+    "file": "model_params_seed_2024.json",
+    "sha256": "d83b0855b28c80516754602ec050ac92caf67c5e1acf10fee5a6d2d86b539138",
+    "bytes": 494
+  },
+  {
+    "file": "model_params_seed_31415.json",
+    "sha256": "059ba1ce28d19cd1cd916d5f171a59b66f45b5329d21ee12d6d861eac94ffe25",
+    "bytes": 495
+  },
+  {
+    "file": "model_params_seed_42.json",
+    "sha256": "7979f485e959a9f75e6151632b0be14e2725624ab9baf87766bf519bfcc62431",
+    "bytes": 492
+  },
+  {
+    "file": "model_params_seed_777.json",
+    "sha256": "982ecb1db5f0cee8492bf4cae0ab3504706b3d6ac8c8eae59eca0deb7ff10418",
+    "bytes": 493
+  },
+  {
+    "file": "model_seed_13.txt",
+    "sha256": "d4bc75474f1578f8fe79cb2ac5e617b1630498577d99f473f881d7cd0b9fcffb",
+    "bytes": 2082015
+  },
+  {
+    "file": "model_seed_2024.txt",
+    "sha256": "d77b2e76417a8cf93ebce8e33bb3acbadb079db2487d5bbc5da4579dfb103e07",
+    "bytes": 2083370
+  },
+  {
+    "file": "model_seed_31415.txt",
+    "sha256": "c1668fe68fbc4dba65b858686ce2e481e8a3ceea260ce15863d09cd2c59f241b",
+    "bytes": 2083561
+  },
+  {
+    "file": "model_seed_42.txt",
+    "sha256": "97185b30deb53171275d87d8a1a2369dd179599d3183237d31b940913711e522",
+    "bytes": 2082051
+  },
+  {
+    "file": "model_seed_777.txt",
+    "sha256": "aa174ac657bea4421d24326406b2e6dc7e25ba688f82ed83afca360a36b37b01",
+    "bytes": 2082352
+  },
+  {
+    "file": "monthly_descriptive_primary_seed.csv",
+    "sha256": "1abcac65693f4fc77cd63da4ec2d989a6066a0309bf0128b5e76cb7ac17f63a9",
+    "bytes": 890
+  },
+  {
+    "file": "predictions_seed_13.csv.gz",
+    "sha256": "aeba432c65cab939f5f893ba181d1da8df2497da726e5e09ae075997afd915f6",
+    "bytes": 3344569
+  },
+  {
+    "file": "predictions_seed_2024.csv.gz",
+    "sha256": "46858dfafb80ff5ff71dac21149dba218b6332bfd0ce53a90d637350847f0108",
+    "bytes": 3346624
+  },
+  {
+    "file": "predictions_seed_31415.csv.gz",
+    "sha256": "6f7b32896ad35895b59c0ad7fcc30b0fa4aff238780b4d1b573c41025bfa3fbb",
+    "bytes": 3347035
+  },
+  {
+    "file": "predictions_seed_42.csv.gz",
+    "sha256": "f816d3683de2f7e56e570f917618e4b045170217888b53501691787e7da062a2",
+    "bytes": 3345496
+  },
+  {
+    "file": "predictions_seed_777.csv.gz",
+    "sha256": "562bafd925d15cc587cee6da51ca8ee96052b2dcc26fda74b6958a1e0f392ccd",
+    "bytes": 3346008
+  },
+  {
+    "file": "results_per_seed.csv",
+    "sha256": "2314c73ec87b96cb8e889dcf0e0a7943e4241148f72fe76f5271e80a06657746",
+    "bytes": 3948
+  },
+  {
+    "file": "row_ledger.csv",
+    "sha256": "83ebca8d107a6b9fc16a797ab8bdf56bc6b3a4301f0206972ca38cb571306797",
+    "bytes": 682
+  },
+  {
+    "file": "seed_variation.csv",
+    "sha256": "d041b6e41c3e1133940e27e75708b91615479973b4c2686323e01b9f80bc8e38",
+    "bytes": 2468
+  },
+  {
+    "file": "split_test.csv.gz",
+    "sha256": "b05907450beb66d5e697055b16a9204036b437344e483c417e8bbc0fb01abd04",
+    "bytes": 8849451
+  },
+  {
+    "file": "split_train.csv.gz",
+    "sha256": "361ecdf45bc67534448f458160ff44e645d0786a9e48ee7e57a6281f89757dde",
+    "bytes": 25918587
+  },
+  {
+    "file": "unparseable_urls.csv",
+    "sha256": "7268310daa295783e8dc999c8ef51d8ac0e2d9301d0e25287012596c0f311a53",
+    "bytes": 400
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "run_id": "summary_20261025T051222767276Z",
+  "created_utc": "2026-10-25T05:12:55.928543Z",
+  "source_runs": [
+    {
+      "run_dir": "outputs\\20261025T050131000106Z",
+      "metrics_sha256": "547e20865a0488789b8e36f2ea2bef4d0a3dbe7985f8de91756de326a09b5659"
+    },
+    {
+      "run_dir": "outputs\\20261025T050850736450Z",
+      "metrics_sha256": "46525c956ba185e6b5df70369eca401b289fe8c6912abcc4142e4bf111391560"
+    }
+  ],
+  "replicates": 1000,
+  "bootstrap_seed": 42,
+  "unit": "registrable_domain",
+  "files": [
+    "base_rate_projection.csv",
+    "bootstrap_intervals.csv",
+    "bootstrap_temporal.csv",
+    "metrics_all.csv",
+    "paired_bootstrap.csv",
+    "summary.csv"
+  ],
+  "notes": "Intervals describe sampling uncertainty of the test domains for a fixed model and cohort; they are not temporal generalisation guarantees."
+}

@@ -1,0 +1,13 @@
+ref_id,cited_metadata_v9,verified_metadata,match,issue_found,action_v10,verification_source
+1,"vol. 136, Art. no. 103545, 2024","vol. 136, Art. no. 103545; online 2023-10-20, issue 2024",MATCH (issue year),none,unchanged,OpenAlex W4387826905
+2,"arXiv:2507.10854, 2025","arXiv:2507.10854 v1 2025-07-14, v2 2026-02-11",MATCH,v2 exists (2026); v1 year retained as cited,unchanged,arXiv API
+3,"CSET 18, Baltimore, MD, 2018","11th USENIX CSET 18, Baltimore, MD, 2018",MATCH,workshop proceedings assign no page range,unchanged,usenix.org BibTeX 220243
+4,"vol. 8, pp. 22170-22192, 2020","vol. 8, pp. 22170-22192, 2020",MATCH,none,unchanged,OpenAlex W3003583062
+5,"pp. 3971-3988, 2022","pp. 3971-3988, Boston MA, 2022",MATCH,none,unchanged,usenix.org BibTeX 277204
+6,"vol. 4, no. 9, Art. no. 100804, 2023","vol. 4, no. 9, Art. no. 100804, 2023",MATCH,none,unchanged,OpenAlex W4385576721
+7,"vol. 22, no. 1, pp. 671-708, 2020","vol. 22, no. 1, pp. 671-708; online 2019-12-05",MATCH (issue year),none,unchanged,OpenAlex W2983955849
+8,"vol. 104, Art. no. 104347, 2021","vol. 104, Art. no. 104347, 2021",MATCH,none,unchanged,OpenAlex W3094291258
+9,"pp. 137-145, 2024","pp. 137-145, 2024-12-19",MATCH,none,unchanged,OpenAlex W4404569134; Crossref
+10,"vol. 13, no. 4, pp. 1-11, 2023","vol. 13, no. 4, pp. 1-11, 2023",MATCH,none,unchanged,OpenAlex W4389270910
+11,"vol. 7, no. 1, pp. 526-537, 2025","vol. 7, no. 1, pp. 526-537, 2025",MATCH,none,unchanged,OpenAlex W7171497939
+12,"vol. 7, no. 2, 2025","vol. 7, no. 2, pp. 1153-1163, 2025",PARTIAL (pages missing),page range absent in v9_P0 reference list,pages added: pp. 1153-1163,OpenAlex W7171518893

@@ -1,0 +1,12 @@
+element,required_for_restoring_interval,status,evidence
+Cluster unit definition (platform / host / tenant),yes,ABSENT,"no script defines a cluster key for E8; grep 'cluster' in Exp8 returns 0 hits"
+Model and cohort specification,yes,ABSENT,"E8 execution_status.json records execution but not a cluster-level estimand"
+Row inclusion / exclusion rule,yes,ABSENT,"no row-level inclusion artefact in Exp8 output"
+Statistic or estimand definition,yes,ABSENT,"no definition file; only a category error table exists"
+Resampling method and replicate count,yes,ABSENT,"no resampling code in Exp8 folder or elsewhere in the workspace"
+Random seed,yes,ABSENT,"no seed artefact for a cluster computation"
+Confidence level,yes,ABSENT,"no configuration artefact"
+Treatment of overlapping categories,yes,ABSENT,"manuscript notes categories overlap; no computation encodes that"
+Saved row-level inputs,yes,ABSENT,"E8 ships category_error_table.csv and execution_status.json only"
+Output hash of the interval,yes,ABSENT,"no output artefact exists"
+Post-P0 manuscript state,no,PRESENT,"interval [1,6%; 66,7%] removed; 37,1% retained as descriptive cohort-scoped share; cluster uncertainty labelled unverified"

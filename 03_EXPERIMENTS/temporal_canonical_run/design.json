@@ -1,0 +1,48 @@
+{
+  "protocol": "modified_temporal_url_deduplicated",
+  "training_corpus": "PhreshPhish",
+  "evaluation_corpus": "PhreshPhish",
+  "label_mapping": {
+    "benign": 0,
+    "phish": 1
+  },
+  "cutoff": "2025-09-08 00:00:00+00:00",
+  "seeds": [
+    13,
+    42,
+    2024,
+    777,
+    31415
+  ],
+  "primary_seed": 13,
+  "threshold": 0.5,
+  "model": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "n_jobs": -1,
+    "verbosity": -1
+  },
+  "include_psl_private_domains": false,
+  "tuning": "none",
+  "test_status": "previously inspected in exploratory probes",
+  "bootstrap_replicates": 1000,
+  "environment": {
+    "numpy": "2.5.3",
+    "pandas": "3.1.0",
+    "pyarrow": "26.0.0",
+    "sklearn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "tldextract": "5.4.0"
+  },
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "logical_cpus": 16,
+  "executor": "local_runner_port_of_notebook",
+  "train_shard_limit": null,
+  "test_shard_limit": null,
+  "unparseable_url_policy": "exclude",
+  "unparseable_url_max_share": 0.0001,
+  "unparseable_url_decision": "Rows whose URL urllib cannot parse receive no features and are excluded with reason unparseable_url, logged in unparseable_urls.csv; the run aborts if the share exceeds unparseable_url_max_share."
+}

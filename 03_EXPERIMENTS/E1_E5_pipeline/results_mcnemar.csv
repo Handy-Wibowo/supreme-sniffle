@@ -1,0 +1,5 @@
+comparison,family,n_test,p_mcnemar,wins_a,wins_b
+lgbm vs xgb,lexical+host,44218,0.263176,13,7
+lgbm vs xgb,content,44218,0.059584,27,14
+lgbm vs xgb,all-features,44218,1.0,2,2
+random-trained vs sitedisjoint-trained (both on sitedisjoint test),all-features,44218,0.21875,5,1

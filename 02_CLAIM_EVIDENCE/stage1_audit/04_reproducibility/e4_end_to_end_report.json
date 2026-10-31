@@ -1,0 +1,171 @@
+{
+  "run_dir": "outputs\\20261022T170935017991Z",
+  "run": "20261022T170935017991Z",
+  "output_manifest_sha256": "911a0691c8606bed0ad666e1d35f87ed15b7af326dd8ad2d23d7867877de9c1f",
+  "checks_total": 25,
+  "checks_passed": 25,
+  "checks_failed": 0,
+  "max_probability_delta_by_seed": {
+    "13": 0.0,
+    "42": 0.0,
+    "2024": 0.0,
+    "777": 0.0,
+    "31415": 0.0
+  },
+  "test_rows_verified": 168035,
+  "train_rows_verified": 40000,
+  "feature_columns": [
+    "URLLength",
+    "DomainLength",
+    "TLDLength",
+    "NoOfSubDomain",
+    "NoOfObfuscatedChar",
+    "ObfuscationRatio",
+    "NoOfLettersInURL",
+    "LetterRatioInURL",
+    "NoOfDegitsInURL",
+    "DegitRatioInURL",
+    "NoOfEqualsInURL",
+    "NoOfQMarkInURL",
+    "NoOfAmpersandInURL",
+    "NoOfOtherSpecialCharsInURL",
+    "SpacialCharRatioInURL",
+    "IsHTTPS",
+    "HasObfuscation",
+    "IsDomainIP"
+  ],
+  "checks": [
+    {
+      "check": "test_row_ids_all_present",
+      "ok": true,
+      "detail": "168035 of 168035"
+    },
+    {
+      "check": "test_label_fidelity",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "test_date_fidelity",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "test_canonical_hash",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "test_domain_fidelity",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "test_feature_columns",
+      "ok": true,
+      "detail": "18 columns"
+    },
+    {
+      "check": "test_features_finite",
+      "ok": true,
+      "detail": "all finite"
+    },
+    {
+      "check": "no_target_encoding_column",
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "check": "train_row_ids_all_present",
+      "ok": true,
+      "detail": "40000 of 40000"
+    },
+    {
+      "check": "train_label_fidelity",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "train_date_fidelity",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "train_canonical_hash",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "train_domain_fidelity",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "train_feature_columns",
+      "ok": true,
+      "detail": "18 columns"
+    },
+    {
+      "check": "test_domain_seen_from_train",
+      "ok": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "seed_13_probabilities_reproduce",
+      "ok": true,
+      "detail": "max |dp| = 0.000e+00"
+    },
+    {
+      "check": "seed_42_probabilities_reproduce",
+      "ok": true,
+      "detail": "max |dp| = 0.000e+00"
+    },
+    {
+      "check": "seed_2024_probabilities_reproduce",
+      "ok": true,
+      "detail": "max |dp| = 0.000e+00"
+    },
+    {
+      "check": "seed_777_probabilities_reproduce",
+      "ok": true,
+      "detail": "max |dp| = 0.000e+00"
+    },
+    {
+      "check": "seed_31415_probabilities_reproduce",
+      "ok": true,
+      "detail": "max |dp| = 0.000e+00"
+    },
+    {
+      "check": "seed_13_confusion_matrix",
+      "ok": true,
+      "detail": "recomputed=(85629, 5630, 21636, 55140) stored=(85629, 5630, 21636, 55140)"
+    },
+    {
+      "check": "seed_42_confusion_matrix",
+      "ok": true,
+      "detail": "recomputed=(85710, 5549, 21731, 55045) stored=(85710, 5549, 21731, 55045)"
+    },
+    {
+      "check": "seed_2024_confusion_matrix",
+      "ok": true,
+      "detail": "recomputed=(85620, 5639, 21775, 55001) stored=(85620, 5639, 21775, 55001)"
+    },
+    {
+      "check": "seed_777_confusion_matrix",
+      "ok": true,
+      "detail": "recomputed=(85647, 5612, 21977, 54799) stored=(85647, 5612, 21977, 54799)"
+    },
+    {
+      "check": "seed_31415_confusion_matrix",
+      "ok": true,
+      "detail": "recomputed=(85659, 5600, 21890, 54886) stored=(85659, 5600, 21890, 54886)"
+    }
+  ],
+  "verifier_python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "verifier_packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "tldextract": "5.4.0"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "audit": "E6 verifier side-effect forensic comparison",
+  "scope": {
+    "mode": "read-only forensic comparison",
+    "verifier_rerun": false,
+    "source_files_touched": false,
+    "allowed_outputs": [
+      "phishing/revision_v9_stage1_audit/04_reproducibility/SIDE_EFFECT_AUDIT.md",
+      "phishing/revision_v9_stage1_audit/04_reproducibility/SIDE_EFFECT_AUDIT.json"
+    ]
+  },
+  "finding": "Numerical E6 predictions and metrics are unchanged relative to the pre-audit v8 package snapshot; current metric-check CSV matches the package-recorded digest. Current workspace manifest differs from immutable pre-audit manifest only in independent_verification.command. The exact workspace CSV bytes immediately before the 2026-10-27 verifier invocation are not preserved; the invocation is documented to overwrite it, but cannot be distinguished as a same-byte rewrite vs content change at invocation time.",
+  "targets": {
+    "independent_metrics_check.csv": {
+      "path": "Experiment/6 - Cross-Corpus Transfer/outputs/independent_metrics_check.csv",
+      "current": {
+        "size_bytes": 29153,
+        "mtime_utc": "2026-10-27T13:16:21.528198+00:00",
+        "sha256": "9bac0a3fd018d5d7f8fa3340b49f9732b9aa76effe4a4dcdb5f2aaeef6a39a42",
+        "manifest_sha256_matches": true
+      },
+      "prior_evidence": {
+        "executed_notebook": "Experiment/6 - Cross-Corpus Transfer/transfer.ipynb, code cell 9 output, execution count 5",
+        "notebook_sha256": "26301de0861646b2461c3c03e30c3051bc31ac2e4061c41922e4aeac949b1a1e",
+        "notebook_output_time": {
+          "input_utc": "2026-10-26T06:43:06.706453Z",
+          "idle_utc": "2026-10-26T06:43:26.670588Z"
+        },
+        "embedded_original_csv_sha256": "368639c03d1cb25dd99d4d4666d6568e0707e0c64ec138139284acb896b67e3d",
+        "package_manifest_recorded_csv_sha256": "9bac0a3fd018d5d7f8fa3340b49f9732b9aa76effe4a4dcdb5f2aaeef6a39a42",
+        "v8_package_manifest_path": "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp6_Cross_Corpus/manifest.json",
+        "v8_package_manifest_mtime_utc": "2026-10-26T06:47:40.422005+00:00",
+        "archive_member": "phishing/AI_Review_SINTA2_Package_v8/01 02 03.zip:03_Experiments/Exp6_Cross_Corpus/manifest.json",
+        "archive_member_manifest_byte_identical_to_directory_copy": true
+      },
+      "current_structure": {
+        "rows": 260,
+        "distinct_prediction_files": 20,
+        "metrics_per_prediction_file": 13,
+        "columns": [
+          "file",
+          "metric",
+          "independent_value",
+          "reported_value",
+          "absolute_difference",
+          "pass"
+        ],
+        "all_pass": true,
+        "all_absolute_difference_zero": true
+      },
+      "comparison": "Current SHA equals immutable package manifest's expected CSV SHA, but differs from the earlier digest embedded in the original executed notebook output. Notebook-generated source specifies saved_prediction_recompute/metrics_csv column labels; current verifier source specifies independent_value/reported_value. The package manifest proves verifier-style CSV bytes existed by package time. The exact immediate pre-invocation workspace CSV is not preserved, so whether the 2026-10-27 verifier invocation changed bytes versus rewriting identical bytes is unknown.",
+      "numerical_change_status": "No numerical changes evidenced: all 260 current comparisons have exact zero delta, and all 25 pre-package output hashes match current workspace outputs."
+    },
+    "manifest.json": {
+      "path": "Experiment/6 - Cross-Corpus Transfer/outputs/manifest.json",
+      "current": {
+        "size_bytes": 9144,
+        "mtime_utc": "2026-10-27T13:16:21.611865+00:00",
+        "sha256": "627c64b8b55d983ed3c51d1ab6d82e0cbeedeb3974b5d5709e000ff1bfba9dce"
+      },
+      "prior_immutable_copy": {
+        "path": "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp6_Cross_Corpus/manifest.json",
+        "size_bytes": 9213,
+        "mtime_utc": "2026-10-26T06:47:40.422005+00:00",
+        "sha256": "105a73dce8669180b3f0978ddd2d8a860b00e05a85c43aeee98cadb4c690e0df",
+        "archive_sha256": "3be48649c5f8a7c107aaf4745aabcfaabc2c559c78ae5d72d4230683efe6b774",
+        "archive_member_identical": true
+      },
+      "semantic_differences": [
+        {
+          "json_path": "independent_verification.command",
+          "prior": "\"E:\\Kuliah\\Tugas Akhir\\Experiment\\5 - PhiUSIIL Focused Ablation\\.venv\\Scripts\\python.exe\" \"Experiment/6 - Cross-Corpus Transfer/verify_predictions.py\"",
+          "current": "\"C:\\Python314\\python.exe\" \"Experiment/6 - Cross-Corpus Transfer/verify_predictions.py\""
+        }
+      ],
+      "all_other_manifest_fields_equal": true,
+      "all_25_recorded_output_hashes_match_current_workspace_files": true,
+      "interpretation": "Only verifier invocation metadata changed; no manifest protocol, input, environment, metric count/value, or output digest changed."
+    }
+  },
+  "verifier_write_behavior_source": {
+    "path": "Experiment/6 - Cross-Corpus Transfer/verify_predictions.py",
+    "sha256": "565c34f66d982d793febeac351e51f5df6f4914e3d06635648335feeac260337",
+    "source_lines": {
+      "13-32": "Read metrics.csv and prediction files; recompute 260 per-file metrics and counts.",
+      "33-34": "Write independent_metrics_check.csv.",
+      "35-42": "Read manifest, validate saved output hashes other than the check CSV about to be replaced.",
+      "43-45": "Set check CSV digest; write independent_verification containing sys.executable command, verifier hash, check count and status; overwrite manifest.json."
+    },
+    "documented_invocation": "python verify_predictions.py from Experiment/6 - Cross-Corpus Transfer",
+    "recorded_result": "exit 0; 20 prediction files; 260 metric checks; 24 SHA checks; see 04_reproducibility/e6_verify.log and COMMAND_LOG.md C07",
+    "this_forensic_dispatch_ran_verifier": false
+  },
+  "cross_output_integrity": {
+    "pre_audit_package_output_hash_count": 25,
+    "current_hash_matches": 25,
+    "mismatches": [],
+    "metrics_csv_sha256": "e0f2e6861f99f8204b2285d8d1c2a47a1a33b7eccb6f82f8a27520ba7e0a67d4",
+    "metrics_csv_unchanged": true,
+    "prediction_files_unchanged": true
+  },
+  "proven_facts": [
+    "The package manifest and archived ZIP member have identical bytes and pre-audit filesystem timestamps.",
+    "Current independent_metrics_check.csv SHA-256 is 9bac0a3fd018d5d7f8fa3340b49f9732b9aa76effe4a4dcdb5f2aaeef6a39a42, equal to the output hash already recorded in the pre-audit package manifest.",
+    "The original executed notebook contains an earlier CSV output digest 368639c03d1cb25dd99d4d4666d6568e0707e0c64ec138139284acb896b67e3d and notebook-style column names; the package CSV digest is a later state.",
+    "Only independent_verification.command differs semantically between the package manifest and current workspace manifest.",
+    "All 25 E6 output hashes from package snapshot match current workspace artifacts; current independent metric file has 260 passing comparisons and all deltas zero.",
+    "Verifier source writes only the independent-metrics check CSV and manifest metadata; it does not write saved predictions or metrics.csv."
+  ],
+  "unavailable_pre_run_state": [
+    "No byte-for-byte snapshot of the two workspace files immediately before the 2026-10-27 verifier invocation was found.",
+    "The pre-package CSV's original bytes and its prior filesystem timestamp are not retained; only its earlier notebook-embedded SHA-256 is available.",
+    "The package manifest is a copied immutable snapshot, not a copy of the live workspace manifest immediately before the audit verifier ran."
+  ],
+  "evidence_paths": [
+    "Experiment/6 - Cross-Corpus Transfer/outputs/independent_metrics_check.csv",
+    "Experiment/6 - Cross-Corpus Transfer/outputs/manifest.json",
+    "Experiment/6 - Cross-Corpus Transfer/transfer.ipynb",
+    "Experiment/6 - Cross-Corpus Transfer/verify_predictions.py",
+    "Experiment/6 - Cross-Corpus Transfer/outputs/metrics.csv",
+    "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_*.csv.gz",
+    "phishing/AI_Review_SINTA2_Package_v8/03_Experiments/Exp6_Cross_Corpus/manifest.json",
+    "phishing/AI_Review_SINTA2_Package_v8/01 02 03.zip:03_Experiments/Exp6_Cross_Corpus/manifest.json",
+    "phishing/AI_Review_SINTA2_Package_v8/02_Evidence/FINAL_VERIFICATION_v8.md",
+    "phishing/revision_v9_stage1_audit/03_cross_corpus_overlap/OVERLAP_RESULTS.json",
+    "phishing/revision_v9_stage1_audit/04_reproducibility/COMMAND_LOG.md",
+    "phishing/revision_v9_stage1_audit/04_reproducibility/e6_verify.log"
+  ]
+}

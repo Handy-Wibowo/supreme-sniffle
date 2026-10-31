@@ -1,0 +1,3127 @@
+{
+  "audit": "cross-corpus URL and domain overlap",
+  "canonicalization": {
+    "implementation": "Experiment 5 src.features.canonical_url",
+    "rules": "URL whitespace stripped; missing scheme receives http://; HTTP(S) only; scheme and hostname lowercased; trailing hostname dot removed; path defaults to /; query retained byte-for-byte; fragment removed; userinfo and explicit port retained; invalid port/host rejected."
+  },
+  "cohorts": {
+    "source": {
+      "class_counts_phishing_positive": {
+        "benign": 80910,
+        "phish": 60312
+      },
+      "key_parse_status": {
+        "errors": {},
+        "invalid_key_rows": 0,
+        "rows": 141222
+      },
+      "name": "PhiUSIIL cleaned random split seed 42 train fold",
+      "rows": 141222
+    },
+    "target": {
+      "class_counts_phishing_positive": {
+        "benign": 91259,
+        "phish": 76776
+      },
+      "cutoff_utc": "2025-09-08T00:00:00+00:00",
+      "key_parse_status": {
+        "errors": {},
+        "invalid_key_rows": 0,
+        "rows": 168035
+      },
+      "name": "PhreshPhish cleaned temporal test; Experiment 4 output 20261022T170935017991Z",
+      "rows": 168035
+    }
+  },
+  "execution": {
+    "elapsed_seconds": 43.765,
+    "numpy": "2.5.3",
+    "pandas": "3.1.0",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.1",
+    "tldextract": "5.4.0"
+  },
+  "frozen_prediction_metrics_on_strict_no_overlap_subset": [
+    {
+      "average_precision": 0.3522856497835537,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.4973940980485483,
+      "fn": 5195,
+      "fp": 79283,
+      "fpr_benign": 0.9864873272032749,
+      "mcc": -0.21623049463467175,
+      "miss_phish": 0.11054132266575879,
+      "model": "lightgbm",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34522315087047006,
+      "recall_phish": 0.8894586773342412,
+      "roc_auc": 0.43497708222220866,
+      "seed": 13,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 1086,
+      "tp": 41801
+    },
+    {
+      "average_precision": 0.3522856497835537,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.4973940980485483,
+      "fn": 5195,
+      "fp": 79283,
+      "fpr_benign": 0.9864873272032749,
+      "mcc": -0.21623049463467175,
+      "miss_phish": 0.11054132266575879,
+      "model": "lightgbm",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34522315087047006,
+      "recall_phish": 0.8894586773342412,
+      "roc_auc": 0.43497708222220866,
+      "seed": 42,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 1086,
+      "tp": 41801
+    },
+    {
+      "average_precision": 0.3522856497835537,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.4973940980485483,
+      "fn": 5195,
+      "fp": 79283,
+      "fpr_benign": 0.9864873272032749,
+      "mcc": -0.21623049463467175,
+      "miss_phish": 0.11054132266575879,
+      "model": "lightgbm",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34522315087047006,
+      "recall_phish": 0.8894586773342412,
+      "roc_auc": 0.43497708222220866,
+      "seed": 2024,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 1086,
+      "tp": 41801
+    },
+    {
+      "average_precision": 0.3522856497835537,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.4973940980485483,
+      "fn": 5195,
+      "fp": 79283,
+      "fpr_benign": 0.9864873272032749,
+      "mcc": -0.21623049463467175,
+      "miss_phish": 0.11054132266575879,
+      "model": "lightgbm",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34522315087047006,
+      "recall_phish": 0.8894586773342412,
+      "roc_auc": 0.43497708222220866,
+      "seed": 777,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 1086,
+      "tp": 41801
+    },
+    {
+      "average_precision": 0.3522856497835537,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.4973940980485483,
+      "fn": 5195,
+      "fp": 79283,
+      "fpr_benign": 0.9864873272032749,
+      "mcc": -0.21623049463467175,
+      "miss_phish": 0.11054132266575879,
+      "model": "lightgbm",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34522315087047006,
+      "recall_phish": 0.8894586773342412,
+      "roc_auc": 0.43497708222220866,
+      "seed": 31415,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 1086,
+      "tp": 41801
+    },
+    {
+      "average_precision": 0.27500662198196446,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.49939817836675787,
+      "fn": 5298,
+      "fp": 78299,
+      "fpr_benign": 0.9742438004703305,
+      "mcc": -0.17977038455137892,
+      "miss_phish": 0.11273299855306834,
+      "model": "xgboost",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34749202063384915,
+      "recall_phish": 0.8872670014469316,
+      "roc_auc": 0.31877382134293597,
+      "seed": 13,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 2070,
+      "tp": 41698
+    },
+    {
+      "average_precision": 0.27500662198196446,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.49939817836675787,
+      "fn": 5298,
+      "fp": 78299,
+      "fpr_benign": 0.9742438004703305,
+      "mcc": -0.17977038455137892,
+      "miss_phish": 0.11273299855306834,
+      "model": "xgboost",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34749202063384915,
+      "recall_phish": 0.8872670014469316,
+      "roc_auc": 0.31877382134293597,
+      "seed": 42,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 2070,
+      "tp": 41698
+    },
+    {
+      "average_precision": 0.27500662198196446,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.49939817836675787,
+      "fn": 5298,
+      "fp": 78299,
+      "fpr_benign": 0.9742438004703305,
+      "mcc": -0.17977038455137892,
+      "miss_phish": 0.11273299855306834,
+      "model": "xgboost",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34749202063384915,
+      "recall_phish": 0.8872670014469316,
+      "roc_auc": 0.31877382134293597,
+      "seed": 2024,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 2070,
+      "tp": 41698
+    },
+    {
+      "average_precision": 0.27500662198196446,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.49939817836675787,
+      "fn": 5298,
+      "fp": 78299,
+      "fpr_benign": 0.9742438004703305,
+      "mcc": -0.17977038455137892,
+      "miss_phish": 0.11273299855306834,
+      "model": "xgboost",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34749202063384915,
+      "recall_phish": 0.8872670014469316,
+      "roc_auc": 0.31877382134293597,
+      "seed": 777,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 2070,
+      "tp": 41698
+    },
+    {
+      "average_precision": 0.27500662198196446,
+      "benign_n": 80369,
+      "excluded_overlap_rows": 40670,
+      "f1_phish": 0.49939817836675787,
+      "fn": 5298,
+      "fp": 78299,
+      "fpr_benign": 0.9742438004703305,
+      "mcc": -0.17977038455137892,
+      "miss_phish": 0.11273299855306834,
+      "model": "xgboost",
+      "n": 127365,
+      "phish_n": 46996,
+      "precision_phish": 0.34749202063384915,
+      "recall_phish": 0.8872670014469316,
+      "roc_auc": 0.31877382134293597,
+      "seed": 31415,
+      "subset": "strict_no_overlap_all_four_levels",
+      "threshold": 0.5,
+      "tn": 2070,
+      "tp": 41698
+    }
+  ],
+  "hostname_rule": "Experiment 5 parse_url: urllib hostname lowercased and trailing dot removed.",
+  "input_hashes": {
+    "files": {
+      "Experiment/1 - PhiUSIIL Cleaning + Leakage-Audit Notebook/phiusill_clean/phiusiil_clean.parquet": {
+        "bytes": 25486408,
+        "matches_transfer_manifest": true,
+        "sha256": "4c86b580ddc694c1a6bd2b0f249b43550508b2935be85c09b34dbaf67273468f",
+        "transfer_manifest_sha256": "4c86b580ddc694c1a6bd2b0f249b43550508b2935be85c09b34dbaf67273468f"
+      },
+      "Experiment/1 - PhiUSIIL Cleaning + Leakage-Audit Notebook/phiusill_clean/split_random.csv": {
+        "bytes": 18980177,
+        "matches_transfer_manifest": true,
+        "sha256": "9520d9bd891c2fe443732a64d0484d52f32c434afa1cc61bd1c21f669a117ab3",
+        "transfer_manifest_sha256": "9520d9bd891c2fe443732a64d0484d52f32c434afa1cc61bd1c21f669a117ab3"
+      },
+      "Experiment/1 - PhiUSIIL Cleaning + Leakage-Audit Notebook/phiusill_clean/splits_manifest.json": {
+        "bytes": 386,
+        "matches_transfer_manifest": null,
+        "sha256": "f4b1ddca7076d586c2732abcfeb6c51a588d1803934eb4589da47ca0e85d7e31",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/4 - PhreshPhish Temporal Audit/outputs/20261022T170935017991Z/design.json": {
+        "bytes": 1469,
+        "matches_transfer_manifest": null,
+        "sha256": "6f6b23f06fab4c7e726faab16d2553a9d0b8a05a82b4c6fd724ba75f7ab693c3",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/4 - PhreshPhish Temporal Audit/outputs/20261022T170935017991Z/input_manifest.json": {
+        "bytes": 13145,
+        "matches_transfer_manifest": null,
+        "sha256": "d400944c98ec67f5cc56c43d0afa67c50512576fba9f3285637a3b6075c5b305",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/4 - PhreshPhish Temporal Audit/outputs/20261022T170935017991Z/split_test.csv.gz": {
+        "bytes": 8849451,
+        "matches_transfer_manifest": true,
+        "sha256": "b05907450beb66d5e697055b16a9204036b437344e483c417e8bbc0fb01abd04",
+        "transfer_manifest_sha256": "b05907450beb66d5e697055b16a9204036b437344e483c417e8bbc0fb01abd04"
+      },
+      "Experiment/5 - PhiUSIIL Focused Ablation/src/features.py": {
+        "bytes": 5352,
+        "matches_transfer_manifest": true,
+        "sha256": "81822b4fac8b50cdf93371651e3c94680628ef189d64c32429ec15cc51cd48e6",
+        "transfer_manifest_sha256": "81822b4fac8b50cdf93371651e3c94680628ef189d64c32429ec15cc51cd48e6"
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/manifest.json": {
+        "bytes": 9144,
+        "matches_transfer_manifest": null,
+        "sha256": "627c64b8b55d983ed3c51d1ab6d82e0cbeedeb3974b5d5709e000ff1bfba9dce",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_lightgbm_seed13.csv.gz": {
+        "bytes": 2850604,
+        "matches_transfer_manifest": null,
+        "sha256": "657044572d7e473823b5add2fb53f0bda0fac3ceaabdda36868fdcfa18b34b9b",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_lightgbm_seed2024.csv.gz": {
+        "bytes": 2857148,
+        "matches_transfer_manifest": null,
+        "sha256": "b498cac11f5c09cea6f657855007845f40e93a0fd7282d00445bbd89fc79f123",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_lightgbm_seed31415.csv.gz": {
+        "bytes": 2858579,
+        "matches_transfer_manifest": null,
+        "sha256": "8c985781e728f0c585b3670517335f927c0317be3919f3d3796f441277112250",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_lightgbm_seed42.csv.gz": {
+        "bytes": 2850559,
+        "matches_transfer_manifest": null,
+        "sha256": "84c329719faa895e79ef1d61956434238eab7fc605b380585ce8a17b9ec4e785",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_lightgbm_seed777.csv.gz": {
+        "bytes": 2857427,
+        "matches_transfer_manifest": null,
+        "sha256": "88a3994580afcbb1e6cd15ce91306ced7f4171d880b41c26754579bd1a0c615e",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_xgboost_seed13.csv.gz": {
+        "bytes": 2131475,
+        "matches_transfer_manifest": null,
+        "sha256": "e5afff48926f9afe9d5535c116f38fba81231b0826f587344d4a2500b51e7e72",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_xgboost_seed2024.csv.gz": {
+        "bytes": 2138806,
+        "matches_transfer_manifest": null,
+        "sha256": "5a091f371bd910119a1f6337ae174b9eb59d8832b301b8a7efcf2fb28aef780a",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_xgboost_seed31415.csv.gz": {
+        "bytes": 2140767,
+        "matches_transfer_manifest": null,
+        "sha256": "7283b8d79d730b66861c3826674798f60948477c3a498f1852bdd9a6f2b37772",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_xgboost_seed42.csv.gz": {
+        "bytes": 2131410,
+        "matches_transfer_manifest": null,
+        "sha256": "2760cb277f1017670f5eb0754bd1724da7a79f294feae8717f7ba015a7c34484",
+        "transfer_manifest_sha256": null
+      },
+      "Experiment/6 - Cross-Corpus Transfer/outputs/predictions_phreshphish_temporal_test_xgboost_seed777.csv.gz": {
+        "bytes": 2137595,
+        "matches_transfer_manifest": null,
+        "sha256": "840790d10c0e1a784faee3d98697a0c453881f1fe5da7aa58d7dec3214055f98",
+        "transfer_manifest_sha256": null
+      },
+      "dataset/PhiUSIIL Phishing/PhiUSIIL_Phishing_URL_Dataset.csv": {
+        "bytes": 56854345,
+        "matches_transfer_manifest": null,
+        "sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+        "transfer_manifest_sha256": null
+      },
+      "dataset/PhreshPhish/data/test-000.parquet": {
+        "bytes": 55340975,
+        "matches_transfer_manifest": true,
+        "sha256": "9ae7908b64cc75669e4be4cbd0fec884ac2b3f4984211eacfbf013a2ada12851",
+        "transfer_manifest_sha256": "9ae7908b64cc75669e4be4cbd0fec884ac2b3f4984211eacfbf013a2ada12851"
+      },
+      "dataset/PhreshPhish/data/test-001.parquet": {
+        "bytes": 349640343,
+        "matches_transfer_manifest": true,
+        "sha256": "bb122ccb309436b92e7edf11792d53efdbde46c4b5d2ad7d39a7d48b50d2b00f",
+        "transfer_manifest_sha256": "bb122ccb309436b92e7edf11792d53efdbde46c4b5d2ad7d39a7d48b50d2b00f"
+      },
+      "dataset/PhreshPhish/data/test-002.parquet": {
+        "bytes": 309443239,
+        "matches_transfer_manifest": true,
+        "sha256": "da3e9b1fb7e537ea951bb6e9ac68ae5a0c48e6590714f2b90ecf5dd96276d894",
+        "transfer_manifest_sha256": "da3e9b1fb7e537ea951bb6e9ac68ae5a0c48e6590714f2b90ecf5dd96276d894"
+      },
+      "dataset/PhreshPhish/data/test-003.parquet": {
+        "bytes": 371223967,
+        "matches_transfer_manifest": true,
+        "sha256": "c6157aeddfc5eff2728e88ccc61186464e4e6861bee0ae841a830be9ebc7cf17",
+        "transfer_manifest_sha256": "c6157aeddfc5eff2728e88ccc61186464e4e6861bee0ae841a830be9ebc7cf17"
+      },
+      "dataset/PhreshPhish/data/test-004.parquet": {
+        "bytes": 378348158,
+        "matches_transfer_manifest": true,
+        "sha256": "b20de434400f3030dd711a1e4f6e012397d1c2889d575b21aa747f8c5ae04df1",
+        "transfer_manifest_sha256": "b20de434400f3030dd711a1e4f6e012397d1c2889d575b21aa747f8c5ae04df1"
+      },
+      "dataset/PhreshPhish/data/test-005.parquet": {
+        "bytes": 401642506,
+        "matches_transfer_manifest": true,
+        "sha256": "19b0ecd6a657a11a3fb43dcb22e260eb5b5c8d7a0dcee880b4705a9ee2ef1c6f",
+        "transfer_manifest_sha256": "19b0ecd6a657a11a3fb43dcb22e260eb5b5c8d7a0dcee880b4705a9ee2ef1c6f"
+      },
+      "dataset/PhreshPhish/data/test-006.parquet": {
+        "bytes": 421478326,
+        "matches_transfer_manifest": true,
+        "sha256": "a34c4ad85cf863af950cad8251717cba3642ae0c0e7bd8ab245a29a63139d187",
+        "transfer_manifest_sha256": "a34c4ad85cf863af950cad8251717cba3642ae0c0e7bd8ab245a29a63139d187"
+      },
+      "dataset/PhreshPhish/data/test-007.parquet": {
+        "bytes": 454488388,
+        "matches_transfer_manifest": true,
+        "sha256": "f91281ac9a8bbf39fe9146e115be5e74cf3d59719c2f06bb38178fbaa9d6719b",
+        "transfer_manifest_sha256": "f91281ac9a8bbf39fe9146e115be5e74cf3d59719c2f06bb38178fbaa9d6719b"
+      },
+      "dataset/PhreshPhish/data/test-008.parquet": {
+        "bytes": 456990152,
+        "matches_transfer_manifest": true,
+        "sha256": "82e7216cef17bd78f83ee3339a980d0e09ef864c83f3e8222ef809b961821252",
+        "transfer_manifest_sha256": "82e7216cef17bd78f83ee3339a980d0e09ef864c83f3e8222ef809b961821252"
+      },
+      "dataset/PhreshPhish/data/test-009.parquet": {
+        "bytes": 483918414,
+        "matches_transfer_manifest": true,
+        "sha256": "a18e27d35f3a06983c1734f875093f45dbd041ea39e796f8d762f5712f800be6",
+        "transfer_manifest_sha256": "a18e27d35f3a06983c1734f875093f45dbd041ea39e796f8d762f5712f800be6"
+      },
+      "dataset/PhreshPhish/data/test-010.parquet": {
+        "bytes": 530323891,
+        "matches_transfer_manifest": true,
+        "sha256": "b5d9ca33207b70e2c22aeef6cdec1f294a7ce5f843c6033e208c6f520c85cfdd",
+        "transfer_manifest_sha256": "b5d9ca33207b70e2c22aeef6cdec1f294a7ce5f843c6033e208c6f520c85cfdd"
+      },
+      "dataset/PhreshPhish/data/test-011.parquet": {
+        "bytes": 500273254,
+        "matches_transfer_manifest": true,
+        "sha256": "585cf9cfa0ddb54421bfccedb26590dd87426908e814f1290b1986c2e750f0e5",
+        "transfer_manifest_sha256": "585cf9cfa0ddb54421bfccedb26590dd87426908e814f1290b1986c2e750f0e5"
+      },
+      "dataset/PhreshPhish/data/test-012.parquet": {
+        "bytes": 524605977,
+        "matches_transfer_manifest": true,
+        "sha256": "3bbffccd4269ac723febeacc01905b2d52d1f98242f5bf18a82093cc4f4cdf97",
+        "transfer_manifest_sha256": "3bbffccd4269ac723febeacc01905b2d52d1f98242f5bf18a82093cc4f4cdf97"
+      },
+      "dataset/PhreshPhish/data/test-013.parquet": {
+        "bytes": 497270955,
+        "matches_transfer_manifest": true,
+        "sha256": "81daa4b68fca7b2df4d144145e80a09355d963e290d277c9976fb5a988b5e1f3",
+        "transfer_manifest_sha256": "81daa4b68fca7b2df4d144145e80a09355d963e290d277c9976fb5a988b5e1f3"
+      },
+      "dataset/PhreshPhish/data/test-014.parquet": {
+        "bytes": 478593835,
+        "matches_transfer_manifest": true,
+        "sha256": "8e30a3b2419604ce578f341392bd6e3878abdae38d7b3e38adb107bf2f557c03",
+        "transfer_manifest_sha256": "8e30a3b2419604ce578f341392bd6e3878abdae38d7b3e38adb107bf2f557c03"
+      },
+      "dataset/PhreshPhish/data/test-015.parquet": {
+        "bytes": 502425981,
+        "matches_transfer_manifest": true,
+        "sha256": "9d2589e528116c862aba4eed4ce0b4778172e8b82f2ac3c4157153666bb68adc",
+        "transfer_manifest_sha256": "9d2589e528116c862aba4eed4ce0b4778172e8b82f2ac3c4157153666bb68adc"
+      },
+      "dataset/PhreshPhish/data/test-016.parquet": {
+        "bytes": 523758907,
+        "matches_transfer_manifest": true,
+        "sha256": "3d9f97863ee0c88448487d4a13c4947951d62e65e571ed695e8bb69108995ba7",
+        "transfer_manifest_sha256": "3d9f97863ee0c88448487d4a13c4947951d62e65e571ed695e8bb69108995ba7"
+      },
+      "dataset/PhreshPhish/data/test-017.parquet": {
+        "bytes": 516672678,
+        "matches_transfer_manifest": true,
+        "sha256": "66b916bc81a28f172ee807acedb497096993f64266459af8d785bc09d4d127d1",
+        "transfer_manifest_sha256": "66b916bc81a28f172ee807acedb497096993f64266459af8d785bc09d4d127d1"
+      },
+      "dataset/PhreshPhish/data/test-018.parquet": {
+        "bytes": 567766583,
+        "matches_transfer_manifest": true,
+        "sha256": "aaa23d30b1c242b94000b5243dfb855f715f95fdbc0fd345f9ec4d30aeda36b1",
+        "transfer_manifest_sha256": "aaa23d30b1c242b94000b5243dfb855f715f95fdbc0fd345f9ec4d30aeda36b1"
+      },
+      "dataset/PhreshPhish/data/test-019.parquet": {
+        "bytes": 504129805,
+        "matches_transfer_manifest": true,
+        "sha256": "c7169aa4564a95e4950f05bc3281a66fe58f2b31eb1594b62a693de65da7508c",
+        "transfer_manifest_sha256": "c7169aa4564a95e4950f05bc3281a66fe58f2b31eb1594b62a693de65da7508c"
+      },
+      "dataset/PhreshPhish/data/test-020.parquet": {
+        "bytes": 347423824,
+        "matches_transfer_manifest": true,
+        "sha256": "77d312fe7dc92fc3b2ed208ab55b148b2032345091ad44d513b479241013d18e",
+        "transfer_manifest_sha256": "77d312fe7dc92fc3b2ed208ab55b148b2032345091ad44d513b479241013d18e"
+      }
+    },
+    "transfer_manifest_mismatches": []
+  },
+  "overlap_by_level": {
+    "canonical_url": {
+      "conflicting_label_cases": [
+        {
+          "key": "https://www.poncevacay.com/",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "https://www.unesco.gov.ph/",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        }
+      ],
+      "label_pair_row_counts": {
+        "source_benign__target_benign": 256,
+        "source_benign__target_phish": 2,
+        "source_phish__target_benign": 0,
+        "source_phish__target_phish": 4
+      },
+      "stats": {
+        "common_keys_with_source_duplicates": 0,
+        "common_keys_with_target_duplicates": 0,
+        "common_unique_keys": 262,
+        "conflicting_label_keys": 2,
+        "conflicting_label_row_pairs": 2,
+        "level": "canonical_url",
+        "source_duplicate_keys": 260,
+        "source_duplicate_rows_beyond_unique": 266,
+        "source_rows": 141222,
+        "source_rows_with_match": 262,
+        "source_target_row_pairs": 262,
+        "source_unique_keys": 140956,
+        "source_valid_rows": 141222,
+        "target_duplicate_keys": 0,
+        "target_duplicate_rows_beyond_unique": 0,
+        "target_rows": 168035,
+        "target_rows_with_match": 262,
+        "target_rows_with_match_pct": 0.0015591989764037254,
+        "target_unique_keys": 168035,
+        "target_valid_rows": 168035
+      }
+    },
+    "hostname": {
+      "conflicting_label_cases": [
+        {
+          "key": "app.box.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "beacons.ai",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "docs.google.com",
+          "source_labels": {
+            "phish": 334
+          },
+          "source_rows": 334,
+          "target_labels": {
+            "benign": 4,
+            "phish": 14
+          },
+          "target_rows": 18
+        },
+        {
+          "key": "express.adobe.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "form.jotform.com",
+          "source_labels": {
+            "phish": 7
+          },
+          "source_rows": 7,
+          "target_labels": {
+            "benign": 10
+          },
+          "target_rows": 10
+        },
+        {
+          "key": "forms.monday.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "forms.office.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "forms.zohopublic.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "id.smt.docomo.ne.jp",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 9
+          },
+          "target_rows": 9
+        },
+        {
+          "key": "indd.adobe.com",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "linktr.ee",
+          "source_labels": {
+            "phish": 4
+          },
+          "source_rows": 4,
+          "target_labels": {
+            "benign": 1,
+            "phish": 12
+          },
+          "target_rows": 13
+        },
+        {
+          "key": "lnk.to",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "my.dealersocket.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "qrfy.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "replit.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "s3.amazonaws.com",
+          "source_labels": {
+            "phish": 102
+          },
+          "source_rows": 102,
+          "target_labels": {
+            "benign": 3,
+            "phish": 12
+          },
+          "target_rows": 15
+        },
+        {
+          "key": "script.google.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "sites.google.com",
+          "source_labels": {
+            "phish": 100
+          },
+          "source_rows": 100,
+          "target_labels": {
+            "benign": 21,
+            "phish": 66
+          },
+          "target_rows": 87
+        },
+        {
+          "key": "substack.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 6
+          },
+          "target_rows": 6
+        },
+        {
+          "key": "t.me",
+          "source_labels": {
+            "phish": 5
+          },
+          "source_rows": 5,
+          "target_labels": {
+            "benign": 6,
+            "phish": 5
+          },
+          "target_rows": 11
+        },
+        {
+          "key": "www.41nbc.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.bankoffranklincounty.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "www.binance.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 11
+          },
+          "target_rows": 11
+        },
+        {
+          "key": "www.bing.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.canva.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 45,
+            "phish": 1
+          },
+          "target_rows": 46
+        },
+        {
+          "key": "www.cefartens.fr",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.coinbase.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 14
+          },
+          "target_rows": 14
+        },
+        {
+          "key": "www.diaridegirona.cat",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.dropbox.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 15
+          },
+          "target_rows": 15
+        },
+        {
+          "key": "www.education.gouv.fr",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "www.getmonero.org",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.goodreads.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 50,
+            "phish": 153
+          },
+          "target_rows": 203
+        },
+        {
+          "key": "www.google.com",
+          "source_labels": {
+            "phish": 6
+          },
+          "source_rows": 6,
+          "target_labels": {
+            "benign": 50,
+            "phish": 9
+          },
+          "target_rows": 59
+        },
+        {
+          "key": "www.migranodearena.org",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.mizuhogroup.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.perio.org",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.poncevacay.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.powershow.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.sites.google.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.slideserve.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "www.t-mobile.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 14,
+            "phish": 1
+          },
+          "target_rows": 15
+        },
+        {
+          "key": "www.tickettailor.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 4
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "www.turito.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "www.unesco.gov.ph",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "www.zoho.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 9
+          },
+          "target_rows": 9
+        }
+      ],
+      "label_pair_row_counts": {
+        "source_benign__target_benign": 6090,
+        "source_benign__target_phish": 170,
+        "source_phish__target_benign": 4338,
+        "source_phish__target_phish": 80406
+      },
+      "stats": {
+        "common_keys_with_source_duplicates": 49,
+        "common_keys_with_target_duplicates": 857,
+        "common_unique_keys": 2748,
+        "conflicting_label_keys": 45,
+        "conflicting_label_row_pairs": 4508,
+        "level": "hostname",
+        "source_duplicate_keys": 2398,
+        "source_duplicate_rows_beyond_unique": 7714,
+        "source_rows": 141222,
+        "source_rows_with_match": 4509,
+        "source_target_row_pairs": 91004,
+        "source_unique_keys": 133508,
+        "source_valid_rows": 141222,
+        "target_duplicate_keys": 12975,
+        "target_duplicate_rows_beyond_unique": 58576,
+        "target_rows": 168035,
+        "target_rows_with_match": 7157,
+        "target_rows_with_match_pct": 0.042592317076799474,
+        "target_unique_keys": 109459,
+        "target_valid_rows": 168035
+      }
+    },
+    "raw_url": {
+      "conflicting_label_cases": [
+        {
+          "key": "https://www.poncevacay.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "https://www.unesco.gov.ph",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        }
+      ],
+      "label_pair_row_counts": {
+        "source_benign__target_benign": 0,
+        "source_benign__target_phish": 2,
+        "source_phish__target_benign": 0,
+        "source_phish__target_phish": 0
+      },
+      "stats": {
+        "common_keys_with_source_duplicates": 0,
+        "common_keys_with_target_duplicates": 0,
+        "common_unique_keys": 2,
+        "conflicting_label_keys": 2,
+        "conflicting_label_row_pairs": 2,
+        "level": "raw_url",
+        "source_duplicate_keys": 0,
+        "source_duplicate_rows_beyond_unique": 0,
+        "source_rows": 141222,
+        "source_rows_with_match": 2,
+        "source_target_row_pairs": 2,
+        "source_unique_keys": 141222,
+        "source_valid_rows": 141222,
+        "target_duplicate_keys": 0,
+        "target_duplicate_rows_beyond_unique": 0,
+        "target_rows": 168035,
+        "target_rows_with_match": 2,
+        "target_rows_with_match_pct": 1.1902282262623858e-05,
+        "target_unique_keys": 168035,
+        "target_valid_rows": 168035
+      }
+    },
+    "registrable_domain": {
+      "conflicting_label_cases": [
+        {
+          "key": "41nbc.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "ac-page.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "adobe.com",
+          "source_labels": {
+            "phish": 5
+          },
+          "source_rows": 5,
+          "target_labels": {
+            "benign": 100,
+            "phish": 13
+          },
+          "target_rows": 113
+        },
+        {
+          "key": "airtable.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "alpha-sense.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "amazonaws.com",
+          "source_labels": {
+            "phish": 178
+          },
+          "source_rows": 178,
+          "target_labels": {
+            "benign": 24,
+            "phish": 273
+          },
+          "target_rows": 297
+        },
+        {
+          "key": "anyflip.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 2,
+            "phish": 1
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "aplos.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 2,
+            "phish": 1
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "autodesk.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 10,
+            "phish": 1
+          },
+          "target_rows": 11
+        },
+        {
+          "key": "axial.net",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "azure.com",
+          "source_labels": {
+            "phish": 4
+          },
+          "source_rows": 4,
+          "target_labels": {
+            "benign": 1,
+            "phish": 2
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "azurewebsites.net",
+          "source_labels": {
+            "phish": 31
+          },
+          "source_rows": 31,
+          "target_labels": {
+            "benign": 7,
+            "phish": 11
+          },
+          "target_rows": 18
+        },
+        {
+          "key": "backendless.app",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "bankoffranklincounty.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "beacons.ai",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "binance.com",
+          "source_labels": {
+            "phish": 12
+          },
+          "source_rows": 12,
+          "target_labels": {
+            "benign": 11
+          },
+          "target_rows": 11
+        },
+        {
+          "key": "bing.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 5
+          },
+          "target_rows": 5
+        },
+        {
+          "key": "blogspot.com",
+          "source_labels": {
+            "phish": 153
+          },
+          "source_rows": 153,
+          "target_labels": {
+            "benign": 32,
+            "phish": 347
+          },
+          "target_rows": 379
+        },
+        {
+          "key": "box.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 9
+          },
+          "target_rows": 9
+        },
+        {
+          "key": "ca.gov",
+          "source_labels": {
+            "benign": 41
+          },
+          "source_rows": 41,
+          "target_labels": {
+            "benign": 138,
+            "phish": 142
+          },
+          "target_rows": 280
+        },
+        {
+          "key": "canva.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 45,
+            "phish": 1
+          },
+          "target_rows": 46
+        },
+        {
+          "key": "canva.site",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "caspio.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "cefartens.fr",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "chezannsalon.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "clever-cloud.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "clickup.com",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 8,
+            "phish": 1
+          },
+          "target_rows": 9
+        },
+        {
+          "key": "cloudfront.net",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 12,
+            "phish": 38
+          },
+          "target_rows": 50
+        },
+        {
+          "key": "coinbase.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 17
+          },
+          "target_rows": 17
+        },
+        {
+          "key": "coinmarketcap.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 6
+          },
+          "target_rows": 6
+        },
+        {
+          "key": "company.site",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1,
+            "phish": 2
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "cosme.net",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "dealersocket.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "diaridegirona.cat",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "discuss.io",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "docomo.ne.jp",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 23
+          },
+          "target_rows": 23
+        },
+        {
+          "key": "dropbox.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 18,
+            "phish": 2
+          },
+          "target_rows": 20
+        },
+        {
+          "key": "education.gouv.fr",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 4
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "eu.org",
+          "source_labels": {
+            "benign": 2,
+            "phish": 16
+          },
+          "source_rows": 18,
+          "target_labels": {
+            "phish": 7
+          },
+          "target_rows": 7
+        },
+        {
+          "key": "fc2.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 10
+          },
+          "target_rows": 10
+        },
+        {
+          "key": "filesusr.com",
+          "source_labels": {
+            "phish": 19
+          },
+          "source_rows": 19,
+          "target_labels": {
+            "benign": 1,
+            "phish": 3
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "findlaw.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 14,
+            "phish": 1
+          },
+          "target_rows": 15
+        },
+        {
+          "key": "firebaseapp.com",
+          "source_labels": {
+            "phish": 3267
+          },
+          "source_rows": 3267,
+          "target_labels": {
+            "benign": 1,
+            "phish": 12
+          },
+          "target_rows": 13
+        },
+        {
+          "key": "fireeye.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "format.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "formstack.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 5
+          },
+          "target_rows": 5
+        },
+        {
+          "key": "free.fr",
+          "source_labels": {
+            "phish": 34
+          },
+          "source_rows": 34,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "fruit.com",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "gainsight.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "getmonero.org",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "gitbook.io",
+          "source_labels": {
+            "phish": 10
+          },
+          "source_rows": 10,
+          "target_labels": {
+            "benign": 1,
+            "phish": 134
+          },
+          "target_rows": 135
+        },
+        {
+          "key": "github.io",
+          "source_labels": {
+            "phish": 248
+          },
+          "source_rows": 248,
+          "target_labels": {
+            "benign": 16,
+            "phish": 307
+          },
+          "target_rows": 323
+        },
+        {
+          "key": "goodreads.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 51,
+            "phish": 153
+          },
+          "target_rows": 204
+        },
+        {
+          "key": "google.com",
+          "source_labels": {
+            "phish": 482
+          },
+          "source_rows": 482,
+          "target_labels": {
+            "benign": 308,
+            "phish": 94
+          },
+          "target_rows": 402
+        },
+        {
+          "key": "googleapis.com",
+          "source_labels": {
+            "phish": 20
+          },
+          "source_rows": 20,
+          "target_labels": {
+            "benign": 5,
+            "phish": 71
+          },
+          "target_rows": 76
+        },
+        {
+          "key": "grabify.link",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "herokuapp.com",
+          "source_labels": {
+            "phish": 41
+          },
+          "source_rows": 41,
+          "target_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "hs-sites-eu1.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "hs-sites.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 40
+          },
+          "target_rows": 40
+        },
+        {
+          "key": "husqvarna.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "infogram.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 17
+          },
+          "target_rows": 17
+        },
+        {
+          "key": "inmotionhosting.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 2,
+            "phish": 8
+          },
+          "target_rows": 10
+        },
+        {
+          "key": "institutionalinvestor.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "iteris.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "jimdofree.com",
+          "source_labels": {
+            "phish": 6
+          },
+          "source_rows": 6,
+          "target_labels": {
+            "benign": 1,
+            "phish": 6
+          },
+          "target_rows": 7
+        },
+        {
+          "key": "jns.org",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "jotform.com",
+          "source_labels": {
+            "phish": 7
+          },
+          "source_rows": 7,
+          "target_labels": {
+            "benign": 17
+          },
+          "target_rows": 17
+        },
+        {
+          "key": "licor.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "linktr.ee",
+          "source_labels": {
+            "phish": 4
+          },
+          "source_rows": 4,
+          "target_labels": {
+            "benign": 1,
+            "phish": 12
+          },
+          "target_rows": 13
+        },
+        {
+          "key": "live.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "lnk.to",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "lpages.co",
+          "source_labels": {
+            "phish": 5
+          },
+          "source_rows": 5,
+          "target_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "luzerne.edu",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "lynk.id",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 5
+          },
+          "target_rows": 5
+        },
+        {
+          "key": "maryland.gov",
+          "source_labels": {
+            "benign": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 17,
+            "phish": 17
+          },
+          "target_rows": 34
+        },
+        {
+          "key": "meramaal.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "migranodearena.org",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "mirakl.net",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "mizuhogroup.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "monday.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 7,
+            "phish": 34
+          },
+          "target_rows": 41
+        },
+        {
+          "key": "myshopify.com",
+          "source_labels": {
+            "phish": 30
+          },
+          "source_rows": 30,
+          "target_labels": {
+            "benign": 14,
+            "phish": 8
+          },
+          "target_rows": 22
+        },
+        {
+          "key": "myt.mu",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "naukri.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "neocities.org",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "netlify.app",
+          "source_labels": {
+            "phish": 175
+          },
+          "source_rows": 175,
+          "target_labels": {
+            "benign": 2,
+            "phish": 449
+          },
+          "target_rows": 451
+        },
+        {
+          "key": "nintex.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "noaa.gov",
+          "source_labels": {
+            "benign": 24
+          },
+          "source_rows": 24,
+          "target_labels": {
+            "benign": 30,
+            "phish": 1
+          },
+          "target_rows": 31
+        },
+        {
+          "key": "notion.site",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "nyc.gov",
+          "source_labels": {
+            "benign": 4
+          },
+          "source_rows": 4,
+          "target_labels": {
+            "benign": 51,
+            "phish": 98
+          },
+          "target_rows": 149
+        },
+        {
+          "key": "nylas.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "odoo.com",
+          "source_labels": {
+            "phish": 4
+          },
+          "source_rows": 4,
+          "target_labels": {
+            "benign": 2,
+            "phish": 2
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "office.com",
+          "source_labels": {
+            "benign": 1,
+            "phish": 2
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 4
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "onemedical.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "oraclecloud.com",
+          "source_labels": {
+            "phish": 38
+          },
+          "source_rows": 38,
+          "target_labels": {
+            "benign": 6,
+            "phish": 1
+          },
+          "target_rows": 7
+        },
+        {
+          "key": "org.ru",
+          "source_labels": {
+            "benign": 1,
+            "phish": 6
+          },
+          "source_rows": 7,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "osaka-geidai.ac.jp",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "outlook.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "outreach.io",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "pages.dev",
+          "source_labels": {
+            "phish": 85
+          },
+          "source_rows": 85,
+          "target_labels": {
+            "benign": 1,
+            "phish": 9348
+          },
+          "target_rows": 9349
+        },
+        {
+          "key": "panopto.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "patientfusion.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "perio.org",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "phplist.com",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "phish": 8
+          },
+          "target_rows": 8
+        },
+        {
+          "key": "poe.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "poncevacay.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "powershow.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "pp.ua",
+          "source_labels": {
+            "benign": 2,
+            "phish": 4
+          },
+          "source_rows": 6,
+          "target_labels": {
+            "phish": 5
+          },
+          "target_rows": 5
+        },
+        {
+          "key": "qrfy.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "qualtrics.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "quickbase.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 11
+          },
+          "target_rows": 11
+        },
+        {
+          "key": "replit.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "revistadearte.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "rewardbloggers.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "run.app",
+          "source_labels": {
+            "phish": 43
+          },
+          "source_rows": 43,
+          "target_labels": {
+            "benign": 1,
+            "phish": 3
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "sakura.ne.jp",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "samcart.com",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 2,
+            "phish": 1
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "scorpion.co",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "sender.net",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "shareasale.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "sharefile.com",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "sharepoint.com",
+          "source_labels": {
+            "phish": 7
+          },
+          "source_rows": 7,
+          "target_labels": {
+            "benign": 10,
+            "phish": 3
+          },
+          "target_rows": 13
+        },
+        {
+          "key": "shipleywins.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "shortest.link",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "showpad.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "slideserve.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "square.site",
+          "source_labels": {
+            "phish": 728
+          },
+          "source_rows": 728,
+          "target_labels": {
+            "benign": 1,
+            "phish": 38
+          },
+          "target_rows": 39
+        },
+        {
+          "key": "squarespace.com",
+          "source_labels": {
+            "benign": 1,
+            "phish": 2
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 13,
+            "phish": 4
+          },
+          "target_rows": 17
+        },
+        {
+          "key": "substack.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 45,
+            "phish": 1
+          },
+          "target_rows": 46
+        },
+        {
+          "key": "sutherlandglobal.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "t-mobile.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 18,
+            "phish": 1
+          },
+          "target_rows": 19
+        },
+        {
+          "key": "t.me",
+          "source_labels": {
+            "phish": 5
+          },
+          "source_rows": 5,
+          "target_labels": {
+            "benign": 6,
+            "phish": 7
+          },
+          "target_rows": 13
+        },
+        {
+          "key": "talentlms.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "teachable.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 1,
+            "phish": 6
+          },
+          "target_rows": 7
+        },
+        {
+          "key": "thinkific.com",
+          "source_labels": {
+            "phish": 8
+          },
+          "source_rows": 8,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "tickettailor.com",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 4
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "tiny.cc",
+          "source_labels": {
+            "benign": 1,
+            "phish": 1
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "phish": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "tinyurl.com",
+          "source_labels": {
+            "phish": 76
+          },
+          "source_rows": 76,
+          "target_labels": {
+            "benign": 1,
+            "phish": 20
+          },
+          "target_rows": 21
+        },
+        {
+          "key": "tripod.com",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "tumblr.com",
+          "source_labels": {
+            "phish": 3
+          },
+          "source_rows": 3,
+          "target_labels": {
+            "benign": 33,
+            "phish": 1
+          },
+          "target_rows": 34
+        },
+        {
+          "key": "turito.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 3
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "uk.com",
+          "source_labels": {
+            "benign": 7
+          },
+          "source_rows": 7,
+          "target_labels": {
+            "benign": 6,
+            "phish": 4
+          },
+          "target_rows": 10
+        },
+        {
+          "key": "uk.net",
+          "source_labels": {
+            "benign": 3,
+            "phish": 1
+          },
+          "source_rows": 4,
+          "target_labels": {
+            "benign": 2,
+            "phish": 1
+          },
+          "target_rows": 3
+        },
+        {
+          "key": "umd.edu",
+          "source_labels": {
+            "benign": 10
+          },
+          "source_rows": 10,
+          "target_labels": {
+            "benign": 3,
+            "phish": 1
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "unesco.gov.ph",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "phish": 1
+          },
+          "target_rows": 1
+        },
+        {
+          "key": "us.com",
+          "source_labels": {
+            "phish": 6
+          },
+          "source_rows": 6,
+          "target_labels": {
+            "benign": 4,
+            "phish": 42
+          },
+          "target_rows": 46
+        },
+        {
+          "key": "vercel.app",
+          "source_labels": {
+            "phish": 42
+          },
+          "source_rows": 42,
+          "target_labels": {
+            "benign": 3,
+            "phish": 793
+          },
+          "target_rows": 796
+        },
+        {
+          "key": "washington.edu",
+          "source_labels": {
+            "benign": 4,
+            "phish": 1
+          },
+          "source_rows": 5,
+          "target_labels": {
+            "benign": 12
+          },
+          "target_rows": 12
+        },
+        {
+          "key": "web.app",
+          "source_labels": {
+            "phish": 3473
+          },
+          "source_rows": 3473,
+          "target_labels": {
+            "benign": 1,
+            "phish": 23
+          },
+          "target_rows": 24
+        },
+        {
+          "key": "webflow.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 4
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "weebly.com",
+          "source_labels": {
+            "phish": 347
+          },
+          "source_rows": 347,
+          "target_labels": {
+            "benign": 3,
+            "phish": 201
+          },
+          "target_rows": 204
+        },
+        {
+          "key": "wikidot.com",
+          "source_labels": {
+            "phish": 12
+          },
+          "source_rows": 12,
+          "target_labels": {
+            "benign": 2
+          },
+          "target_rows": 2
+        },
+        {
+          "key": "workers.dev",
+          "source_labels": {
+            "phish": 869
+          },
+          "source_rows": 869,
+          "target_labels": {
+            "benign": 1,
+            "phish": 28
+          },
+          "target_rows": 29
+        },
+        {
+          "key": "worldvision.org",
+          "source_labels": {
+            "benign": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 3,
+            "phish": 1
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "wpengine.com",
+          "source_labels": {
+            "phish": 19
+          },
+          "source_rows": 19,
+          "target_labels": {
+            "benign": 2,
+            "phish": 2
+          },
+          "target_rows": 4
+        },
+        {
+          "key": "wpenginepowered.com",
+          "source_labels": {
+            "phish": 2
+          },
+          "source_rows": 2,
+          "target_labels": {
+            "benign": 1,
+            "phish": 19
+          },
+          "target_rows": 20
+        },
+        {
+          "key": "yolasite.com",
+          "source_labels": {
+            "phish": 151
+          },
+          "source_rows": 151,
+          "target_labels": {
+            "benign": 2,
+            "phish": 6
+          },
+          "target_rows": 8
+        },
+        {
+          "key": "zendesk.com",
+          "source_labels": {
+            "phish": 7
+          },
+          "source_rows": 7,
+          "target_labels": {
+            "benign": 32,
+            "phish": 131
+          },
+          "target_rows": 163
+        },
+        {
+          "key": "zoho.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 13
+          },
+          "target_rows": 13
+        },
+        {
+          "key": "zohopublic.com",
+          "source_labels": {
+            "phish": 1
+          },
+          "source_rows": 1,
+          "target_labels": {
+            "benign": 3
+          },
+          "target_rows": 3
+        }
+      ],
+      "label_pair_row_counts": {
+        "source_benign__target_benign": 30533,
+        "source_benign__target_phish": 6578,
+        "source_phish__target_benign": 174840,
+        "source_phish__target_phish": 1735193
+      },
+      "stats": {
+        "common_keys_with_source_duplicates": 397,
+        "common_keys_with_target_duplicates": 1485,
+        "common_unique_keys": 3752,
+        "conflicting_label_keys": 159,
+        "conflicting_label_row_pairs": 181418,
+        "level": "registrable_domain",
+        "source_duplicate_keys": 3479,
+        "source_duplicate_rows_beyond_unique": 34149,
+        "source_rows": 141222,
+        "source_rows_with_match": 26059,
+        "source_target_row_pairs": 1947144,
+        "source_unique_keys": 107073,
+        "source_valid_rows": 141222,
+        "target_duplicate_keys": 13828,
+        "target_duplicate_rows_beyond_unique": 102747,
+        "target_rows": 168035,
+        "target_rows_with_match": 40670,
+        "target_rows_with_match_pct": 0.24203290981045616,
+        "target_unique_keys": 65288,
+        "target_valid_rows": 168035
+      }
+    }
+  },
+  "prediction_join": {
+    "all_row_ids_and_labels_match_target": true,
+    "method": "unique immutable PhreshPhish row_id reconstructed from test shard filename and original zero-based row position",
+    "prediction_files": 10,
+    "validated": true
+  },
+  "psl": {
+    "include_psl_private_domains": false,
+    "library": "tldextract",
+    "snapshot_bytes": 318581,
+    "snapshot_file": ".tld_set_snapshot",
+    "snapshot_sha256": "b69315c085d53972724b8f2df111ffc329b0c84fe0a47d62c8c91655cc774a38",
+    "suffix_list_urls": []
+  },
+  "registrable_domain_rule": "Experiment 5 host_parts with bundled tldextract PSL; IP literals remain the IP; unknown suffix falls back to e.domain or host.",
+  "seed_42_full_vs_strict_subset": [
+    {
+      "full_target": {
+        "average_precision": 0.4005338371176017,
+        "benign_n": 91259,
+        "f1_phish": 0.599064368742861,
+        "fn": 5449,
+        "fp": 90025,
+        "fpr_benign": 0.9864780460009424,
+        "mcc": -0.14644459844592028,
+        "miss_phish": 0.07097269980202146,
+        "n": 168035,
+        "phish_n": 76776,
+        "precision_phish": 0.44205835688432743,
+        "recall_phish": 0.9290273001979785,
+        "roc_auc": 0.38256603832941105,
+        "tn": 1234,
+        "tp": 71327
+      },
+      "model": "lightgbm",
+      "strict_no_overlap": {
+        "average_precision": 0.3522856497835537,
+        "benign_n": 80369,
+        "excluded_overlap_rows": 40670,
+        "f1_phish": 0.4973940980485483,
+        "fn": 5195,
+        "fp": 79283,
+        "fpr_benign": 0.9864873272032749,
+        "mcc": -0.21623049463467175,
+        "miss_phish": 0.11054132266575879,
+        "n": 127365,
+        "phish_n": 46996,
+        "precision_phish": 0.34522315087047006,
+        "recall_phish": 0.8894586773342412,
+        "roc_auc": 0.43497708222220866,
+        "tn": 1086,
+        "tp": 41801
+      }
+    },
+    {
+      "full_target": {
+        "average_precision": 0.3541250765556683,
+        "benign_n": 91259,
+        "f1_phish": 0.6010616302522427,
+        "fn": 5552,
+        "fp": 88994,
+        "fpr_benign": 0.9751805301394931,
+        "mcc": -0.11233650349979157,
+        "miss_phish": 0.07231426487443993,
+        "n": 168035,
+        "phish_n": 76776,
+        "precision_phish": 0.4445443083798325,
+        "recall_phish": 0.9276857351255601,
+        "roc_auc": 0.3248713542891012,
+        "tn": 2265,
+        "tp": 71224
+      },
+      "model": "xgboost",
+      "strict_no_overlap": {
+        "average_precision": 0.27500662198196446,
+        "benign_n": 80369,
+        "excluded_overlap_rows": 40670,
+        "f1_phish": 0.49939817836675787,
+        "fn": 5298,
+        "fp": 78299,
+        "fpr_benign": 0.9742438004703305,
+        "mcc": -0.17977038455137892,
+        "miss_phish": 0.11273299855306834,
+        "n": 127365,
+        "phish_n": 46996,
+        "precision_phish": 0.34749202063384915,
+        "recall_phish": 0.8872670014469316,
+        "roc_auc": 0.31877382134293597,
+        "tn": 2070,
+        "tp": 41698
+      }
+    }
+  ],
+  "status": "completed",
+  "strict_no_overlap_subset": {
+    "definition": "Target rows having no matching raw URL, shared canonical URL, hostname, or registrable domain in any source training row.",
+    "no_overlap_class_counts": {
+      "benign": 80369,
+      "phish": 46996
+    },
+    "overlap_row_pct": 0.24203290981045616,
+    "overlap_rows_excluded_union": 40670,
+    "target_denominator": 168035,
+    "target_rows": 127365
+  },
+  "target_url_hash_rule": "Reconstructed target URLs are validated against split_test.url_sha256 using SHA-256(canonical_url(raw URL)), matching Experiment 4 verify_end_to_end.py."
+}

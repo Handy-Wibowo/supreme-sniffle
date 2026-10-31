@@ -1,0 +1,137 @@
+{
+  "experiment": "7 - operational threshold evaluation",
+  "protocol": "temporal_split_fit_validation_test",
+  "training_corpus": "PhreshPhish",
+  "evaluation_corpus": "PhreshPhish",
+  "label_mapping": {
+    "benign": 0,
+    "phish": 1
+  },
+  "split": {
+    "fit_start": "2024-07-02 00:00:00+00:00",
+    "fit_end": "2025-07-01 00:00:00+00:00",
+    "validation_start": "2025-07-01 00:00:00+00:00",
+    "validation_end": "2025-09-08 00:00:00+00:00",
+    "test_start": "2025-09-08 00:00:00+00:00"
+  },
+  "cutoff": "2025-09-08 00:00:00+00:00",
+  "validation_start": "2025-07-01 00:00:00+00:00",
+  "seeds": [
+    13,
+    42,
+    2024,
+    777,
+    31415
+  ],
+  "primary_seed": 13,
+  "default_threshold": 0.5,
+  "threshold_rules": [
+    {
+      "rule": "default_0p5",
+      "kind": "default",
+      "parameter": 0.5
+    },
+    {
+      "rule": "fpr_le_1pct",
+      "kind": "fpr",
+      "parameter": 0.01
+    },
+    {
+      "rule": "fpr_le_0p5pct",
+      "kind": "fpr",
+      "parameter": 0.005
+    },
+    {
+      "rule": "max_val_f1",
+      "kind": "f1",
+      "parameter": null
+    }
+  ],
+  "fpr_targets": {
+    "fpr_le_1pct": 0.01,
+    "fpr_le_0p5pct": 0.005
+  },
+  "ppv_projection_prevalences": [
+    0.01,
+    0.05
+  ],
+  "model_params": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "n_jobs": -1,
+    "verbosity": -1
+  },
+  "tuning": "none; model parameters and seeds inherited from Experiment 4",
+  "test_usage": "test scores are produced once, after the model is fit on the fit block and the thresholds are frozen on validation",
+  "unparseable_url_policy": "exclude",
+  "unparseable_url_max_share": 0.0001,
+  "environment": {
+    "numpy": "2.5.3",
+    "pandas": "3.1.0",
+    "pyarrow": "26.0.0",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "tldextract": "5.4.0"
+  },
+  "psl_snapshot": {
+    "path": ".tld_set_snapshot",
+    "bytes": 318581,
+    "sha256": "b69315c085d53972724b8f2df111ffc329b0c84fe0a47d62c8c91655cc774a38"
+  },
+  "code_sha256": {
+    "config.py": "e85196f3f4acbe4a4269dcbb656f76e8b9109f2a39b4fd49f90bfb4dee6da080",
+    "data.py": "72c16717b9b1562fbe304d2dbc271953c4a9223f9c3751a15b709f2a89e9988c",
+    "features.py": "c98b119c72c77df225bd21b7f803c367b71a934630622b3349ddecf349dc5864",
+    "thresholds.py": "f6ebc04940169e72f22d150579d332a65e497bc3853b7c2862e5a2ae78dff215",
+    "run_experiment.py": "a1e22165e6ef0c5f2a6ba899880bd91c7f719f73c908e7183daaf349aedcc546",
+    "provenance.py": "cfd904dd517ecc6db7df52c8c4ac69d5de55344c345bb6ba7cd0b6ef3fc54fa3"
+  },
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "logical_cpus": 16,
+  "rows": {
+    "fit": 372213,
+    "validation": 125146,
+    "test": 168035
+  },
+  "runtime": {
+    "load_s": 66.368,
+    "clean_s": 24.632,
+    "feature_extract_s": 31.916,
+    "fits": {
+      "13": {
+        "fit_s": 4.959,
+        "val_predict_s": 0.622,
+        "test_predict_s": 0.774,
+        "n_trees": 300
+      },
+      "42": {
+        "fit_s": 4.413,
+        "val_predict_s": 0.579,
+        "test_predict_s": 0.746,
+        "n_trees": 300
+      },
+      "2024": {
+        "fit_s": 3.691,
+        "val_predict_s": 0.544,
+        "test_predict_s": 0.754,
+        "n_trees": 300
+      },
+      "777": {
+        "fit_s": 3.972,
+        "val_predict_s": 0.555,
+        "test_predict_s": 0.701,
+        "n_trees": 300
+      },
+      "31415": {
+        "fit_s": 4.471,
+        "val_predict_s": 0.565,
+        "test_predict_s": 0.764,
+        "n_trees": 300
+      }
+    },
+    "wall_s": 196.448,
+    "executor": "local runner, sequential fits, notebook-driven"
+  }
+}
