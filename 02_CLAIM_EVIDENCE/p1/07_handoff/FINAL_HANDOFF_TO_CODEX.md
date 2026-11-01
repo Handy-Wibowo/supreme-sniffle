@@ -3,7 +3,7 @@
 ## 1. Candidate identity
 
 - Candidate path: `E:\Kuliah\Tugas Akhir\phishing\BITS_Draft_Phishing_URL_Leakage_v10_P1_candidate.docx`
-- SHA-256: `31dc1c21b3ea11ce2f8711129f859455c9ec18c6b2521913b2953af8717cf6a0`
+- SHA-256: `ef5990b3009080aa6f9e9972f922c35db57b8ec0644e43e231fc3ac7b3cdad33`
 - Source path: `E:\Kuliah\Tugas Akhir\phishing\BITS_Draft_Phishing_URL_Leakage_v9_P0.docx`
 - Source SHA-256: `16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec` (unchanged; verified before and after the build)
 - Build script: `phishing/revision_v10_p1/05_integrated_manuscript/apply_p1_revisions.py`
@@ -16,7 +16,7 @@
 - A16 literature/novelty: **PASS** — 24 verified sources, 91.7 % within 10 years, 87.5 % primary, design comparison table added
 - A14 provenance: **PARTIAL** — fields confirmed vendor-distributed; four unknowns remain `UNKNOWN`; no manuscript change
 - A15 interval evidence: **NOT RECOVERED** — no cluster computation exists; interval stays removed
-- Integration: **PASS** — 51 registered changes, deterministic, locator-asserted
+- Integration: **PASS** — 54 registered changes, deterministic, locator-asserted
 - P0 regression: **PASS** — 16/16
 - Visual QA: **PASS** — 15 pages rendered, 6 pages inspected at full resolution
 - Dual independent review: **BLOCK** — `glm-5-3-flash` APPROVE (rounds 3–5); `gpt-6-luna` BLOCK (C1–C5 PASS, C6/C7 block on disclosed limits and user-owned metadata)
@@ -24,7 +24,7 @@
 
 ## 3. Exact changes
 
-Row-level detail: `05_integrated_manuscript/CHANGE_REGISTER.csv` (51 rows). In brief:
+Row-level detail: `05_integrated_manuscript/CHANGE_REGISTER.csv` (54 rows). In brief:
 
 - **A02 residual:** `word/media/image3.png` replaced with `figure_1_research_pipeline_v10.png`; the only wording change in the SVG is `ceiling effect, paired domain bootstrap,` → `saturasi benchmark, bootstrap domain berpasangan,`, proven to be the sole change by round-trip substitution.
 - **Metadata:** `dc:title` de-versioned and aligned to the candidate title; `dc:subject` and `dc:description` corrected; `wp:docPr` name/title de-versioned; `docProps/app.xml` Pages/Words `4/1998` → `14/9300`.
@@ -85,7 +85,7 @@ Changed locators caused by insertions (for Codex's own checks):
 | `python qa_structure.py` | `phishing/revision_v10_p1/06_self_qa` | 0 | 24/24 PASS | `QA_CHECKS.json` |
 | `python regression_p0.py` | same | 0 | 16/16 PASS | `P0_REGRESSION_MATRIX.csv` |
 | `python two_build_test.py` | same | 0 | two builds from v9_P0: package members, media and semantic text identical; bytes differ only by ZIP container timestamps (G6 allowance) | `TWO_BUILD_COMPARISON.json` |
-| `python render_candidate.py` | same | 0 | 15 pages, 10 076 words; 13 page PNGs | `RENDER_LOG.json` |
+| `python render_candidate.py` | same | 0 | 15 pages, 10 368 words; 13 page PNGs | `RENDER_LOG.json` |
 | `python verify_package_relationships.py …v10_P1_candidate.docx` | `phishing/revision_v9_p0/04_integrated_manuscript` | 0 | `{"ok": true, "issues": []}` | printed JSON |
 | `sha256sum -c MANIFEST.sha256` | package root | 0 | all files OK | `MANIFEST.sha256` |
 

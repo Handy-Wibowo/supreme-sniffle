@@ -6,7 +6,7 @@ A04,Unverified platform-cluster interval removed; uncertainty labelled unverifie
 A05,Extant temporal cohort not described as blind/prospective,PASS,'bukan holdout buta atau prospektif' x3,
 A06,Availability wording distinguishes package from workspace and lists omissions,PASS,'MANIFEST.csv'; 'OMITTED_ARTIFACTS.csv'; 'tidak memuat korpus mentah',
 A07,Four dropped fields named; LineOfCode and NoOfExternalRef retained,PASS,DROP_COLS + 4 dropped names + 2 retained names all present,
-A08,85 scoped as selected reported fits; E3 temporal branch marked stub,PASS,'85 kecocokan terpilih'; 'stub',
+A08,85 scoped as selected reported fits; E3 temporal branch marked stub,PASS,'90 kecocokan terpilih'; 'stub',
 A09,Strict no-overlap scoring bounded; no leakage proof claimed,PASS,'tidak membuktikan'; 'tumpang tindih ketat'; 'bukti kebocoran' absent,
 A10,Verifier claims bounded to checked fields and package-relative outputs,PASS,verifier-scope wording present (see Stage-1 SIDE_EFFECT_AUDIT for the bound),
 A11,A2 described as shared ordered 18-feature URL extractor; no equality claim,PASS,'tidak membuktikan kesamaan nilai'; '18 fitur',

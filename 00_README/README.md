@@ -1,7 +1,7 @@
 # AI Review Package — v10 P1 candidate
 
-Built: 2026-11-01T07:48:21Z (UTC)
-Included files: 186  |  total bytes: 41,231,455  |  omitted/limited entries: 18
+Built: 2026-11-01T07:51:36Z (UTC)
+Included files: 186  |  total bytes: 41,231,294  |  omitted/limited entries: 18
 
 ## What this package is
 

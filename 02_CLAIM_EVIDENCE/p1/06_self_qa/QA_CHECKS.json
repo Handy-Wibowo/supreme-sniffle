@@ -1,5 +1,5 @@
 {
-  "candidate_sha256": "31dc1c21b3ea11ce2f8711129f859455c9ec18c6b2521913b2953af8717cf6a0",
+  "candidate_sha256": "fed5c9251594e10b94837df9333a047c41b0be74d8ea44becc57842475495dc0",
   "baseline_sha256": "16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec",
   "paragraphs_v9": 181,
   "paragraphs_v10": 207,
@@ -92,7 +92,7 @@
     {
       "check": "document.xml well-formed",
       "verdict": "PASS",
-      "detail": "314466 bytes"
+      "detail": "316397 bytes"
     },
     {
       "check": "title metadata current",
