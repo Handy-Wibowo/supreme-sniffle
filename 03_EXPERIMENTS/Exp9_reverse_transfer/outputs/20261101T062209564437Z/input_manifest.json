@@ -1,0 +1,23 @@
+[
+  {
+    "file": "phiusiil_clean.parquet",
+    "path": "E:\\Kuliah\\Tugas Akhir\\Experiment\\1 - PhiUSIIL Cleaning + Leakage-Audit Notebook\\phiusill_clean\\phiusiil_clean.parquet",
+    "sha256": "4c86b580ddc694c1a6bd2b0f249b43550508b2935be85c09b34dbaf67273468f",
+    "rows": 235370,
+    "role": "target corpus (cleaned)"
+  },
+  {
+    "file": "PhreshPhish train shards",
+    "path": "E:\\Kuliah\\Tugas Akhir\\dataset\\PhreshPhish\\data",
+    "sha256": "see per-file manifest",
+    "rows": 498255,
+    "role": "source corpus, fit block selected by date"
+  },
+  {
+    "file": "features.py",
+    "path": "E:\\Kuliah\\Tugas Akhir\\Experiment\\5 - PhiUSIIL Focused Ablation\\src\\features.py",
+    "sha256": "81822b4fac8b50cdf93371651e3c94680628ef189d64c32429ec15cc51cd48e6",
+    "rows": null,
+    "role": "shared A2 extractor"
+  }
+]

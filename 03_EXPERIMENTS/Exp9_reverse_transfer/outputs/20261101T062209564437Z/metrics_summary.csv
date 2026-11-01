@@ -1,0 +1,5 @@
+,f1_phish,f1_phish,precision_phish,precision_phish,recall_phish,recall_phish,fpr_benign,fpr_benign,mcc,mcc,roc_auc,roc_auc,average_precision,average_precision,accuracy,accuracy
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+arm,,,,,,,,,,,,,,,,
+in_source_PhreshPhish,0.80582315,0.000131906,0.890260894,0.000621414,0.736015625,0.000603962,0.076351085,0.00054714,0.677770926,0.000195057,0.909406963,0.000875977,0.913389092,0.000505314,0.83790432,6.7765e-05
+target_PhiUSIIL,0.550218789,0.000645796,0.410065519,0.000610054,0.835923199,0.000619993,0.89643604,0.001885169,-0.089187671,0.003531238,0.639277583,0.017740169,0.679820015,0.017866655,0.416334282,0.001219958

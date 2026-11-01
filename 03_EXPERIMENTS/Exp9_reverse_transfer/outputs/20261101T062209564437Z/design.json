@@ -1,0 +1,85 @@
+{
+  "experiment": "9 - reverse transfer PhreshPhish -> PhiUSIIL",
+  "direction": "PhreshPhish(fit block) -> PhiUSIIL",
+  "is_temporal": false,
+  "note": "PhiUSIIL has no collection dates, so this is a frozen cross-corpus transfer, not a temporal evaluation",
+  "training_corpus": "PhreshPhish",
+  "evaluation_corpus": "PhiUSIIL",
+  "split": {
+    "fit_start": "2024-07-02",
+    "fit_end_exclusive": "2025-07-01",
+    "in_source_test_start": "2025-09-08",
+    "in_source_test_end_exclusive": "2025-12-17"
+  },
+  "representation": "A2 (18 URL-only features)",
+  "extractor": {
+    "path": "E:\\Kuliah\\Tugas Akhir\\Experiment\\5 - PhiUSIIL Focused Ablation\\src\\features.py",
+    "sha256": "81822b4fac8b50cdf93371651e3c94680628ef189d64c32429ec15cc51cd48e6",
+    "features": [
+      "URLLength",
+      "DomainLength",
+      "TLDLength",
+      "NoOfSubDomain",
+      "NoOfObfuscatedChar",
+      "ObfuscationRatio",
+      "NoOfLettersInURL",
+      "LetterRatioInURL",
+      "NoOfDegitsInURL",
+      "DegitRatioInURL",
+      "NoOfEqualsInURL",
+      "NoOfQMarkInURL",
+      "NoOfAmpersandInURL",
+      "NoOfOtherSpecialCharsInURL",
+      "SpacialCharRatioInURL",
+      "IsHTTPS",
+      "HasObfuscation",
+      "IsDomainIP"
+    ]
+  },
+  "label_mapping": {
+    "PhiUSIIL": "1=legitimate -> y_phish=0 ; 0=phishing -> y_phish=1",
+    "PhreshPhish": "phish -> 1 ; benign -> 0"
+  },
+  "model": {
+    "family": "lightgbm",
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "n_jobs": -1,
+    "verbose": -1
+  },
+  "seeds": [
+    13,
+    42,
+    777,
+    2024,
+    31415
+  ],
+  "primary_seed": 42,
+  "threshold": {
+    "value": 0.5,
+    "rule": "score >= t",
+    "frozen": true,
+    "calibrated_on_target": false
+  },
+  "bootstrap": {
+    "type": "percentile",
+    "unit": "registrable_domain",
+    "replicates": 1000,
+    "seed": 42
+  },
+  "rows": {
+    "train_fit": 372380,
+    "in_source_test": 168060,
+    "target": 235370
+  },
+  "environment": {
+    "python": "3.14.7",
+    "pandas": "3.1.0",
+    "numpy": "2.5.3",
+    "lightgbm": "4.7.0",
+    "sklearn": "1.9.1",
+    "platform": "Windows-11-10.0.22631-SP0"
+  },
+  "run_id": "20261101T062209564437Z"
+}

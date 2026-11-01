@@ -1,0 +1,32 @@
+[
+  {
+    "file": "bootstrap_target_primary_seed.csv",
+    "bytes": 625,
+    "sha256": "57661b83e63739da8905976a2fe6ec5baf558607ad2da962c2fbb50b969c4c2b"
+  },
+  {
+    "file": "design.json",
+    "bytes": 2253,
+    "sha256": "628e027cd017b433ff25417cc2c52e5c9565b0074d1f4779192e3c87d33e1788"
+  },
+  {
+    "file": "input_manifest.json",
+    "bytes": 851,
+    "sha256": "181948cf619dc9a731ecd919e53c199e68bb52c8075cc34e4fa1554ae3eefbaf"
+  },
+  {
+    "file": "metrics_per_seed.csv",
+    "bytes": 2511,
+    "sha256": "4adc37cd53d8394c6b01b9705c265a68eb13c05faba10809fdaa409f5916e9c5"
+  },
+  {
+    "file": "metrics_summary.csv",
+    "bytes": 693,
+    "sha256": "f3efa3621871aa58dedebbedbfec276e6526c445a147dcd8c903e7d6e93b7a7e"
+  },
+  {
+    "file": "overlap_train_vs_target.csv",
+    "bytes": 157,
+    "sha256": "f2c98bfd728ae7ee22b992b60973c43b22385b63e713f838e81e103e291f5fdc"
+  }
+]

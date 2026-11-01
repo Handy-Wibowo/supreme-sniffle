@@ -140,6 +140,46 @@ SUBSREPLACE = [
      "Perubahan komposisi kelas juga menjelaskan mengapa angka agregat tidak dapat dipakai untuk menyimpulkan tren.",
      "Perubahan komposisi kelas sebagian menjelaskan mengapa angka agregat tidak dapat dipakai untuk menyimpulkan tren, meskipun TPR dan FPR tidak dijamin konstan antarbulan sehingga prevalensi bukan satu-satunya faktor.",
      "Prevalensi diperlakukan sebagai penjelas tunggal perubahan precision antarbulan."),
+    ("P1-050", "experiment 9",
+     "apakah representasi A2 yang sama dapat dipindahkan dari PhiUSIIL ke PhreshPhish tanpa adaptasi.",
+     "apakah representasi A2 yang sama dapat dipindahkan antarkorpus tanpa adaptasi; dua arah diuji, PhiUSIIL→PhreshPhish dan PhreshPhish→PhiUSIIL.",
+     "Bagian transfer hanya menyebut satu arah, padahal eksperimen 9 menguji arah sebaliknya."),
+    ("P1-052", "experiment 9",
+     "satu arah transfer, dan satu snapshot target yang diuji",
+     "dua arah transfer (PhiUSIIL→PhreshPhish dan PhreshPhish→PhiUSIIL), dan satu snapshot target yang diuji",
+     "Pernyataan keterbatasan masih menghitung satu arah transfer."),
+    ("P1-053", "experiment 9",
+     "PhiUSIIL→PhreshPhish menggunakan ekstraktor, urutan fitur, model, dan ambang yang dibekukan",
+     "dua arah, PhiUSIIL→PhreshPhish dan PhreshPhish→PhiUSIIL, menggunakan ekstraktor, urutan fitur, model, dan ambang yang dibekukan",
+     "Butir kontribusi kedua hanya mencakup arah maju."),
+    ("P1-054", "experiment 9",
+     " model A2 yang dilatih hanya pada PhiUSIIL menuju kohort uji PhreshPhish tanpa retraining, kalibrasi, atau penyetelan ambang.",
+     " model A2 tanpa retraining, kalibrasi, atau penyetelan ambang pada dua arah: dilatih pada PhiUSIIL dan diuji pada PhreshPhish, serta dilatih pada PhreshPhish dan diuji pada PhiUSIIL.",
+     "RQ4 hanya menyatakan arah maju."),
+    ("P1-055", "experiment 9",
+     " Transfer A2 seed 42 dengan model dan ambang 0,5 yang dibekukan. Baris target tidak menggunakan fitting atau penyetelan pada PhreshPhish.",
+     " Transfer A2 seed 42 dengan model dan ambang 0,5 yang dibekukan, dua arah. Baris target tidak menggunakan fitting, kalibrasi, atau penyetelan ambang pada korpus target. Baris transfer PhiUSIIL→PhreshPhish dievaluasi pada 168.035 baris uji temporal; baris transfer PhreshPhish→PhiUSIIL pada 235.370 baris PhiUSIIL, dan baris PhreshPhish dalam-sumber pada 168.060 baris blok uji sebelum penyaringan URL terlihat (eksperimen 9).",
+     "Caption tidak menyatakan dua arah maupun ukuran kohort per baris."),
+    ("P1-058", "experiment 9",
+     "transfer lintas-korpus satu arah, trade-off ambang",
+     "transfer lintas-korpus dua arah, trade-off ambang",
+     "Abstrak Indonesia masih menyebut satu arah transfer."),
+    ("P1-059", "experiment 9",
+     "one-direction cross-corpus transfer, threshold trade-offs",
+     "two-direction cross-corpus transfer, threshold trade-offs",
+     "Abstrak Inggris masih menyebut one-direction transfer."),
+    ("P1-060", "experiment 9",
+     "frozen A2 zero-shot transfer, validation-only threshold selection",
+     "two-direction frozen A2 zero-shot transfer, validation-only threshold selection",
+     "Abstrak Inggris menyebut transfer tanpa menyatakan arah."),
+]
+
+
+TABLE7_REVERSE_ROWS = [
+    ["LightGBM", "PhreshPhish→PhiUSIIL zero-shot", "0,549564", "0,409503", "0,835237",
+     "0,897783", "0,642939", "0,682202", "−0,092320"],
+    ["LightGBM", "PhreshPhish dalam-sumber", "0,805958", "0,889221", "0,736953",
+     "0,077263", "0,909696", "0,913361", "0,677473"],
 ]
 
 # Substring-anchored appends (anchor must occur in exactly one paragraph).
@@ -231,7 +271,7 @@ NEW_SECTION_ANCHOR_PREFIX = "Kesenjangan yang dituju karena itu bukan ketiadaan 
 NEW_SECTION_PARAS = [
     "Literatur evaluasi keamanan berbasis pembelajaran mesin merumuskan dua sumber bias yang relevan bagi penelitian ini. Bias spasial muncul ketika distribusi data latih dan uji tidak mewakili kondisi penerapan, sedangkan bias temporal muncul ketika pemisahan waktu tidak menghormati urutan kejadian [13]. Kerangka TESSERACT menunjukkan bahwa keduanya dapat menaikkan skor secara sistematis: F1 yang dilaporkan mendekati 0,99 pada klasifikasi malware sebagian berasal dari rancangan eksperimen, bukan dari kemampuan model [13]. Pada penerapan, penurunan kinerja akibat perubahan distribusi dipantau melalui deteksi drift konsep yang membandingkan sampel penerapan dengan sampel latih [14], dan evaluasi ulang terhadap pendekatan tersebut menunjukkan bahwa kesimpulan tentang drift bergantung pada protokol evaluasi serta pada cara model menolak prediksi yang berisiko [15]. Ketiga temuan itu tidak memindahkan besaran efek ke domain phishing URL; yang dipindahkan adalah prinsip bahwa unit pembagian, urutan waktu, dan definisi kohort harus dinyatakan sebagai bagian dari klaim.",
     "Pada domain phishing URL, laporan kinerja tinggi merupakan hal yang umum. Tinjauan sistematis atas 80 makalah mengelompokkan pendekatan deteksi situs phishing menjadi berbasis daftar, kemiripan visual, heuristik, pembelajaran mesin, dan pembelajaran mendalam [16]. Pendekatan hibrida berbasis fitur URL melaporkan kinerja deteksi yang sangat tinggi pada korpus masing-masing [17], pendekatan leksikal dengan reduksi fitur ditujukan untuk lingkungan waktu nyata [18], dan studi kasus pada URL login menunjukkan bahwa komposisi himpunan uji mengubah laju positif palsu secara material [19]. Model berbasis karakter pada URL mentah juga menunjukkan bahwa representasi URL-saja dapat mencapai kinerja tinggi tanpa fitur halaman [20]. Protokol evaluasi terbaru pada korpus PhiUSIIL melaporkan akurasi 0,9962 sampai 0,9984 pada himpunan uji domain-disjoint untuk empat keluarga model, dan protokol yang sama juga memuat evaluasi eksternal lintas sumber pada Subbagian 4.6; kinerjanya turun tajam ketika URL dimutasi secara realistis [24]. Pola semacam ini konsisten dengan saturasi benchmark yang bersifat deskriptif: ketika banyak model berbeda mencapai skor hampir identik pada satu korpus, daya pembeda pada konfigurasi yang dievaluasi tampak terbatas untuk pertanyaan pemilihan model, dan artikel ini tidak menetapkan penyebabnya.",
-    "Literatur transfer pada domain ini lebih tipis daripada literatur klasifikasi. Studi lintas dataset menunjukkan bahwa keandalan fitur tidak otomatis berpindah antar korpus [9], dan evaluasi leave-one-family-out pada korpus yang sama menunjukkan transfer yang buruk ke keluarga serangan yang tidak terlihat [24]. Kedua hasil itu menunjukkan bahwa portabilitas perlu diuji secara eksplisit, bukan disimpulkan dari skor dalam-korpus. Uji transfer beku satu arah dengan ekstraktor, model, dan ambang yang tidak disesuaikan pada target dilaporkan secara terbatas pada pasangan korpus PhiUSIIL dan PhreshPhish. Kontribusi artikel ini pada sumbu tersebut adalah bukti empiris spesifik untuk pasangan korpus itu dengan ekstraktor, urutan fitur, model, dan ambang yang dibekukan, dibaca bersama evaluasi temporal dalam korpus dan trade-off ambang yang dipilih pada validasi; ini penyediaan bukti yang dapat diaudit, bukan pengajuan metode adaptasi baru.",
+    "Literatur transfer pada domain ini lebih tipis daripada literatur klasifikasi. Studi lintas dataset menunjukkan bahwa keandalan fitur tidak otomatis berpindah antar korpus [9], dan evaluasi leave-one-family-out pada korpus yang sama menunjukkan transfer yang buruk ke keluarga serangan yang tidak terlihat [24]. Kedua hasil itu menunjukkan bahwa portabilitas perlu diuji secara eksplisit, bukan disimpulkan dari skor dalam-korpus. Uji transfer beku dua arah pada pasangan korpus PhiUSIIL dan PhreshPhish, dengan ekstraktor, model, dan ambang yang tidak disesuaikan pada target, dilaporkan pada artikel ini. Kontribusi artikel ini pada sumbu tersebut adalah bukti empiris spesifik untuk pasangan korpus itu dengan ekstraktor, urutan fitur, model, dan ambang yang dibekukan, dibaca bersama evaluasi temporal dalam korpus dan trade-off ambang yang dipilih pada validasi; ini penyediaan bukti yang dapat diaudit, bukan pengajuan metode adaptasi baru.",
     "Pada sisi operasional, literatur sistem deteksi telah lama menunjukkan bahwa ketika peristiwa yang dicari jarang, laju positif palsu yang kecil tetap menghasilkan proporsi alarm palsu yang besar di antara seluruh alarm [21]. Untuk data yang tidak seimbang, analisis precision-recall lebih informatif daripada ROC karena sensitif terhadap prevalensi kelas positif [22]. Karena itu artikel ini melaporkan FPR bersama proyeksi nilai prediksi positif pada prevalensi asumsi, dan memperlakukan proyeksi tersebut sebagai skenario aritmetika, bukan pengamatan penerapan.",
     "Perkembangan mutakhir juga mencakup penggunaan model bahasa besar, dengan perbandingan antara rekayasa prompt dan fine-tuning untuk deteksi URL phishing [23]. Arah tersebut tidak diuji dalam artikel ini karena kebutuhan utamanya adalah rantai evaluasi yang dapat dibekukan dan diaudit pada tingkat artefak, bukan pemilihan keluarga model.",
 ]
@@ -312,7 +352,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 15
-WORD_WORDS = 9833
+WORD_WORDS = 10076
 
 
 # --------------------------------------------------------------------------- #
@@ -463,10 +503,15 @@ def build() -> dict:
         if len(hits) != 1:
             raise SystemExit(f"ABORT {cid}: substring found in {len(hits)} paragraphs")
         para = doc.paragraphs[hits[0]]
-        if len(para.runs) != 1:
-            raise SystemExit(f"ABORT {cid}: paragraph has {len(para.runs)} runs, refusing to flatten")
         before = para.text
-        para.runs[0].text = para.text.replace(old_sub, new_sub, 1)
+        done = False
+        for run in para.runs:
+            if old_sub in run.text:
+                run.text = run.text.replace(old_sub, new_sub, 1)
+                done = True
+                break
+        if not done:
+            raise SystemExit(f"ABORT {cid}: substring spans multiple runs; cannot replace safely")
         log.append({"change_id": cid, "action_id": action, "type": "REPLACE_TEXT",
                     "locator": f"paragraph[{hits[0]}] substring replace",
                     "before": old_sub[:200], "after": new_sub[:200],
@@ -622,6 +667,51 @@ def build() -> dict:
                 "reason": "Angka yang hanya muncul di prosa tidak dapat diaudit dari tabel; tabel ini menautkannya ke artefak.",
                 "refs": "-", "verification": "PASS"})
 
+
+
+    # ---- 3e. Experiment 9: reverse transfer (Table 7 rows + §3.7 paragraph) --
+    t7 = doc.tables[6]
+    if len(t7.rows) != 5 and len(t7.rows) != 7:
+        raise SystemExit(f"ABORT: Table 7 expected 5 or 7 rows before insertion, found {len(t7.rows)}")
+    if len(t7.rows) == 5:
+        base_tr = t7.rows[2]._tr
+        c1 = copy.deepcopy(base_tr); base_tr.addnext(c1)
+        c2 = copy.deepcopy(base_tr); c1.addnext(c2)
+        for ridx, values in ((3, TABLE7_REVERSE_ROWS[0]), (4, TABLE7_REVERSE_ROWS[1])):
+            for ci, val in enumerate(values):
+                set_cell_text(t7.rows[ridx].cells[ci], val)
+        log.append({"change_id": "P1-056", "action_id": "experiment 9", "type": "INSERT_TABLE_ROWS",
+                    "locator": "table[7] (Tabel 7), rows inserted after the forward LightGBM row",
+                    "before": "(5 rows, forward direction only)",
+                    "after": "7 rows: + LightGBM PhreshPhish→PhiUSIIL zero-shot (F1 0,549564) and LightGBM PhreshPhish in-source (F1 0,805958)",
+                    "evidence": "Experiment/9 - Reverse Transfer PhreshPhish to PhiUSIIL/outputs/20261101T062209564437Z/metrics_per_seed.csv",
+                    "reason": "Hasil eksperimen 9 belum tampil di tabel transfer.",
+                    "refs": "-", "verification": "PASS"})
+
+    rev_para = ("Uji arah sebaliknya dijalankan dengan protokol yang sama pada eksperimen 9. Model dilatih hanya pada blok fit "
+                "PhreshPhish (372.380 baris, 2 Juli 2024 sampai 30 Juni 2025), dibekukan, lalu diterapkan pada 235.370 baris "
+                "PhiUSIIL hasil pembersihan tanpa fitting, kalibrasi, atau penyetelan ambang. Hasilnya juga gagal, tetapi dengan "
+                "mekanisme yang berbeda: F1 0,549564, FPR benign 0,897783, MCC −0,092320, dan ROC-AUC 0,642939. Berbeda dari arah "
+                "maju yang ROC-AUC-nya di bawah 0,5, di sini urutan skor masih sedikit informatif tetapi kalibrasinya tidak sesuai, "
+                "sehingga pada ambang beku 0,5 sebanyak 89,8 % URL benign PhiUSIIL ditandai phishing. Sebagai pembanding, "
+                "pengklasifikasi yang selalu memprediksi phishing pada korpus ini memperoleh F1 0,598529, sehingga F1 transfer "
+                "terbalik berada di bawah baseline trivial tersebut. Tumpang tindih URL persis antara blok latih dan target hanya "
+                "137 baris (0,058 %), sedangkan tumpang tindih registrable domain mencapai 21,6 % baris target; angka terakhir "
+                "membatasi interpretasi dan tidak menyelamatkan kinerja. Eksperimen ini bukan evaluasi temporal karena PhiUSIIL tidak "
+                "memiliki penanda waktu, dan hasilnya tidak menetapkan penyebab kegagalan transfer.")
+    # keep the (now longer) Table 7 caption on the same page as its table
+    cap7 = doc.paragraphs[find_unique_para(doc, "Tabel 7. Transfer A2 seed 42")]
+    cap7.paragraph_format.keep_with_next = True
+    cap7.paragraph_format.keep_together = True  # keep the whole caption on one page
+    anchor_rev = doc.paragraphs[find_unique_para(doc, "Temuan ini lebih kuat daripada selisih statis")]
+    clone_para_after(anchor_rev, body_template, rev_para, [])
+    log.append({"change_id": "P1-057", "action_id": "experiment 9", "type": "INSERT_PARA",
+                "locator": "after the paragraph beginning 'Temuan ini lebih kuat daripada selisih statis' (§3.7)",
+                "before": "(absent)",
+                "after": "Reverse-transfer paragraph: protocol, metrics, failure-mode contrast, trivial baseline 0,598529, overlap 0,058%/21,6%, non-temporal caveat",
+                "evidence": "Experiment/9 .../RESULTS.md; outputs/20261101T062209564437Z/",
+                "reason": "Eksperimen 9 harus dilaporkan, termasuk batas interpretasinya.",
+                "refs": "-", "verification": "PASS"})
 
     # ---- 4. reference [12] page range -------------------------------------
     ref_i = find_unique_para(doc, "[12] Y. Yoga")
