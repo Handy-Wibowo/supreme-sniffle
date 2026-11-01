@@ -1,0 +1,13 @@
+check,value
+fit_window_rows_raw,372381
+unparseable_urls_purged,1
+rows_after_canonical_purge,372380
+unique_canonical_keys,372213
+canonical_duplicate_groups,129
+rows_removed_by_canonical_dedup,167
+experiment9_reported_fit_rows,372380
+experiment7_reported_fit_rows,372213
+reported_difference,167
+difference_equals_rows_removed,True
+exact_url_dedup_removed,0
+method,canonical_url() from Experiment 5 src/features.py applied to fit window

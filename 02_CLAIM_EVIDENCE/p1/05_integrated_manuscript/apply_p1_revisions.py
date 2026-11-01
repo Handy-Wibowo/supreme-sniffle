@@ -176,6 +176,38 @@ SUBSREPLACE = [
      "Perolehan Pendanaan: tidak ada.",
      "Perolehan Pendanaan: tidak ada dana eksternal; penelitian didanai mandiri oleh para penulis.",
      "§5.1 menyatakan pendanaan 'tidak ada' sedangkan §5.3 menyatakan 'self-funded', yang terbaca bertentangan."),
+    ("P1-071", "review 3 C1",
+     "Selisih rerata antarprotokol berada pada rentang 0,000163 sampai 0,001178 dalam F1, bergantung pada model dan konfigurasi. Untuk A0/LightGBM selisihnya 0,000203; untuk A0/XGBoost 0,000163.",
+     "Selisih rerata antarprotokol berada pada rentang 0,000162 sampai 0,001178 dalam F1, bergantung pada model dan konfigurasi. Untuk A0/LightGBM selisihnya 0,000203; untuk A0/XGBoost 0,000162, dihitung dari nilai tak-terbulatkan pada summary.csv eksperimen 5.",
+     "Selisih minimum dihitung dari rerata yang sudah dibulatkan sehingga menjadi 0,000163; nilai tak-terbulatkan memberi 0,000162."),
+    ("P1-072", "review 3 C1",
+     "Interval kepercayaan 95 % untuk rata-rata lintas seed dihitung dengan distribusi t (df = 4).",
+     "Interval kepercayaan 95 % untuk rata-rata lintas seed dihitung dengan distribusi t (df = 4) dari lima metrik per seed, dan tersedia sebagai seed_t_intervals.csv pada folder keluaran eksperimen 5; variasi yang tercakup juga meliputi perubahan partisi pada benchmark.",
+     "Klaim bahwa interval t tersimpan tidak didukung artefak; artefak seed_t_intervals.csv kini dibuat dari metrik per seed yang tersimpan."),
+    ("P1-075", "review 3 C3",
+     "sedangkan transfer lintas-korpus melatih model hanya pada PhiUSIIL dan menggunakan kohort uji PhreshPhish sebagai target tanpa adaptasi",
+     "sedangkan transfer lintas-korpus dijalankan dua arah: arah maju melatih model hanya pada PhiUSIIL dan menggunakan kohort uji PhreshPhish sebagai target tanpa adaptasi, dan arah balik melatih model hanya pada blok fit PhreshPhish dengan deduplikasi string URL persis lalu menguji pada PhiUSIIL tanpa adaptasi",
+     "Metode §2.2/§2.7 hanya mendeskripsikan transfer maju, sehingga eksperimen arah balik tidak punya padanan metode."),
+    ("P1-076", "review 3 C3",
+     "dua fitur yang dipertahankan masing-masing memiliki AUC tunggal di atas 0,988",
+     "dua fitur yang dipertahankan masing-masing memiliki AUC tunggal sekitar 0,988 atau lebih",
+     "Frasa 'di atas 0,988' tidak dapat disimpulkan dari tampilan empat desimal."),
+    ("P1-077", "review 3 C3",
+     "memuat dua kolom dengan AUC tunggal di atas 0,988",
+     "memuat dua kolom dengan AUC tunggal sekitar 0,988 atau lebih",
+     "Sama: frasa pembanding yang tidak konsisten dengan presisi tampilan."),
+    ("P1-078", "review 3 C3",
+     "dua kolom A0 memiliki AUC tunggal di atas 0,988",
+     "dua kolom A0 memiliki AUC tunggal sekitar 0,988 atau lebih",
+     "Sama: frasa pembanding yang tidak konsisten dengan presisi tampilan."),
+    ("P1-079", "review 3 C3",
+     "dua fitur yang dipertahankan dengan AUC tunggal di atas 0,988",
+     "dua fitur yang dipertahankan dengan AUC tunggal sekitar 0,988 atau lebih",
+     "Sama: frasa pembanding yang tidak konsisten dengan presisi tampilan."),
+    ("P1-080", "review 3 C3",
+     "Dua kolom A0 memiliki AUC tunggal di atas 0,988 sementara metrik A0 teramati",
+     "Dua kolom A0 memiliki AUC tunggal sekitar 0,988 atau lebih, sementara metrik A0 teramati",
+     "Frasa pembanding yang tidak konsisten dengan presisi tampilan empat desimal."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -184,10 +216,10 @@ SUBSREPLACE = [
      "Seluruh artefak eksperimen bersifat deterministik terhadap seed yang dicatat, dan setiap angka",
      "Seluruh artefak eksperimen mencatat konfigurasi dan seed untuk replikasi, dan setiap angka",
      "Kalimat determinisme penuh dipertahankan berdampingan dengan pernyataan bahwa determinisme tidak diverifikasi."),
-    ("P1-063", "re-review C3",
-     "Kedua, faktor populasi dan vendor: korpus PhreshPhish dikumpulkan melalui pipeline dan vendor yang berbeda dari PhiUSIIL, sehingga perbedaan distribusi dapat berasal dari perbedaan sumber pengumpulan, bukan dari perubahan perilaku penyerang seiring waktu.",
-     "Kedua, faktor populasi dan vendor: korpus PhreshPhish dikumpulkan melalui pipeline dan vendor yang berbeda dari PhiUSIIL, sehingga perbedaan distribusi antara kedua korpus dapat berasal dari perbedaan sumber pengumpulan, bukan dari perubahan perilaku penyerang seiring waktu. Perancu vendor ini berlaku pada perbandingan lintas korpus PhiUSIIL–PhreshPhish, bukan pada perbandingan antarbulan di dalam PhreshPhish, karena seluruh blok temporal PhreshPhish berasal dari sumber pengumpulan yang sama.",
-     "Kalimat awal §3.6 tetap menyiratkan perancu vendor berlaku pada evaluasi temporal dalam korpus."),
+    ("P1-063", "review 3 C3",
+     "Lebih penting lagi, evaluasi temporal pada PhreshPhish tidak dapat dipisahkan dari dua sumber perancu. Pertama, faktor temporal: periode uji berasal dari waktu yang lebih akhir daripada periode latih. Kedua, faktor populasi dan vendor: korpus PhreshPhish dikumpulkan melalui pipeline dan vendor yang berbeda dari PhiUSIIL, sehingga perbedaan distribusi dapat berasal dari perbedaan sumber pengumpulan, bukan dari perubahan perilaku penyerang seiring waktu. Kedua sumber perancu ini bercampur",
+     "Lebih penting lagi, evaluasi temporal pada PhreshPhish tidak dapat dipisahkan dari faktor temporal: periode uji berasal dari waktu yang lebih akhir daripada periode latih, sehingga perbedaan kinerja antara periode awal dan akhir tidak dapat diatribusikan kepada waktu saja. Perbandingan lintas korpus PhiUSIIL–PhreshPhish membawa perancu tambahan yang berbeda sifatnya, yaitu pipeline dan vendor pengumpulan yang berbeda, dan perancu tersebut berlaku pada perbandingan lintas korpus itu, bukan pada perbandingan antarbulan di dalam PhreshPhish. Kedua jenis perancu ini bercampur",
+     "Pembukaan §3.6 masih mengatribusikan perancu vendor lintas korpus kepada evaluasi temporal dalam-korpus, lalu menyangkalnya di akhir paragraf yang sama; satu klaim perancu ditutup dengan kalimat penutup yang mengulang penyangkalan."),
     ("P1-064", "re-review C3",
      "Eksperimen transfer membekukan ekstraktor A2, urutan 18 fitur, model, dan ambang 0,5 setelah pelatihan pada PhiUSIIL. PhreshPhish hanya digunakan sebagai target evaluasi; tidak ada retraining, kalibrasi, atau pemilihan ambang berbasis target.",
      "Jalur yang digambarkan adalah arm transfer arah maju: ekstraktor A2, urutan 18 fitur, model, dan ambang 0,5 dibekukan setelah pelatihan pada PhiUSIIL, dan PhreshPhish hanya digunakan sebagai target evaluasi tanpa retraining, kalibrasi, atau pemilihan ambang berbasis target. Arm arah balik (PhreshPhish→PhiUSIIL) dijalankan pada eksperimen 9 dan tidak digambarkan di sini.",
@@ -236,11 +268,11 @@ SUBAPPENDS = [
      " Nilai interval tersebut tersimpan pada berkas metrik per seed dan tidak ditabulasikan dalam artikel ini.",
      "Teks menyatakan interval t dilaporkan, sedangkan nilainya tidak muncul pada tabel mana pun."),
     ("P1-042", "bukan \"kinerja model menurun 20 poin karena waktu\"",
-     " Perlu ditegaskan bahwa perbedaan vendor dan pipeline merupakan perancu perbandingan lintas korpus PhiUSIIL–PhreshPhish, bukan perancu perbandingan antarbulan di dalam PhreshPhish, karena seluruh blok temporal PhreshPhish berasal dari sumber pengumpulan yang sama.",
+     "",
      "Perancu lintas korpus dipakai untuk menjelaskan evaluasi dalam korpus."),
     ("P1-046", "tidak diperlakukan sebagai klaim yang portabel, karena pengukuran waktu bergantung pada perangkat keras dan beban sistem saat eksekusi",
-     " Spesifikasi perangkat keras dan jumlah thread tidak dicatat pada artefak, sehingga angka waktu tersebut adalah log eksekusi, bukan pembandingan biaya komputasi.",
-     "Angka waktu dilaporkan tanpa spesifikasi mesin."),
+     " Metadata eksekusi mencatat 16 CPU logis dan konfigurasi n_jobs, tetapi jumlah thread efektif, kapasitas RAM, dan beban sistem saat eksekusi tidak dicatat; karena itu angka waktu tersebut adalah log eksekusi, bukan pembandingan biaya komputasi.",
+     "Angka waktu dilaporkan tanpa spesifikasi mesin; §3.3 kemudian bertentangan dengan Tabel A1."),
 ]
 
 # Paragraph replaced wholesale (its content is a description of Table 1).
@@ -262,7 +294,7 @@ TABLE1_ROWS = [
      "Tidak memindahkan angka atau efek protokol ke PhiUSIIL"],
     ["PhishBench (El Aassal et al.) [4]",
      "Banyak dataset deteksi phishing; kondisi pembandingan diseragamkan",
-     "Tanpa desain temporal; protokol ambang tidak dilaporkan pada abstrak",
+     "Menguji ulang metode pada dataset baru dan beragam, termasuk pengaruh rasio kelas; menyatakan pelatihan ulang saja tidak cukup menghadapi serangan baru; protokol ambang tidak dilaporkan pada abstrak",
      "Penelitian ini tidak menggunakan pipeline PhishBench"],
     ["Arp et al. [5]; Kapoor dan Narayanan [6]",
      "Lintas domain keamanan dan sains; unit entitas dan kebocoran data",
@@ -274,7 +306,7 @@ TABLE1_ROWS = [
      "Protokol, fitur, dan pasangan korpus berbeda; bukan replikasi langsung"],
     ["Nabila et al. [11]; Yoga et al. [12]",
      "Klasifikasi URL pada venue BITS; evaluasi dalam-korpus",
-     "Tanpa desain temporal atau transfer lintas korpus",
+     "Membandingkan protokol evaluasi pada beberapa dataset; tidak melaporkan transfer lintas korpus",
      "Tidak ada klaim peningkatan model atas kedua studi"],
     ["TESSERACT (Pendlebury et al.) [13]",
      "Malware Android; 129 ribu aplikasi lintas tiga tahun; batas ruang dan waktu",
@@ -372,7 +404,7 @@ AVAILABILITY_NEW = (
     "OMITTED_LICENSE_PRIVACY, atau NOT_REQUIRED. Karena itu paket ini adalah bundel bukti yang dapat diaudit, bukan "
     "bundel yang dapat direproduksi penuh di lingkungan bersih tanpa mengambil data dari penyedia aslinya. "
     "Salinan paket tersedia pada repositori publik https://github.com/Handy-Wibowo/supreme-sniffle dan diarsipkan dengan DOI konsep 10.5281/zenodo.23847784, dengan MANIFEST.sha256 untuk verifikasi independen; DOI konsep tersebut selalu menunjuk rilis terbaru. "
-    "Artefak yang dikecualikan tidak dihasilkan oleh satu skrip tunggal. Pemetaan per eksperimen: benchmark PhiUSIIL (E1-E5) dibangun oleh 03_evaluation_pipeline_v2_run_complete.ipynb dengan split_random.csv dan split_sitedisjoint.csv sebagai masukan; evaluasi temporal PhreshPhish (E4) oleh run_temporal.py dengan design.json pada folder run; evaluasi ambang operasional (E7) oleh 01_operational_thresholds.executed.ipynb yang mengimpor paket src eksperimen 7; taksonomi galat (E8) oleh error_taxonomy.py; dan transfer arah balik (E9) oleh reverse_transfer.ipynb. Biner model, prediksi per baris, dan pemisahan baris lengkap dibangkitkan ulang oleh skrip masing-masing dengan seed yang tercatat, bukan oleh satu perintah bersama."
+    "Artefak yang dikecualikan tidak dihasilkan oleh satu skrip tunggal, dan pemetaan berikut menyebut artefak yang benar-benar tersedia. Pembersihan dan pembagian PhiUSIIL disiapkan oleh notebook tahap awal, dengan split_random.csv dan split_sitedisjoint.csv sebagai manifest ID-fold yang menjadi masukan setiap arm. Benchmark A0/A1/A2 dan ablasi dibangkitkan oleh paired_bootstrap_E4/src/run_experiment.py dan diringkas oleh paired_bootstrap_E4/src/summarize.py; nama folder historis E4 tidak berarti notebook E3 menghasilkan benchmark final, dan notebook 03_evaluation_pipeline_v2_run_complete.ipynb memakai keluarga fitur serta konvensi label yang berbeda sehingga tidak dipakai untuk metrik positif-phishing. Evaluasi temporal memakai temporal_scripts/run_temporal.py untuk jalur kanonik, sedangkan interval yang dikutip Tabel 6 berasal dari paired_bootstrap_E4/bootstrap_temporal.csv. Transfer maju dijalankan oleh Exp6_Cross_Corpus/transfer.executed.ipynb; evaluasi ambang oleh Exp7_Operational_Threshold/01_operational_thresholds.executed.ipynb dengan paket src eksperimen 7; taksonomi galat oleh Exp8_Error_Taxonomy/error_taxonomy.executed.ipynb; dan transfer balik oleh Exp9_reverse_transfer/reverse_transfer.ipynb. Kedua manifest split memuat 1.176.850 baris, yaitu lima seed kali 235.370 URL; yang tidak dibundel adalah data mentah, biner model, dan prediksi per baris, bukan manifest ID-fold. Snapshot arsip yang dirujuk adalah DOI versi 10.5281/zenodo.23860185 di bawah DOI konsep 10.5281/zenodo.23847784."
 )
 
 CORE_SUBJECT_NEW = "Manuskrip v10 P1 dengan transfer lintas-korpus, evaluasi ambang, dan taksonomi galat"
@@ -384,8 +416,8 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # Rendered statistics of the candidate, measured with Word ComputeStatistics and
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
-WORD_PAGES = 15
-WORD_WORDS = 10597
+WORD_PAGES = 16
+WORD_WORDS = 10717
 
 
 # --------------------------------------------------------------------------- #
@@ -544,7 +576,24 @@ def build() -> dict:
                 done = True
                 break
         if not done:
-            raise SystemExit(f"ABORT {cid}: substring spans multiple runs; cannot replace safely")
+            # Cross-run fallback: the substring spans several runs. Rewrite the paragraph as a single
+            # run carrying the first run's formatting. Only used when the paragraph has no mixed
+            # formatting that matters (plain body text), and the change is logged as REPLACE_TEXT_XRUN.
+            joined = "".join(r.text for r in para.runs)
+            if old_sub not in joined:
+                raise SystemExit(f"ABORT {cid}: substring spans multiple runs and not in joint text")
+            first = para.runs[0]
+            style = (first.font.name, first.font.size, first.font.bold, first.font.italic)
+            new_joined = joined.replace(old_sub, new_sub, 1)
+            first.text = new_joined
+            for r in para.runs[1:]:
+                r._element.getparent().remove(r._element)
+            if any(v is not None for v in style[:2]):
+                first.font.name, first.font.size, first.font.bold, first.font.italic = style
+            done = True
+            cross_run = True
+        if not done:
+            raise SystemExit(f"ABORT {cid}: substring cannot be replaced safely")
         log.append({"change_id": cid, "action_id": action, "type": "REPLACE_TEXT",
                     "locator": f"paragraph[{hits[0]}] substring replace",
                     "before": old_sub[:200], "after": new_sub[:200],
@@ -648,7 +697,7 @@ def build() -> dict:
     rows10 = [
         ["Angka", "Nilai", "Artefak sumber"],
         ["Selisih F1 acak terhadap site-disjoint, minimum (A0/XGBoost)", "0,000162",
-         "summary.csv (eksperimen 5): 0,999811573 − 0,999649117"],
+         "summary.csv (eksperimen 5): 0,999855755 − 0,999693299"],
         ["Selisih F1 acak terhadap site-disjoint, maksimum (A2/LightGBM)", "0,001178",
          "summary.csv (eksperimen 5): 0,996364752 − 0,995186381"],
         ["Kesalahan A0→A1 LightGBM, rerata 5 seed pada 44.213,6 baris uji", "12,8 → 32,2",
