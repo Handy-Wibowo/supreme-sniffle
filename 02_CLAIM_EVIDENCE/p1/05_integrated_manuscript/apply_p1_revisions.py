@@ -168,6 +168,14 @@ SUBSREPLACE = [
      "Keduanya dipilih sebagai pembanding karena telah digunakan dan dibandingkan dalam studi deteksi phishing URL [10] dan karena biaya komputasinya memungkinkan pengulangan lima seed.",
      "Keduanya dipilih sebagai pembanding karena telah digunakan dan dibandingkan dalam studi deteksi phishing URL [10]; pilihan ini juga mempertimbangkan biaya komputasi yang memungkinkan pengulangan lima seed, dan pertimbangan biaya tersebut merupakan keputusan desain studi ini, bukan klaim yang bersumber dari [10].",
      "Kalimat menyatukan klaim literatur dan keputusan desain sendiri di bawah satu sitasi, sehingga keputusan penulis tampak bersumber dari [10]."),
+    ("P1-069", "fresh audit",
+     "Menurunkan FPR uji dari 7,65% menjadi 1,14% mengurangi alarm palsu dari 765 menjadi 114 per 10.000 URL benign, tetapi recall turun dari 0,738 menjadi 0,544.",
+     "Menurunkan FPR uji dari 7,65% menjadi 1,14% mengurangi alarm palsu dari 765 menjadi 114 per 10.000 URL benign, tetapi recall turun dari 0,738 menjadi 0,544 (Gambar 2b).",
+     "Gambar 2 memiliki caption tetapi tidak pernah dirujuk di badan teks, sehingga menjadi caption yatim."),
+    ("P1-070", "fresh audit",
+     "Perolehan Pendanaan: tidak ada.",
+     "Perolehan Pendanaan: tidak ada dana eksternal; penelitian didanai mandiri oleh para penulis.",
+     "§5.1 menyatakan pendanaan 'tidak ada' sedangkan §5.3 menyatakan 'self-funded', yang terbaca bertentangan."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -377,7 +385,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 15
-WORD_WORDS = 10587
+WORD_WORDS = 10597
 
 
 # --------------------------------------------------------------------------- #
