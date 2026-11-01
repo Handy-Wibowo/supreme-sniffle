@@ -130,6 +130,18 @@ REPLACES = [
 ]
 
 
+
+SUBSREPLACE = [
+    ("P1-048", "external-review D5",
+     "berdampak jauh lebih besar terhadap beban investigasi analis daripada penurunan recall pada orde yang sama.",
+     "dapat berdampak lebih besar terhadap beban investigasi analis daripada penurunan recall pada orde yang sama, tetapi besaran beban yang sebenarnya bergantung pada jumlah baris benign dan phishing, prevalensi, aturan tindak lanjut, dan biaya per investigasi, yang tidak dimodelkan di sini.",
+     "Klaim beban analis dinyatakan tanpa syarat padahal bergantung pada volume, prevalensi, dan biaya."),
+    ("P1-049", "external-review D5",
+     "Perubahan komposisi kelas juga menjelaskan mengapa angka agregat tidak dapat dipakai untuk menyimpulkan tren.",
+     "Perubahan komposisi kelas sebagian menjelaskan mengapa angka agregat tidak dapat dipakai untuk menyimpulkan tren, meskipun TPR dan FPR tidak dijamin konstan antarbulan sehingga prevalensi bukan satu-satunya faktor.",
+     "Prevalensi diperlakukan sebagai penjelas tunggal perubahan precision antarbulan."),
+]
+
 # Substring-anchored appends (anchor must occur in exactly one paragraph).
 SUBAPPENDS = [
     ("P1-036", "jumlah domain pada himpunan uji site-disjoint adalah 35.100",
@@ -300,7 +312,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 15
-WORD_WORDS = 9771
+WORD_WORDS = 9833
 
 
 # --------------------------------------------------------------------------- #
@@ -444,6 +456,23 @@ def build() -> dict:
                     "reason": reason, "refs": refs, "verification": "PASS"})
 
 
+
+    # ---- 1d. substring replacements (single-run paragraphs only) ---------
+    for cid, action, old_sub, new_sub, reason in SUBSREPLACE:
+        hits = [i for i, p in enumerate(doc.paragraphs) if old_sub in (p.text or "")]
+        if len(hits) != 1:
+            raise SystemExit(f"ABORT {cid}: substring found in {len(hits)} paragraphs")
+        para = doc.paragraphs[hits[0]]
+        if len(para.runs) != 1:
+            raise SystemExit(f"ABORT {cid}: paragraph has {len(para.runs)} runs, refusing to flatten")
+        before = para.text
+        para.runs[0].text = para.text.replace(old_sub, new_sub, 1)
+        log.append({"change_id": cid, "action_id": action, "type": "REPLACE_TEXT",
+                    "locator": f"paragraph[{hits[0]}] substring replace",
+                    "before": old_sub[:200], "after": new_sub[:200],
+                    "evidence": "ai review/v10 review/result/REVIEW_INDEPENDEN_v10_P1.md (D5)",
+                    "reason": reason, "refs": "-", "verification": "PASS"})
+
     # ---- 1c. substring-anchored appends -----------------------------------
     for cid, needle, added, reason in SUBAPPENDS:
         hits = [i for i, p in enumerate(doc.paragraphs) if needle in (p.text or "")]
@@ -560,6 +589,10 @@ def build() -> dict:
          "0,646167; 0,480645; 0,005843", "test_metrics_across_seeds.csv"],
         ["FN kategori host platform, termasuk pages.dev", "8.035 (pages.dev 7.341)", "category_error_table.csv"],
         ["FP dan FN kategori query_present", "52 FP; 13 FN", "category_error_table.csv"],
+        ["AUC tunggal tiga kolom A0 (URLSimilarityIndex; LineOfCode; NoOfExternalRef)",
+         "0,9961; 0,9903; 0,9880", "phiusiil_leakage_audit.md"],
+        ["Registrable domain unik dan baris ber-alamat IP pada PhiUSIIL", "175.509; 636",
+         "phiusiil_leakage_audit.md"],
     ]
     heading_310 = doc.paragraphs[find_unique_para(doc, "3.10 Pembahasan")]
     lead10 = ("Tabel 10 merangkum angka deskriptif yang dibahas di luar tabel utama beserta artefak sumbernya, "

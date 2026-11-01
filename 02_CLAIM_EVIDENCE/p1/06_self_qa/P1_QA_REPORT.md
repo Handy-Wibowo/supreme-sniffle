@@ -2,7 +2,7 @@
 
 Date: 2026-11-01
 Candidate: `phishing/BITS_Draft_Phishing_URL_Leakage_v10_P1_candidate.docx`
-Candidate SHA-256: `d2ffef6726f50f9f174fec11901a02d32a6c63605adbce5a02f07d628e3f86f1`
+Candidate SHA-256: `6248b1af73390d921a44da750b1ead9fb6abffe49a6d8379bc45529329b0adf5`
 Baseline: `BITS_Draft_Phishing_URL_Leakage_v9_P0.docx`, SHA-256 `16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec` (unchanged)
 
 ## 1. Gate summary
@@ -11,7 +11,7 @@ Baseline: `BITS_Draft_Phishing_URL_Leakage_v9_P0.docx`, SHA-256 `16478b6e2844dfc
 |---|---|---|
 | G0 Baseline integrity | **PASS** | v9_P0 hash matches the published record before and after the build; v8_final and v9_P0 were opened read-only; all new files are confined to `revision_v10_p1/`, the candidate DOCX and the new package folder |
 | G1 P0 regression | **PASS** | 16/16 semantic checks (`P0_REGRESSION_MATRIX.csv`); no A01–A12 criterion regressed |
-| G2 Figure, metadata, visual | **PASS** | no "ceiling effect" in SVG, PNG, embedded media, OOXML or prose; metadata current; 14 pages inspected |
+| G2 Figure, metadata, visual | **PASS** | no "ceiling effect" in SVG, PNG, embedded media, OOXML or prose; metadata current; 15 pages inspected |
 | G3 A13 package | **PASS (declared gaps)** | manifest covers every file; 161 files hash-verified; omissions enumerated |
 | G4 A16 references/novelty | **PASS** | 24 sources, all verified; 91.7 % within 10 years; 87.5 % primary; no SOTA or superiority claim |
 | G5 A14/A15 conditional | **PASS** | A14 `PARTIAL`, A15 `NOT RECOVERED`; both recorded without strengthening the manuscript |
@@ -50,7 +50,7 @@ renumbering. The semantic criterion (seed 42 named separately from model seed 13
 |---|---|
 | Renderer | Microsoft Word (COM), `SaveAs2(FileFormat=17)` |
 | Pages | **14** (v9_P0: 12) |
-| Words | 9 746 |
+| Words | 9 771 |
 | Page images | `06_self_qa/pages/page_01..13.png` |
 | Inspected pages | 1, 2, 4, 5, 10, 13 (full-resolution visual review) |
 | Findings | Figure 1 legible and carries the corrected wording; Table 1 fits with 11 rows; Table 2 caption correctly placed; Figure 2 and Table 9 both fit on page 10; references [12]–[24] complete and ordered |

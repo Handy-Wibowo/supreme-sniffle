@@ -3,7 +3,7 @@
 ## 1. Candidate identity
 
 - Candidate path: `E:\Kuliah\Tugas Akhir\phishing\BITS_Draft_Phishing_URL_Leakage_v10_P1_candidate.docx`
-- SHA-256: `d2ffef6726f50f9f174fec11901a02d32a6c63605adbce5a02f07d628e3f86f1`
+- SHA-256: `6248b1af73390d921a44da750b1ead9fb6abffe49a6d8379bc45529329b0adf5`
 - Source path: `E:\Kuliah\Tugas Akhir\phishing\BITS_Draft_Phishing_URL_Leakage_v9_P0.docx`
 - Source SHA-256: `16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec` (unchanged; verified before and after the build)
 - Build script: `phishing/revision_v10_p1/05_integrated_manuscript/apply_p1_revisions.py`
@@ -18,7 +18,7 @@
 - A15 interval evidence: **NOT RECOVERED** — no cluster computation exists; interval stays removed
 - Integration: **PASS** — 39 registered changes, deterministic, locator-asserted
 - P0 regression: **PASS** — 16/16
-- Visual QA: **PASS** — 14 pages rendered, 6 pages inspected at full resolution
+- Visual QA: **PASS** — 15 pages rendered, 6 pages inspected at full resolution
 - Dual independent review: **BLOCK** — `glm-5-3-flash` APPROVE (rounds 3–5); `gpt-6-luna` BLOCK (C1–C5 PASS, C6/C7 block on disclosed limits and user-owned metadata)
 - Overall: `IMPLEMENTATION COMPLETE — PENDING CODEX REVIEW` (dual-review gate not cleared)
 
@@ -85,7 +85,7 @@ Changed locators caused by insertions (for Codex's own checks):
 | `python qa_structure.py` | `phishing/revision_v10_p1/06_self_qa` | 0 | 24/24 PASS | `QA_CHECKS.json` |
 | `python regression_p0.py` | same | 0 | 16/16 PASS | `P0_REGRESSION_MATRIX.csv` |
 | `python two_build_test.py` | same | 0 | members/media/text identical; bytes differ (ZIP timestamps) | `TWO_BUILD_COMPARISON.json` |
-| `python render_candidate.py` | same | 0 | 14 pages, 9 746 words; 13 page PNGs | `RENDER_LOG.json` |
+| `python render_candidate.py` | same | 0 | 15 pages, 9 771 words; 13 page PNGs | `RENDER_LOG.json` |
 | `python verify_package_relationships.py …v10_P1_candidate.docx` | `phishing/revision_v9_p0/04_integrated_manuscript` | 0 | `{"ok": true, "issues": []}` | printed JSON |
 | `sha256sum -c MANIFEST.sha256` | package root | 0 | all files OK | `MANIFEST.sha256` |
 

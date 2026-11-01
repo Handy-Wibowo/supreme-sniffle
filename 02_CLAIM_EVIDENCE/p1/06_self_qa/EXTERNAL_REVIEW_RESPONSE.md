@@ -3,7 +3,7 @@
 Date: 2026-11-01
 Review received: `ai review/v10 review/result/REVIEW_INDEPENDEN_v10_P1.md` — verdict BLOCK, SINTA2 FIT MAJOR REVISION, band 20–35 %.
 Candidate reviewed by that report: `f312e95d…` (hash matches the artifact sent; no mismatch).
-Candidate after this response: `d2ffef6726f50f9f174fec11901a02d32a6c63605adbce5a02f07d628e3f86f1`, 14 pages, 9 746 words, 39 registered changes.
+Candidate after this response: `6248b1af73390d921a44da750b1ead9fb6abffe49a6d8379bc45529329b0adf5`, 15 pages, 9 771 words, 39 registered changes.
 
 The review was high quality: it verified the hash, read the primary sources [9] and [24], and found two defects the
 internal dual review had missed. Every finding was checked against artifacts before acting.
@@ -28,7 +28,7 @@ internal dual review had missed. Every finding was checked against artifacts bef
 |---|---|---|
 | **C6 / D2 — full protocol recovery** | **DONE in P1-047.** Lampiran A + Tabel A1 now record, from artifacts: the frozen PhiUSIIL split manifests with per-fold counts at seed 13; the PhreshPhish snapshot (77 parquet shards, 666 315 rows, per-file SHA-256 in `input_manifest.json`, official train/test split used as-is); the 921-row exclusion ledger with reason breakdown (681 post-cutoff, 214 train duplicates, 22 test duplicates, 3 seen-in-train, 1 unparseable) and both stage totals; the string label mapping with out-of-domain rejection; A0/A1/A2 definitions; the A2 extractor file hash; both model configurations; the full environment including xgboost 3.4.1 and the PSL hash; the percentile bootstrap with domain resampling; the threshold rule (score >= t, candidates = unique validation probabilities); the 14-domain platform set and 7 binary categories; and the statement that hardware was not recorded. | agent — completed |
 | **C1 / D4 — complete Table 10 mapping** | **Partly done in this pass.** Four rows added: the two 5-seed threshold summaries (verified against `test_metrics_across_seeds.csv`: 0,700739/0,546658/0,011365 and 0,646167/0,480645/0,005843), FN in the host-platform category (8 035, of which pages.dev 7 341), and FP/FN in the query category (52/13) from `category_error_table.csv`. Not added: the univariate AUCs (source not located) and the 175 509-domain / 636-IP figures (they appear in the Stage-1 claim matrix, not in a raw artifact I could verify). | agent |
-| **C6 — access route in §5.2** | There is no public repository. A supplement route or a DOI deposit is the author's decision; inventing a URL would be worse than the current honest statement. | user |
+| **C6 — access route in §5.2** | **CLOSED.** The evidence package is published at `https://github.com/Handy-Wibowo/supreme-sniffle` and archived on Zenodo under concept DOI `10.5281/zenodo.23847784` (v1.0.0 = version DOI `10.5281/zenodo.23847785`, v1.1.0 minted from the same concept). §5.2 now states the route, the archival DOI and the manifest verification. Verified from a clean clone: 170/170 manifest entries OK, 0 failures. | agent — completed |
 | **Author metadata, CRediT** | Reserved by the user. | user |
 | **D2 — PhreshPhish 498 255/168 060 vs 497 359/168 035** | Correctly flagged as UNVERIFIABLE, not an error. Needs the dataset revision used at run time; `input_manifest.json` in the canonical run may resolve it. | agent |
 
