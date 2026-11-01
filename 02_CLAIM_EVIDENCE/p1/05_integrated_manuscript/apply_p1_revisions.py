@@ -95,7 +95,7 @@ APPENDS = [
      "-"),
     ("P1-023", "dual-review C1", "Tabel 6. Kinerja temporal A2/LightGBM", "APPEND",
      "dengan RNG seed 42.",
-     " Model dilatih pada seluruh blok pra-cutoff, yaitu periode fit dan validasi (497.359 baris), dengan ambang 0,5.",
+     " Model dilatih pada seluruh blok pra-cutoff, yaitu periode fit dan validasi (497.359 baris), dengan ambang 0,5. Batas interval diambil dari bootstrap_temporal.csv eksperimen 5; berkas cluster_bootstrap_primary_seed.csv pada folder eksperimen 4 memuat interval berbeda untuk estimasi yang sama dan tidak dipakai di sini.",
      "Caption tabel harus menyatakan blok latih agar tidak tertukar dengan Tabel 8.",
      "-"),
     ("P1-024", "dual-review C1", "Tabel 8. Ambang berbasis validasi", "APPEND",
@@ -208,6 +208,18 @@ SUBSREPLACE = [
      "Dua kolom A0 memiliki AUC tunggal di atas 0,988 sementara metrik A0 teramati",
      "Dua kolom A0 memiliki AUC tunggal sekitar 0,988 atau lebih, sementara metrik A0 teramati",
      "Frasa pembanding yang tidak konsisten dengan presisi tampilan empat desimal."),
+    ("P1-081", "round-2 audit",
+     "two retained features each had single-feature AUC above 0.988",
+     "two retained features each had single-feature AUC of about 0.988 or more",
+     "Abstrak EN masih memakai 'above 0.988' setelah versi ID diubah; keduanya harus menyatakan hal yang sama."),
+    ("P1-083", "round-2 audit",
+     "Interval kepercayaan 95 % berbasis t (df = 4) pada masing-masing protokol dilaporkan untuk menunjukkan variasi lintas seed, bukan untuk menguji selisih lintas protokol.",
+     "Interval kepercayaan 95 % berbasis t (df = 4) pada masing-masing protokol dihitung dan tersedia pada seed_t_intervals.csv eksperimen 5, tidak ditabulasikan dalam artikel ini; interval tersebut menunjukkan variasi lintas seed, bukan menguji selisih lintas protokol.",
+     "Teks menyatakan interval t dilaporkan padahal nilainya tidak muncul pada tabel mana pun."),
+    ("P1-084", "round-2 audit",
+     "prevalensi phishing 13,48 % pada September 2025, 46,75 % pada Oktober, 90,08 % pada November",
+     "prevalensi phishing 13,47 % pada September 2025, 46,75 % pada Oktober, 90,08 % pada November",
+     "Nilai artefak 0,1347495344 dibulatkan ke bawah menjadi 13,47 %, bukan 13,48 %."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -253,7 +265,7 @@ TABLE7_REVERSE_ROWS = [
 # Substring-anchored appends (anchor must occur in exactly one paragraph).
 SUBAPPENDS = [
     ("P1-036", "jumlah domain pada himpunan uji site-disjoint adalah 35.100",
-     " Kembali ke perbandingan A1−A0: titik estimasinya adalah nilai model seed 42, bukan rerata lima seed pada Tabel 4; seed 42 di sini berperan sebagai seed model, sedangkan seed 42 pada bootstrap berperan sebagai seed RNG resampling. Karena itu selisih pada Tabel 5 dan selisih rerata pada Tabel 4 memang berbeda dan tidak boleh dibandingkan langsung. Untuk evaluasi temporal, interval dihitung dengan bootstrap pada unit registrable domain, 1.000 replikasi, dan seed RNG bootstrap 42, diterapkan pada prediksi model seed 13; angka 13 pada Tabel 6 menandai seed model, bukan seed RNG bootstrap.",
+     " Kembali ke perbandingan A1−A0: titik estimasinya adalah nilai model seed 42, bukan rerata lima seed pada Tabel 4; seed 42 di sini berperan sebagai seed model, sedangkan seed 42 pada bootstrap berperan sebagai seed RNG resampling. Karena itu selisih pada Tabel 5 dan selisih rerata pada Tabel 4 memang berbeda dan tidak boleh dibandingkan langsung.",
      "Identitas estimasi Tabel 5 tidak dinyatakan, sehingga selisihnya tampak bertentangan dengan Tabel 4."),
     ("P1-037", "Tabel 5. Selisih berpasangan",
      " Titik estimasi memakai model seed 42; Tabel 4 menampilkan rerata lima seed.",
@@ -264,9 +276,6 @@ SUBAPPENDS = [
     ("P1-039", "Setiap kategori melaporkan dukungan, FP/FN, laju bersyarat pada kelas, dan interval Wilson 95%",
      " Nilai interval Wilson per kategori dihitung dari penyebut di dalam kategori dan tersimpan pada berkas taksonomi galat (kolom batas bawah dan batas atas); Tabel 9 menampilkan proporsi titik saja.",
      "Teks menyatakan interval Wilson dilaporkan, sedangkan Tabel 9 tidak memuatnya dan lokasi lampirannya tidak disebut."),
-    ("P1-040", "Interval kepercayaan 95 % berbasis t (df = 4) pada masing-masing protokol dilaporkan",
-     " Nilai interval tersebut tersimpan pada berkas metrik per seed dan tidak ditabulasikan dalam artikel ini.",
-     "Teks menyatakan interval t dilaporkan, sedangkan nilainya tidak muncul pada tabel mana pun."),
     ("P1-042", "bukan \"kinerja model menurun 20 poin karena waktu\"",
      "",
      "Perancu lintas korpus dipakai untuk menjelaskan evaluasi dalam korpus."),
@@ -417,7 +426,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 16
-WORD_WORDS = 10732
+WORD_WORDS = 10720
 
 
 # --------------------------------------------------------------------------- #
