@@ -220,6 +220,22 @@ SUBSREPLACE = [
      "prevalensi phishing 13,48 % pada September 2025, 46,75 % pada Oktober, 90,08 % pada November",
      "prevalensi phishing 13,47 % pada September 2025, 46,75 % pada Oktober, 90,08 % pada November",
      "Nilai artefak 0,1347495344 dibulatkan ke bawah menjadi 13,47 %, bukan 13,48 %."),
+    ("P1-086", "round-3 prose",
+     "Temuan ini lebih kuat daripada selisih statis pada Bagian 3.6 karena ekstraktor dan himpunan fitur sama serta pipeline target benar-benar dibekukan.",
+     "Temuan ini lebih kuat daripada selisih statis pada Bagian 3.6 karena kontrak 18 fitur dan urutannya sama serta pipeline target benar-benar dibekukan; dua salinan ekstraktor dipakai pada eksperimen berbeda dan kesetaraan nilai keduanya tidak diverifikasi dalam artikel ini.",
+     "Teks utama menyatakan ekstraktor sama, sedangkan Lampiran A menyatakan dua salinan ekstraktor dipakai dan kesetaraan nilainya tidak diperiksa."),
+    ("P1-087", "round-3 prose",
+     "Klaim yang sah adalah \"kelompok fitur konten menyumbang sekitar 0,001 F1 pada protokol site-disjoint\", bukan \"fitur X menyumbang sekian\".",
+     "Klaim yang sah adalah \"A1 memiliki F1 sekitar 0,001 lebih rendah daripada A0 pada protokol site-disjoint\"; rancangan ini tidak menetapkan kontribusi kausal tiap fitur maupun kelompok fitur.",
+     "Kata 'menyumbang' tetap merupakan atribusi kausal, sedangkan batas yang dinyatakan adalah tanpa klaim kausal."),
+    ("P1-088", "round-3 prose",
+     "Pada pembagian acak seed 42, 26,63 % baris uji berbagi registrable domain dengan baris latih",
+     "Pada pembagian acak dengan seed 42, 26,63 % baris uji berbagi registrable domain dengan baris latih",
+     "Preposisi hilang pada konstruksi 'pembagian acak seed 42'."),
+    ("P1-089", "round-3 prose",
+     "FPR 21,8% pada URL benign sepanjang paling banyak 30 karakter",
+     "FPR 21,8% pada URL benign dengan panjang paling banyak 30 karakter",
+     "Frasa 'sepanjang' tidak wajar untuk panjang URL."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -426,7 +442,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 17
-WORD_WORDS = 10869
+WORD_WORDS = 10896
 
 
 # --------------------------------------------------------------------------- #

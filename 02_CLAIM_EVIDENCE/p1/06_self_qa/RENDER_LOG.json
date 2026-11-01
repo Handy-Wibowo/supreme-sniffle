@@ -1,22 +1,22 @@
 {
   "docx": "E:\\Kuliah\\Tugas Akhir\\phishing\\BITS_Draft_Phishing_URL_Leakage_v10_P1_candidate.docx",
-  "docx_sha256_before_metadata_refresh": "c46027dffa7d4042f314686b48f28cec46eeb2fdba64ae55119d1159bccf34c1",
-  "docx_sha256_after": "c46027dffa7d4042f314686b48f28cec46eeb2fdba64ae55119d1159bccf34c1",
+  "docx_sha256_before_metadata_refresh": "1254fbb2be33c284184374895c26435e88c5a64bca1e9b37c01f36f0e1cd000b",
+  "docx_sha256_after": "1254fbb2be33c284184374895c26435e88c5a64bca1e9b37c01f36f0e1cd000b",
   "word_stats_before": {
     "pages": 17,
-    "words": 10869,
+    "words": 10896,
     "paragraphs": 647
   },
   "word_stats_after": {
     "pages": 17,
-    "words": 10869,
+    "words": 10896,
     "paragraphs": 647
   },
   "app_xml_replacements": {
     "skipped": "docProps/app.xml already current"
   },
   "pdf": "E:\\Kuliah\\Tugas Akhir\\phishing\\revision_v10_p1\\06_self_qa\\rendered_candidate.pdf",
-  "pdf_sha256": "e878559f3ea5b28b0c4462729a32f8f3d25d4f89e1af02971218dd9b20a1d966",
+  "pdf_sha256": "e3affd9404995b41051381f10c2d173c3c3c583d224f31ea10886e3c7356bb06",
   "pdf_pages": 17,
   "page_pngs": [
     "page_01.png",
