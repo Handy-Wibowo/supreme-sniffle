@@ -299,7 +299,7 @@ TABLE1_HEADER = ["Sumber", "Korpus, domain, dan unit pembagian",
 TABLE1_ROWS = [
     ["Marchal dan Asokan [3]",
      "Deteksi halaman phishing; unit pembagian tidak dilaporkan pada abstrak",
-     "Evaluasi untuk kondisi nyata; tanpa adaptasi lintas korpus",
+     "Mengusulkan protokol evaluasi untuk kondisi nyata, termasuk studi longitudinal pada interval waktu tetap dengan dan tanpa pelatihan ulang; tidak menjalankan transfer lintas korpus",
      "Tidak memindahkan angka atau efek protokol ke PhiUSIIL"],
     ["PhishBench (El Aassal et al.) [4]",
      "Banyak dataset deteksi phishing; kondisi pembandingan diseragamkan",
@@ -426,7 +426,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 16
-WORD_WORDS = 10720
+WORD_WORDS = 10735
 
 
 # --------------------------------------------------------------------------- #
