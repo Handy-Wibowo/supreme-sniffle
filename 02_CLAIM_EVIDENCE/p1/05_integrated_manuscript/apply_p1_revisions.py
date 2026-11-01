@@ -156,6 +156,14 @@ SUBSREPLACE = [
      " model A2 yang dilatih hanya pada PhiUSIIL menuju kohort uji PhreshPhish tanpa retraining, kalibrasi, atau penyetelan ambang.",
      " model A2 tanpa retraining, kalibrasi, atau penyetelan ambang pada dua arah: dilatih pada PhiUSIIL dan diuji pada PhreshPhish, serta dilatih pada PhreshPhish dan diuji pada PhiUSIIL.",
      "RQ4 hanya menyatakan arah maju."),
+    ("P1-066", "self-audit",
+     "dibandingkan F1 sumber 0,995985.",
+     "dibandingkan F1 sumber 0,995985; pada arah sebaliknya, model yang dilatih pada blok fit PhreshPhish dan diuji pada 235.370 URL PhiUSIIL mencapai F1 0,549564, FPR benign 0,897783, ROC-AUC 0,642939, dan MCC −0,092320.",
+     "Abstrak mengklaim transfer dua arah tetapi hanya melaporkan angka arah maju."),
+    ("P1-067", "self-audit",
+     "compared with source-domain F1 0.995985.",
+     "compared with source-domain F1 0.995985; in the reverse direction, training on the PhreshPhish fit block and testing on 235,370 PhiUSIIL URLs achieved F1 0.549564, benign FPR 0.897783, ROC-AUC 0.642939, and MCC −0.092320.",
+     "English abstract makes the same two-direction claim without the reverse numbers."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -365,7 +373,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 15
-WORD_WORDS = 10515
+WORD_WORDS = 10569
 
 
 # --------------------------------------------------------------------------- #

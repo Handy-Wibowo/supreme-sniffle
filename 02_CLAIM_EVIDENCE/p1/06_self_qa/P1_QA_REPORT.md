@@ -2,7 +2,7 @@
 
 Date: 2026-11-01
 Candidate: `phishing/BITS_Draft_Phishing_URL_Leakage_v10_P1_candidate.docx`
-Candidate SHA-256: `c8417afc9443f76e7056d5291b3bd2584828566e408e5da544e7667a769d160e`
+Candidate SHA-256: `8a93499e309228c520be1a48fe4974b3d158950e233b7135df3e2bc0124b6bc4`
 Baseline: `BITS_Draft_Phishing_URL_Leakage_v9_P0.docx`, SHA-256 `16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec` (unchanged)
 
 ## 1. Gate summary
@@ -50,7 +50,7 @@ renumbering. The semantic criterion (seed 42 named separately from model seed 13
 |---|---|
 | Renderer | Microsoft Word (COM), `SaveAs2(FileFormat=17)` |
 | Pages | **14** (v9_P0: 12) |
-| Words | 10 515 |
+| Words | 10 569 |
 | Page images | `06_self_qa/pages/page_01..13.png` |
 | Inspected pages | 1, 2, 4, 5, 10, 13 (full-resolution visual review) |
 | Findings | Figure 1 legible and carries the corrected wording; Table 1 fits with 11 rows; Table 2 caption correctly placed; Figure 2 and Table 9 both fit on page 10; references [12]–[24] complete and ordered |
