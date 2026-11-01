@@ -330,8 +330,8 @@ TABLE1_ROWS = [
      "Umumnya evaluasi dalam-korpus; representasi URL-saja atau hibrida",
      "Perbandingan angka tidak dilakukan karena korpus dan protokol berbeda"],
     ["Ahamed et al. [24]",
-     "PhiUSIIL 235.370 URL tervalidasi; validasi eksternal memakai PhishTank dengan benign independen",
-     "Robustness adversarial, generalisasi leave-one-family-out, stabilitas penjelasan, dan evaluasi eksternal lintas sumber (Subbagian 4.6)",
+     "PhiUSIIL 235.370 URL tervalidasi; validasi eksternal memakai 49.121 URL PhishTank, dengan kelas benign diambil dari split uji PhiUSIIL yang dipegang",
+     "Robustness adversarial, generalisasi leave-one-family-out, stabilitas penjelasan, dan validasi eksternal yang hanya eksternal pada sisi phishing (Subbagian 4.6), karena kelas benign diambil dari PhiUSIIL",
      "Sumbu pembandingnya robustness; evaluasi temporal berbasis waktu dan ambang berbasis validasi tidak dilaporkan di sana"],
     ["Axelsson [21]; Saito dan Rehmsmeier [22]; Trad dan Chehab [23]",
      "Sistem deteksi, klasifikasi tidak seimbang, dan model bahasa besar",
@@ -425,8 +425,8 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # Rendered statistics of the candidate, measured with Word ComputeStatistics and
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
-WORD_PAGES = 16
-WORD_WORDS = 10850
+WORD_PAGES = 17
+WORD_WORDS = 10869
 
 
 # --------------------------------------------------------------------------- #
