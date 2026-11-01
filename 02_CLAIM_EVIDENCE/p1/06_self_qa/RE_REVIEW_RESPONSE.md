@@ -3,7 +3,7 @@
 Date: 2026-11-01
 Review received: `ai review/v10 review/result/REVIEW_ULANG_v10_P1_31dc1c21.md`
 Reviewed artifact: `31dc1c21…` — the reviewer independently confirmed that hash and verified all 181 manifest entries.
-Candidate after this response: `8a93499e309228c520be1a48fe4974b3d158950e233b7135df3e2bc0124b6bc4` — 15 pages, 10,569 words, 56 registered changes, package 191 files.
+Candidate after this response: `cc7eebeb81d85724e2273f03dba187272c60aa5f098bf13c33ea4aea9224a4e2` — 15 pages, 10,587 words, 57 registered changes, package 191 files.
 Verdict received: BLOCK / MAJOR REVISION / 40–55 %.
 
 This review was materially better than the first: it fetched the archive, read the code, and found errors that were mine, not artefacts of a text extraction. Six of its findings are confirmed defects and are fixed below.

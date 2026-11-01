@@ -164,6 +164,10 @@ SUBSREPLACE = [
      "compared with source-domain F1 0.995985.",
      "compared with source-domain F1 0.995985; in the reverse direction, training on the PhreshPhish fit block and testing on 235,370 PhiUSIIL URLs achieved F1 0.549564, benign FPR 0.897783, ROC-AUC 0.642939, and MCC −0.092320.",
      "English abstract makes the same two-direction claim without the reverse numbers."),
+    ("P1-068", "citation audit",
+     "Keduanya dipilih sebagai pembanding karena telah digunakan dan dibandingkan dalam studi deteksi phishing URL [10] dan karena biaya komputasinya memungkinkan pengulangan lima seed.",
+     "Keduanya dipilih sebagai pembanding karena telah digunakan dan dibandingkan dalam studi deteksi phishing URL [10]; pilihan ini juga mempertimbangkan biaya komputasi yang memungkinkan pengulangan lima seed, dan pertimbangan biaya tersebut merupakan keputusan desain studi ini, bukan klaim yang bersumber dari [10].",
+     "Kalimat menyatukan klaim literatur dan keputusan desain sendiri di bawah satu sitasi, sehingga keputusan penulis tampak bersumber dari [10]."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -373,7 +377,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 15
-WORD_WORDS = 10569
+WORD_WORDS = 10587
 
 
 # --------------------------------------------------------------------------- #

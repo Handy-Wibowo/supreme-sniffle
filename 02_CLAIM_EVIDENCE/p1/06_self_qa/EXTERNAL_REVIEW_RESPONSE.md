@@ -3,7 +3,7 @@
 Date: 2026-11-01
 Review received: `ai review/v10 review/result/REVIEW_INDEPENDEN_v10_P1.md` — verdict BLOCK, SINTA2 FIT MAJOR REVISION, band 20–35 %.
 Candidate reviewed by that report: `f312e95d…` (hash matches the artifact sent; no mismatch).
-Candidate after this response: `8a93499e309228c520be1a48fe4974b3d158950e233b7135df3e2bc0124b6bc4`, 15 pages, 10 569 words, 56 registered changes.
+Candidate after this response: `cc7eebeb81d85724e2273f03dba187272c60aa5f098bf13c33ea4aea9224a4e2`, 15 pages, 10 587 words, 57 registered changes.
 
 The review was high quality: it verified the hash, read the primary sources [9] and [24], and found two defects the
 internal dual review had missed. Every finding was checked against artifacts before acting.
