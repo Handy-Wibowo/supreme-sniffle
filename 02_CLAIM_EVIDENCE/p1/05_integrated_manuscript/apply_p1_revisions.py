@@ -417,7 +417,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 16
-WORD_WORDS = 10717
+WORD_WORDS = 10724
 
 
 # --------------------------------------------------------------------------- #
@@ -714,7 +714,7 @@ def build() -> dict:
          "0,700739; 0,546658; 0,011365", "test_metrics_across_seeds.csv"],
         ["Rerata lima seed, aturan FPR validasi <= 0,5 % (F1; recall; FPR)",
          "0,646167; 0,480645; 0,005843", "test_metrics_across_seeds.csv"],
-        ["FN kategori host platform, termasuk pages.dev", "8.035 (pages.dev 7.341)", "category_error_table.csv"],
+        ["FN kategori host platform, termasuk pages.dev", "8.035 (pages.dev 7.341)", "category_error_table.csv (8.035); README.md eksperimen 8 (rincian pages.dev 7.341)"],
         ["FP dan FN kategori query_present", "52 FP; 13 FN", "category_error_table.csv"],
         ["AUC tunggal tiga kolom sumber: URLSimilarityIndex (dibuang); LineOfCode dan NoOfExternalRef (dipertahankan dalam A0)",
          "0,9961; 0,9903; 0,9880", "phiusiil_leakage_audit.md"],
