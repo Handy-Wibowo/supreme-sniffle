@@ -236,6 +236,10 @@ SUBSREPLACE = [
      "FPR 21,8% pada URL benign sepanjang paling banyak 30 karakter",
      "FPR 21,8% pada URL benign dengan panjang paling banyak 30 karakter",
      "Frasa 'sepanjang' tidak wajar untuk panjang URL."),
+    ("P1-090", "round-3 prose",
+     "sebagai referensi dalam-domain.",
+     "sebagai referensi dalam-domain. Tiga istilah dipakai konsisten di seluruh naskah: dalam-korpus berarti evaluasi temporal latih-lalu-uji di dalam PhreshPhish; dalam-sumber berarti evaluasi pada blok uji korpus sumber di dalam eksperimen transfer; dan dalam-domain berarti evaluasi referensi pada PhiUSIIL.",
+     "Tiga label 'dalam' dipakai berdampingan tanpa definisi, sehingga pembaca dapat membacanya sebagai sinonim."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -330,7 +334,7 @@ TABLE1_ROWS = [
      "Uji transfer model lintas dataset dua arah dengan fitur bersama; protokol ambangnya tidak dinyatakan pada sumber yang diperiksa",
      "Protokol, fitur, dan pasangan korpus berbeda; bukan replikasi langsung"],
     ["Nabila et al. [11]; Yoga et al. [12]",
-     "Klasifikasi URL pada venue BITS; evaluasi dalam-korpus",
+     "Klasifikasi phishing URL dan website pada venue BITS; evaluasi dalam-korpus",
      "Pembagian dalam-korpus pada satu dataset per studi (80/20 berstrata pada [11]; 70/30 pada [12]); tidak ada pemisahan berbasis waktu dan tidak ada transfer lintas korpus",
      "Tidak ada klaim peningkatan model atas kedua studi"],
     ["TESSERACT (Pendlebury et al.) [13]",
@@ -338,7 +342,7 @@ TABLE1_ROWS = [
      "Batas waktu eksplisit; metrik ketahanan yang diharapkan",
      "Domain malware; tidak memindahkan besaran efek ke phishing URL"],
     ["Transcend (Jordaney et al.) [14]; Barbero et al. [15]",
-     "Malware Android dan Windows",
+     "Malware Android dan Windows [14]; Android saja pada [15]",
      "Deteksi drift saat penerapan; penolakan prediksi berisiko",
      "Tidak memberi protokol ambang lintas korpus untuk phishing URL"],
     ["Safi dan Singh [16]; Karim et al. [17]; Gupta et al. [18]; Sanchez-Paniagua et al. [19]; Aljofey et al. [20]",
@@ -442,7 +446,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 17
-WORD_WORDS = 10896
+WORD_WORDS = 10938
 
 
 # --------------------------------------------------------------------------- #
