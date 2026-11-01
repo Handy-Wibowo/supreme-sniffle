@@ -1,0 +1,8 @@
+scope,host_suffix,count,source_artifact,note
+platform_category,ALL,8035,category_error_table.csv,FN total in platform=True class; fp=45
+example_rows,pages.dev,4,redacted_examples.csv,"count of FN example rows with this host suffix (sample, not full population)"
+example_rows,blogspot.com,2,redacted_examples.csv,"count of FN example rows with this host suffix (sample, not full population)"
+example_rows,academicsearch.org,1,redacted_examples.csv,"count of FN example rows with this host suffix (sample, not full population)"
+example_rows,korlen.cfd,1,redacted_examples.csv,"count of FN example rows with this host suffix (sample, not full population)"
+example_rows,nyc.gov,1,redacted_examples.csv,"count of FN example rows with this host suffix (sample, not full population)"
+pages_dev,pages.dev,7341,README.md eksperimen 8,"prose figure: 7,341 of 8,035 platform FN sit on pages.dev"
