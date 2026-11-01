@@ -417,7 +417,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 16
-WORD_WORDS = 10724
+WORD_WORDS = 10732
 
 
 # --------------------------------------------------------------------------- #
@@ -708,8 +708,8 @@ def build() -> dict:
         ["IK 95 % FPR benign transfer LightGBM", "[0,984874; 0,988138]", "primary_seed_domain_bootstrap.csv"],
         ["IK 95 % ROC-AUC transfer LightGBM", "[0,353178; 0,413481]", "primary_seed_domain_bootstrap.csv"],
         ["IK 95 % MCC transfer LightGBM", "[−0,175573; −0,111340]", "primary_seed_domain_bootstrap.csv"],
-        ["Waktu latih LightGBM temporal (5 seed)", "6,06–7,21 detik", "results_per_seed.csv"],
-        ["Waktu prediksi batch 168.035 baris", "0,79–0,84 detik", "results_per_seed.csv"],
+        ["Waktu latih LightGBM temporal (5 seed)", "6,06–7,21 detik", "results_per_seed.csv (run 20261022T170935017991Z, run kanonik)"],
+        ["Waktu prediksi batch 168.035 baris", "0,79–0,84 detik", "results_per_seed.csv (run 20261022T170935017991Z, run kanonik)"],
         ["Rerata lima seed, aturan FPR validasi <= 1 % (F1; recall; FPR)",
          "0,700739; 0,546658; 0,011365", "test_metrics_across_seeds.csv"],
         ["Rerata lima seed, aturan FPR validasi <= 0,5 % (F1; recall; FPR)",
