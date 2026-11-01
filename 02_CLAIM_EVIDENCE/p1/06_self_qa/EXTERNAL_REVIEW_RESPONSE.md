@@ -3,7 +3,7 @@
 Date: 2026-11-01
 Review received: `ai review/v10 review/result/REVIEW_INDEPENDEN_v10_P1.md` — verdict BLOCK, SINTA2 FIT MAJOR REVISION, band 20–35 %.
 Candidate reviewed by that report: `f312e95d…` (hash matches the artifact sent; no mismatch).
-Candidate after this response: `5595d765471af00f1374a570c8519c60640ebea0e85bcce463fd8461e3106be6`, 15 pages, 9 833 words, 41 registered changes.
+Candidate after this response: `31dc1c21b3ea11ce2f8711129f859455c9ec18c6b2521913b2953af8717cf6a0`, 15 pages, 10 076 words, 51 registered changes.
 
 The review was high quality: it verified the hash, read the primary sources [9] and [24], and found two defects the
 internal dual review had missed. Every finding was checked against artifacts before acting.
@@ -33,6 +33,23 @@ internal dual review had missed. Every finding was checked against artifacts bef
 | **C6 — access route in §5.2** | **CLOSED.** The evidence package is published at `https://github.com/Handy-Wibowo/supreme-sniffle` and archived on Zenodo under concept DOI `10.5281/zenodo.23847784` (v1.0.0 = version DOI `10.5281/zenodo.23847785`, v1.1.0 minted from the same concept). §5.2 now states the route, the archival DOI and the manifest verification. Verified from a clean clone: 170/170 manifest entries OK, 0 failures. | agent — completed |
 | **Author metadata, CRediT** | Reserved by the user. | user |
 | **D2 — PhreshPhish 498 255/168 060 vs 497 359/168 035** | Correctly flagged as UNVERIFIABLE, not an error. Needs the dataset revision used at run time; `input_manifest.json` in the canonical run may resolve it. | agent |
+
+## 2b. New experiment integrated after this review (not a response to it)
+
+Experiment 9 — frozen reverse transfer PhreshPhish → PhiUSIIL — was run and integrated after the review above:
+
+- New paragraph in §3.7 with protocol, metrics, failure-mode contrast, trivial-baseline anchor (0,598529),
+  overlap figures (0,058 % exact URL, 21,6 % registrable domain) and an explicit statement that it is not a
+  temporal evaluation because PhiUSIIL is undated.
+- Table 7 extended from 5 to 7 rows: `PhreshPhish→PhiUSIIL zero-shot` and `PhreshPhish dalam-sumber`.
+- The "one direction" claim corrected in five places: Indonesian abstract, English abstract (two phrases),
+  RQ4, contribution bullet 2, §1.2, and the limitations paragraph. A check confirms zero remaining
+  "satu arah" / "one-direction" occurrences.
+- Evidence archived: `03_EXPERIMENTS/Exp9_reverse_transfer/` (executed notebook, README, RESULTS, run outputs).
+
+Result: the transfer failure is bidirectional but not symmetric — forward ROC-AUC 0,382566 (anti-ordered),
+reverse 0,642939 (ordered but miscalibrated, 89,8 % benign FPR at the frozen threshold). Both directions fall
+below the always-phishing F1 baseline of their target corpus.
 
 ## 3. Where this leaves the manuscript
 
