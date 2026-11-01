@@ -3,7 +3,7 @@
 ## 1. Candidate identity
 
 - Candidate path: `E:\Kuliah\Tugas Akhir\phishing\BITS_Draft_Phishing_URL_Leakage_v10_P1_candidate.docx`
-- SHA-256: `ef5990b3009080aa6f9e9972f922c35db57b8ec0644e43e231fc3ac7b3cdad33`
+- SHA-256: `c8417afc9443f76e7056d5291b3bd2584828566e408e5da544e7667a769d160e`
 - Source path: `E:\Kuliah\Tugas Akhir\phishing\BITS_Draft_Phishing_URL_Leakage_v9_P0.docx`
 - Source SHA-256: `16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec` (unchanged; verified before and after the build)
 - Build script: `phishing/revision_v10_p1/05_integrated_manuscript/apply_p1_revisions.py`
@@ -85,7 +85,7 @@ Changed locators caused by insertions (for Codex's own checks):
 | `python qa_structure.py` | `phishing/revision_v10_p1/06_self_qa` | 0 | 24/24 PASS | `QA_CHECKS.json` |
 | `python regression_p0.py` | same | 0 | 16/16 PASS | `P0_REGRESSION_MATRIX.csv` |
 | `python two_build_test.py` | same | 0 | two builds from v9_P0: package members, media and semantic text identical; bytes differ only by ZIP container timestamps (G6 allowance) | `TWO_BUILD_COMPARISON.json` |
-| `python render_candidate.py` | same | 0 | 15 pages, 10 368 words; 13 page PNGs | `RENDER_LOG.json` |
+| `python render_candidate.py` | same | 0 | 15 pages, 10 515 words; 13 page PNGs | `RENDER_LOG.json` |
 | `python verify_package_relationships.py …v10_P1_candidate.docx` | `phishing/revision_v9_p0/04_integrated_manuscript` | 0 | `{"ok": true, "issues": []}` | printed JSON |
 | `sha256sum -c MANIFEST.sha256` | package root | 0 | all files OK | `MANIFEST.sha256` |
 

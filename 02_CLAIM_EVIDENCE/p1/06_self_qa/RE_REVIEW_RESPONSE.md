@@ -3,7 +3,7 @@
 Date: 2026-11-01
 Review received: `ai review/v10 review/result/REVIEW_ULANG_v10_P1_31dc1c21.md`
 Reviewed artifact: `31dc1c21…` — the reviewer independently confirmed that hash and verified all 181 manifest entries.
-Candidate after this response: `ef5990b3009080aa6f9e9972f922c35db57b8ec0644e43e231fc3ac7b3cdad33` — 15 pages, 10,368 words, 54 registered changes, package 191 files.
+Candidate after this response: `c8417afc9443f76e7056d5291b3bd2584828566e408e5da544e7667a769d160e` — 15 pages, 10,515 words, 54 registered changes, package 191 files.
 Verdict received: BLOCK / MAJOR REVISION / 40–55 %.
 
 This review was materially better than the first: it fetched the archive, read the code, and found errors that were mine, not artefacts of a text extraction. Six of its findings are confirmed defects and are fixed below.
@@ -43,9 +43,9 @@ Package now 191 files, verified 191/191 from a clean clone.
 
 | Item | Reason |
 |---|---|
-| Row-level attribution of the 167-row fit-block difference (372.380 vs 372.213) | The reviewer correctly calls this `UNVERIFIABLE` without row matching. The cause is visible in code (canonical dedup + purge chain vs exact-URL dedup inside the window), but the per-row reconciliation would require re-running the canonical cleaning over the training shards. Recorded as unverifiable rather than asserted. |
-| §5.2 claim that `run_temporal.py` + `design.json` regenerate all excluded artefacts | Reviewer is right that this reads as one script covering everything. Correcting it properly means mapping script → artefact per experiment; noted as the next editorial task. |
-| Reviewer's minor point: move the Table 5 estimand sentence in §2.6 | Editorial placement only; not yet moved. |
+| ~~Row-level attribution of the 167-row fit-block difference~~ | **RESOLVED and verified.** Recomputing the canonical key over the fit window gives exactly 372,213 rows: the 167-row gap is precisely the count of canonical-URL duplicates inside the window (exact-string dedup dropped 0). §3.7 now states this reconciliation explicitly instead of leaving it unverifiable. |
+| ~~§5.2 single-script claim~~ | **RESOLVED.** §5.2 now carries a per-experiment map: E1–E5 by the evaluation pipeline notebook with the two split manifests as input; E4 by `run_temporal.py` + `design.json`; E7 by its executed notebook importing the Experiment 7 `src` package; E8 by `error_taxonomy.py`; E9 by `reverse_transfer.ipynb`. |
+| ~~Table 5 estimand sentence placement in §2.6~~ | **RESOLVED by a different route.** Reordering the paragraph was unsafe (it spans eight runs), so the sentence now opens with an explicit back-reference — "Kembali ke perbandingan A1−A0:" — which removes the ambiguity the reviewer identified without moving nodes. |
 | Author metadata | Reserved by the author; excluded from scoring by the brief. |
 
 ## 4. Verdict

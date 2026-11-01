@@ -201,7 +201,7 @@ TABLE7_REVERSE_ROWS = [
 # Substring-anchored appends (anchor must occur in exactly one paragraph).
 SUBAPPENDS = [
     ("P1-036", "jumlah domain pada himpunan uji site-disjoint adalah 35.100",
-     " Titik estimasi pada perbandingan itu adalah nilai model seed 42, bukan rerata lima seed pada Tabel 4, sehingga selisih pada Tabel 5 dan selisih rerata pada Tabel 4 memang berbeda dan tidak boleh dibandingkan langsung. Seed 42 di sini berperan sebagai seed model, sedangkan seed 42 pada bootstrap berperan sebagai seed RNG resampling; keduanya kebetulan bernilai sama tetapi berperan berbeda.",
+     " Kembali ke perbandingan A1−A0: titik estimasinya adalah nilai model seed 42, bukan rerata lima seed pada Tabel 4; seed 42 di sini berperan sebagai seed model, sedangkan seed 42 pada bootstrap berperan sebagai seed RNG resampling. Karena itu selisih pada Tabel 5 dan selisih rerata pada Tabel 4 memang berbeda dan tidak boleh dibandingkan langsung. Untuk evaluasi temporal, interval dihitung dengan bootstrap pada unit registrable domain, 1.000 replikasi, dan seed RNG bootstrap 42, diterapkan pada prediksi model seed 13; angka 13 pada Tabel 6 menandai seed model, bukan seed RNG bootstrap.",
      "Identitas estimasi Tabel 5 tidak dinyatakan, sehingga selisihnya tampak bertentangan dengan Tabel 4."),
     ("P1-037", "Tabel 5. Selisih berpasangan",
      " Titik estimasi memakai model seed 42; Tabel 4 menampilkan rerata lima seed.",
@@ -352,7 +352,7 @@ AVAILABILITY_NEW = (
     "OMITTED_LICENSE_PRIVACY, atau NOT_REQUIRED. Karena itu paket ini adalah bundel bukti yang dapat diaudit, bukan "
     "bundel yang dapat direproduksi penuh di lingkungan bersih tanpa mengambil data dari penyedia aslinya. "
     "Salinan paket tersedia pada repositori publik https://github.com/Handy-Wibowo/supreme-sniffle dan diarsipkan dengan DOI konsep 10.5281/zenodo.23847784, dengan MANIFEST.sha256 untuk verifikasi independen; DOI konsep tersebut selalu menunjuk rilis terbaru. "
-    "Penghitungan ulang artefak yang dikecualikan memerlukan run_temporal.py, design.json, dan seed yang tercatat."
+    "Artefak yang dikecualikan tidak dihasilkan oleh satu skrip tunggal. Pemetaan per eksperimen: benchmark PhiUSIIL (E1-E5) dibangun oleh 03_evaluation_pipeline_v2_run_complete.ipynb dengan split_random.csv dan split_sitedisjoint.csv sebagai masukan; evaluasi temporal PhreshPhish (E4) oleh run_temporal.py dengan design.json pada folder run; evaluasi ambang operasional (E7) oleh 01_operational_thresholds.executed.ipynb yang mengimpor paket src eksperimen 7; taksonomi galat (E8) oleh error_taxonomy.py; dan transfer arah balik (E9) oleh reverse_transfer.ipynb. Biner model, prediksi per baris, dan pemisahan baris lengkap dibangkitkan ulang oleh skrip masing-masing dengan seed yang tercatat, bukan oleh satu perintah bersama."
 )
 
 CORE_SUBJECT_NEW = "Manuskrip v10 P1 dengan transfer lintas-korpus, evaluasi ambang, dan taksonomi galat"
@@ -365,7 +365,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 15
-WORD_WORDS = 10076
+WORD_WORDS = 10515
 
 
 # --------------------------------------------------------------------------- #
@@ -716,7 +716,10 @@ def build() -> dict:
                 "mencapai 21,6 % baris target; angka terakhir membatasi interpretasi dan tidak menyelamatkan kinerja. "
                 "Interval bootstrap domain untuk arah balik tersedia pada artefak eksperimen 9 (F1 [0,512634; 0,586764], "
                 "FPR [0,895279; 0,900180], MCC [−0,137850; −0,042795]; 1.000 replikasi, RNG seed 42, 175.509 domain). "
-                "Eksperimen ini bukan evaluasi temporal karena PhiUSIIL tidak memiliki penanda waktu.")
+                "Eksperimen ini bukan evaluasi temporal karena PhiUSIIL tidak memiliki penanda waktu. Blok latih "
+        "eksperimen ini berisi 372.380 baris, berbeda 167 baris dari 372.213 pada eksperimen ambang; rekonsiliasi "
+        "menunjukkan selisih itu persis sama dengan jumlah duplikat URL kanonik di dalam jendela fit, karena "
+        "eksperimen 9 melakukan deduplikasi pada string URL persis sedangkan jalur kanonik memakai kunci URL kanonik.")
     # keep the (now longer) Table 7 caption on the same page as its table
     cap7 = doc.paragraphs[find_unique_para(doc, "Tabel 7. Transfer A2 seed 42")]
     cap7.paragraph_format.keep_with_next = True
