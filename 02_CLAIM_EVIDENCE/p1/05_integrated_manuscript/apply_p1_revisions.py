@@ -315,7 +315,7 @@ TABLE1_ROWS = [
      "Protokol, fitur, dan pasangan korpus berbeda; bukan replikasi langsung"],
     ["Nabila et al. [11]; Yoga et al. [12]",
      "Klasifikasi URL pada venue BITS; evaluasi dalam-korpus",
-     "Membandingkan protokol evaluasi pada beberapa dataset; tidak melaporkan transfer lintas korpus",
+     "Pembagian dalam-korpus pada satu dataset per studi (80/20 berstrata pada [11]; 70/30 pada [12]); tidak ada pemisahan berbasis waktu dan tidak ada transfer lintas korpus",
      "Tidak ada klaim peningkatan model atas kedua studi"],
     ["TESSERACT (Pendlebury et al.) [13]",
      "Malware Android; 129 ribu aplikasi lintas tiga tahun; batas ruang dan waktu",
@@ -426,7 +426,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 16
-WORD_WORDS = 10735
+WORD_WORDS = 10844
 
 
 # --------------------------------------------------------------------------- #
@@ -727,6 +727,11 @@ def build() -> dict:
         ["FP dan FN kategori query_present", "52 FP; 13 FN", "category_error_table.csv"],
         ["AUC tunggal tiga kolom sumber: URLSimilarityIndex (dibuang); LineOfCode dan NoOfExternalRef (dipertahankan dalam A0)",
          "0,9961; 0,9903; 0,9880", "phiusiil_leakage_audit.md"],
+        ["Rerata lima seed F1 temporal A2/LightGBM (seluruh 168.035 baris uji)", "0,800461", "summary.csv (eksperimen 5), protokol temporal; simpangan baku 0,001184"],
+        ["Rerata lima seed F1 temporal A2/XGBoost (seluruh 168.035 baris uji)", "0,799629", "summary.csv (eksperimen 5), protokol temporal; simpangan baku 0 (prosedur histogram deterministik)"],
+        ["Aturan FPR validasi <= 1 %: FPR uji, recall uji, ambang terpilih", "1,1352 %; 0,5440; 0,884705", "test_metrics_primary_seed.csv (eksperimen 7, seed 13)"],
+        ["Aturan ambang 0,5: FPR uji dan recall uji", "7,6497 %; 0,7380", "test_metrics_primary_seed.csv (eksperimen 7, seed 13)"],
+        ["FPR pada URL benign dengan panjang <= 30 karakter", "21,8 %", "category_error_table.csv (eksperimen 8), kategori url_length_band <=30"],
         ["Registrable domain unik dan baris ber-alamat IP pada PhiUSIIL", "175.509; 636",
          "phiusiil_leakage_audit.md"],
     ]
