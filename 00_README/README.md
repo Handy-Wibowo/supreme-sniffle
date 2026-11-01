@@ -1,7 +1,7 @@
 # AI Review Package — v10 P1 candidate
 
-Built: 2026-11-01T07:51:36Z (UTC)
-Included files: 186  |  total bytes: 41,231,294  |  omitted/limited entries: 18
+Built: 2026-11-01T07:55:23Z (UTC)
+Included files: 187  |  total bytes: 41,238,916  |  omitted/limited entries: 18
 
 ## What this package is
 
@@ -13,7 +13,7 @@ It is a *candidate* package: the manuscript has not been accepted and the P1 pha
 | Directory | Files | Content |
 |---|---:|---|
 | `01_MANUSCRIPT/` | 2 | P1 candidate DOCX and its Word render |
-| `02_CLAIM_EVIDENCE/` | 98 | Stage-1 audit, P0 QA, P1 registers and literature ledgers |
+| `02_CLAIM_EVIDENCE/` | 99 | Stage-1 audit, P0 QA, P1 registers and literature ledgers |
 | `03_EXPERIMENTS/` | 85 | Executed notebooks, metrics, ledgers and canonical temporal run artefacts |
 | `05_LIMITATIONS/` | 1 | Known missing evidence and reproduction limits |
 
