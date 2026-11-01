@@ -110,7 +110,7 @@ APPENDS = [
      "-"),
     ("P1-030", "dual-review C1", "Pembersihan membuang tepat empat kolom", "APPEND",
      "AUC ini menggambarkan separabilitas dan tidak membuktikan derivasi fitur dari label.",
-     " Nilai AUC ditampilkan hingga empat desimal; pernyataan \"di atas 0,988\" karena itu mengacu pada nilai tak-terbulatkan, bukan pada perbandingan nilai terbulatkan.",
+     " Nilai AUC ditampilkan hingga empat desimal; pernyataan \"di atas 0,988\" karena itu dibaca sebagai sekitar 0,988 atau lebih, bukan sebagai perbandingan nilai terbulatkan.",
      "Menyatakan presisi pelaporan AUC agar klaim 'di atas 0,988' tidak dibaca sebagai inferensi dari angka terbulatkan 0,9880.",
      "-"),
 ]
@@ -156,9 +156,25 @@ SUBSREPLACE = [
      " model A2 yang dilatih hanya pada PhiUSIIL menuju kohort uji PhreshPhish tanpa retraining, kalibrasi, atau penyetelan ambang.",
      " model A2 tanpa retraining, kalibrasi, atau penyetelan ambang pada dua arah: dilatih pada PhiUSIIL dan diuji pada PhreshPhish, serta dilatih pada PhreshPhish dan diuji pada PhiUSIIL.",
      "RQ4 hanya menyatakan arah maju."),
+    ("P1-061", "re-review C3",
+     "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
+     "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
+     "Penambahan eksperimen 9 menambah lima fit LightGBM sehingga hitungan 85 menjadi tidak akurat."),
+    ("P1-062", "re-review C3",
+     "Seluruh artefak eksperimen bersifat deterministik terhadap seed yang dicatat, dan setiap angka",
+     "Seluruh artefak eksperimen mencatat konfigurasi dan seed untuk replikasi, dan setiap angka",
+     "Kalimat determinisme penuh dipertahankan berdampingan dengan pernyataan bahwa determinisme tidak diverifikasi."),
+    ("P1-063", "re-review C3",
+     "Kedua, faktor populasi dan vendor: korpus PhreshPhish dikumpulkan melalui pipeline dan vendor yang berbeda dari PhiUSIIL, sehingga perbedaan distribusi dapat berasal dari perbedaan sumber pengumpulan, bukan dari perubahan perilaku penyerang seiring waktu.",
+     "Kedua, faktor populasi dan vendor: korpus PhreshPhish dikumpulkan melalui pipeline dan vendor yang berbeda dari PhiUSIIL, sehingga perbedaan distribusi antara kedua korpus dapat berasal dari perbedaan sumber pengumpulan, bukan dari perubahan perilaku penyerang seiring waktu. Perancu vendor ini berlaku pada perbandingan lintas korpus PhiUSIIL–PhreshPhish, bukan pada perbandingan antarbulan di dalam PhreshPhish, karena seluruh blok temporal PhreshPhish berasal dari sumber pengumpulan yang sama.",
+     "Kalimat awal §3.6 tetap menyiratkan perancu vendor berlaku pada evaluasi temporal dalam korpus."),
+    ("P1-064", "re-review C3",
+     "Eksperimen transfer membekukan ekstraktor A2, urutan 18 fitur, model, dan ambang 0,5 setelah pelatihan pada PhiUSIIL. PhreshPhish hanya digunakan sebagai target evaluasi; tidak ada retraining, kalibrasi, atau pemilihan ambang berbasis target.",
+     "Jalur yang digambarkan adalah arm transfer arah maju: ekstraktor A2, urutan 18 fitur, model, dan ambang 0,5 dibekukan setelah pelatihan pada PhiUSIIL, dan PhreshPhish hanya digunakan sebagai target evaluasi tanpa retraining, kalibrasi, atau pemilihan ambang berbasis target. Arm arah balik (PhreshPhish→PhiUSIIL) dijalankan pada eksperimen 9 dan tidak digambarkan di sini.",
+     "Caption Gambar 1 menyatakan PhreshPhish hanya menjadi target, padahal eksperimen 9 memakai PhreshPhish sebagai sumber latih."),
     ("P1-055", "experiment 9",
      " Transfer A2 seed 42 dengan model dan ambang 0,5 yang dibekukan. Baris target tidak menggunakan fitting atau penyetelan pada PhreshPhish.",
-     " Transfer A2 seed 42 dengan model dan ambang 0,5 yang dibekukan, dua arah. Baris target tidak menggunakan fitting, kalibrasi, atau penyetelan ambang pada korpus target. Baris transfer PhiUSIIL→PhreshPhish dievaluasi pada 168.035 baris uji temporal; baris transfer PhreshPhish→PhiUSIIL pada 235.370 baris PhiUSIIL, dan baris PhreshPhish dalam-sumber pada 168.060 baris blok uji sebelum penyaringan URL terlihat (eksperimen 9).",
+     " Transfer A2 seed 42 dengan model dan ambang 0,5 yang dibekukan, dua arah. Baris target tidak menggunakan fitting, kalibrasi, atau penyetelan ambang pada korpus target. Baris PhiUSIIL→PhreshPhish dievaluasi pada 168.035 baris uji temporal setelah penyaringan kanonik yang mengeluarkan 3 URL terlihat di latih dan 22 duplikat URL. Baris PhreshPhish→PhiUSIIL dievaluasi pada 235.370 baris PhiUSIIL, dan baris PhreshPhish dalam-sumber pada 168.060 baris blok uji sebelum rangkaian penyaringan kanonik yang sama diterapkan (eksperimen 9). Arah balik hanya memakai LightGBM, dan deduplikasi pada eksperimen 9 memakai string URL persis di dalam blok tanggal, bukan kunci URL kanonik yang dipakai eksperimen temporal dan ambang.",
      "Caption tidak menyatakan dua arah maupun ukuran kohort per baris."),
     ("P1-058", "experiment 9",
      "transfer lintas-korpus satu arah, trade-off ambang",
@@ -199,9 +215,6 @@ SUBAPPENDS = [
     ("P1-040", "Interval kepercayaan 95 % berbasis t (df = 4) pada masing-masing protokol dilaporkan",
      " Nilai interval tersebut tersimpan pada berkas metrik per seed dan tidak ditabulasikan dalam artikel ini.",
      "Teks menyatakan interval t dilaporkan, sedangkan nilainya tidak muncul pada tabel mana pun."),
-    ("P1-041", "deterministik terhadap seed yang dicatat",
-     " Pernyataan determinisme penuh tidak diverifikasi melalui artefak; yang dicatat adalah konfigurasi dan seed untuk replikasi.",
-     "Klaim determinisme tidak memiliki bukti artefak."),
     ("P1-042", "bukan \"kinerja model menurun 20 poin karena waktu\"",
      " Perlu ditegaskan bahwa perbedaan vendor dan pipeline merupakan perancu perbandingan lintas korpus PhiUSIIL–PhreshPhish, bukan perancu perbandingan antarbulan di dalam PhreshPhish, karena seluruh blok temporal PhreshPhish berasal dari sumber pengumpulan yang sama.",
      "Perancu lintas korpus dipakai untuk menjelaskan evaluasi dalam korpus."),
@@ -271,7 +284,7 @@ NEW_SECTION_ANCHOR_PREFIX = "Kesenjangan yang dituju karena itu bukan ketiadaan 
 NEW_SECTION_PARAS = [
     "Literatur evaluasi keamanan berbasis pembelajaran mesin merumuskan dua sumber bias yang relevan bagi penelitian ini. Bias spasial muncul ketika distribusi data latih dan uji tidak mewakili kondisi penerapan, sedangkan bias temporal muncul ketika pemisahan waktu tidak menghormati urutan kejadian [13]. Kerangka TESSERACT menunjukkan bahwa keduanya dapat menaikkan skor secara sistematis: F1 yang dilaporkan mendekati 0,99 pada klasifikasi malware sebagian berasal dari rancangan eksperimen, bukan dari kemampuan model [13]. Pada penerapan, penurunan kinerja akibat perubahan distribusi dipantau melalui deteksi drift konsep yang membandingkan sampel penerapan dengan sampel latih [14], dan evaluasi ulang terhadap pendekatan tersebut menunjukkan bahwa kesimpulan tentang drift bergantung pada protokol evaluasi serta pada cara model menolak prediksi yang berisiko [15]. Ketiga temuan itu tidak memindahkan besaran efek ke domain phishing URL; yang dipindahkan adalah prinsip bahwa unit pembagian, urutan waktu, dan definisi kohort harus dinyatakan sebagai bagian dari klaim.",
     "Pada domain phishing URL, laporan kinerja tinggi merupakan hal yang umum. Tinjauan sistematis atas 80 makalah mengelompokkan pendekatan deteksi situs phishing menjadi berbasis daftar, kemiripan visual, heuristik, pembelajaran mesin, dan pembelajaran mendalam [16]. Pendekatan hibrida berbasis fitur URL melaporkan kinerja deteksi yang sangat tinggi pada korpus masing-masing [17], pendekatan leksikal dengan reduksi fitur ditujukan untuk lingkungan waktu nyata [18], dan studi kasus pada URL login menunjukkan bahwa komposisi himpunan uji mengubah laju positif palsu secara material [19]. Model berbasis karakter pada URL mentah juga menunjukkan bahwa representasi URL-saja dapat mencapai kinerja tinggi tanpa fitur halaman [20]. Protokol evaluasi terbaru pada korpus PhiUSIIL melaporkan akurasi 0,9962 sampai 0,9984 pada himpunan uji domain-disjoint untuk empat keluarga model, dan protokol yang sama juga memuat evaluasi eksternal lintas sumber pada Subbagian 4.6; kinerjanya turun tajam ketika URL dimutasi secara realistis [24]. Pola semacam ini konsisten dengan saturasi benchmark yang bersifat deskriptif: ketika banyak model berbeda mencapai skor hampir identik pada satu korpus, daya pembeda pada konfigurasi yang dievaluasi tampak terbatas untuk pertanyaan pemilihan model, dan artikel ini tidak menetapkan penyebabnya.",
-    "Literatur transfer pada domain ini lebih tipis daripada literatur klasifikasi. Studi lintas dataset menunjukkan bahwa keandalan fitur tidak otomatis berpindah antar korpus [9], dan evaluasi leave-one-family-out pada korpus yang sama menunjukkan transfer yang buruk ke keluarga serangan yang tidak terlihat [24]. Kedua hasil itu menunjukkan bahwa portabilitas perlu diuji secara eksplisit, bukan disimpulkan dari skor dalam-korpus. Uji transfer beku dua arah pada pasangan korpus PhiUSIIL dan PhreshPhish, dengan ekstraktor, model, dan ambang yang tidak disesuaikan pada target, dilaporkan pada artikel ini. Kontribusi artikel ini pada sumbu tersebut adalah bukti empiris spesifik untuk pasangan korpus itu dengan ekstraktor, urutan fitur, model, dan ambang yang dibekukan, dibaca bersama evaluasi temporal dalam korpus dan trade-off ambang yang dipilih pada validasi; ini penyediaan bukti yang dapat diaudit, bukan pengajuan metode adaptasi baru.",
+    "Literatur transfer lintas korpus pada domain ini lebih sedikit dijumpai dibanding literatur klasifikasi dalam-korpus pada penelusuran terarah yang dilakukan di sini; pernyataan ini tidak didasarkan pada survei kuantitatif. Studi lintas dataset menunjukkan bahwa keandalan fitur tidak otomatis berpindah antar korpus [9], dan evaluasi leave-one-family-out pada korpus yang sama menunjukkan transfer yang buruk ke keluarga serangan yang tidak terlihat [24]. Kedua hasil itu menunjukkan bahwa portabilitas perlu diuji secara eksplisit, bukan disimpulkan dari skor dalam-korpus. Uji transfer beku dua arah pada pasangan korpus PhiUSIIL dan PhreshPhish, dengan ekstraktor, model, dan ambang yang tidak disesuaikan pada target, dilaporkan pada artikel ini. Kontribusi artikel ini pada sumbu tersebut adalah bukti empiris spesifik untuk pasangan korpus itu dengan ekstraktor, urutan fitur, model, dan ambang yang dibekukan, dibaca bersama evaluasi temporal dalam korpus dan trade-off ambang yang dipilih pada validasi; ini penyediaan bukti yang dapat diaudit, bukan pengajuan metode adaptasi baru.",
     "Pada sisi operasional, literatur sistem deteksi telah lama menunjukkan bahwa ketika peristiwa yang dicari jarang, laju positif palsu yang kecil tetap menghasilkan proporsi alarm palsu yang besar di antara seluruh alarm [21]. Untuk data yang tidak seimbang, analisis precision-recall lebih informatif daripada ROC karena sensitif terhadap prevalensi kelas positif [22]. Karena itu artikel ini melaporkan FPR bersama proyeksi nilai prediksi positif pada prevalensi asumsi, dan memperlakukan proyeksi tersebut sebagai skenario aritmetika, bukan pengamatan penerapan.",
     "Perkembangan mutakhir juga mencakup penggunaan model bahasa besar, dengan perbandingan antara rekayasa prompt dan fine-tuning untuk deteksi URL phishing [23]. Arah tersebut tidak diuji dalam artikel ini karena kebutuhan utamanya adalah rantai evaluasi yang dapat dibekukan dan diaudit pada tingkat artefak, bukan pemilihan keluarga model.",
 ]
@@ -614,10 +627,10 @@ def build() -> dict:
     # ---- 3c. Table 10: traceability of prose-only figures ------------------
     rows10 = [
         ["Angka", "Nilai", "Artefak sumber"],
-        ["Selisih F1 acak terhadap site-disjoint, minimum (A0/XGBoost)", "0,000163",
-         "results_random.csv; results_sitedisjoint.csv"],
+        ["Selisih F1 acak terhadap site-disjoint, minimum (A0/XGBoost)", "0,000162",
+         "summary.csv (eksperimen 5): 0,999811573 − 0,999649117"],
         ["Selisih F1 acak terhadap site-disjoint, maksimum (A2/LightGBM)", "0,001178",
-         "results_random.csv; results_sitedisjoint.csv"],
+         "summary.csv (eksperimen 5): 0,996364752 − 0,995186381"],
         ["Kesalahan A0→A1 LightGBM, rerata 5 seed pada 44.213,6 baris uji", "12,8 → 32,2",
          "metrics_all.csv (Eksperimen 5)"],
         ["Kesalahan A0→A1 XGBoost, rerata 5 seed pada 44.213,6 baris uji", "10,4 → 39,0",
@@ -634,7 +647,7 @@ def build() -> dict:
          "0,646167; 0,480645; 0,005843", "test_metrics_across_seeds.csv"],
         ["FN kategori host platform, termasuk pages.dev", "8.035 (pages.dev 7.341)", "category_error_table.csv"],
         ["FP dan FN kategori query_present", "52 FP; 13 FN", "category_error_table.csv"],
-        ["AUC tunggal tiga kolom A0 (URLSimilarityIndex; LineOfCode; NoOfExternalRef)",
+        ["AUC tunggal tiga kolom sumber: URLSimilarityIndex (dibuang); LineOfCode dan NoOfExternalRef (dipertahankan dalam A0)",
          "0,9961; 0,9903; 0,9880", "phiusiil_leakage_audit.md"],
         ["Registrable domain unik dan baris ber-alamat IP pada PhiUSIIL", "175.509; 636",
          "phiusiil_leakage_audit.md"],
@@ -688,17 +701,22 @@ def build() -> dict:
                     "reason": "Hasil eksperimen 9 belum tampil di tabel transfer.",
                     "refs": "-", "verification": "PASS"})
 
-    rev_para = ("Uji arah sebaliknya dijalankan dengan protokol yang sama pada eksperimen 9. Model dilatih hanya pada blok fit "
-                "PhreshPhish (372.380 baris, 2 Juli 2024 sampai 30 Juni 2025), dibekukan, lalu diterapkan pada 235.370 baris "
-                "PhiUSIIL hasil pembersihan tanpa fitting, kalibrasi, atau penyetelan ambang. Hasilnya juga gagal, tetapi dengan "
-                "mekanisme yang berbeda: F1 0,549564, FPR benign 0,897783, MCC −0,092320, dan ROC-AUC 0,642939. Berbeda dari arah "
-                "maju yang ROC-AUC-nya di bawah 0,5, di sini urutan skor masih sedikit informatif tetapi kalibrasinya tidak sesuai, "
-                "sehingga pada ambang beku 0,5 sebanyak 89,8 % URL benign PhiUSIIL ditandai phishing. Sebagai pembanding, "
-                "pengklasifikasi yang selalu memprediksi phishing pada korpus ini memperoleh F1 0,598529, sehingga F1 transfer "
-                "terbalik berada di bawah baseline trivial tersebut. Tumpang tindih URL persis antara blok latih dan target hanya "
-                "137 baris (0,058 %), sedangkan tumpang tindih registrable domain mencapai 21,6 % baris target; angka terakhir "
-                "membatasi interpretasi dan tidak menyelamatkan kinerja. Eksperimen ini bukan evaluasi temporal karena PhiUSIIL tidak "
-                "memiliki penanda waktu, dan hasilnya tidak menetapkan penyebab kegagalan transfer.")
+    rev_para = ("Uji arah sebaliknya dijalankan pada eksperimen 9 dengan prinsip yang sama: representasi A2, model yang "
+                "dibekukan, dan ambang 0,5 tanpa penyesuaian pada target. Model dilatih hanya pada blok fit PhreshPhish "
+                "(372.380 baris, 2 Juli 2024 sampai 30 Juni 2025), lalu diterapkan pada 235.370 baris PhiUSIIL hasil "
+                "pembersihan. Kinerjanya juga buruk: F1 0,549564, FPR benign 0,897783, MCC −0,092320, dan ROC-AUC "
+                "0,642939. ROC-AUC di atas 0,5 menunjukkan pola pengurutan skor yang berbeda dari arah maju, sedangkan FPR "
+                "0,897783 menunjukkan ketidaksesuaian titik operasi pada kohort target: pada ambang beku 0,5, 89,8 % URL "
+                "benign PhiUSIIL ditandai phishing. Sebagai pembanding titik, pengklasifikasi yang selalu memprediksi "
+                "phishing pada korpus ini memperoleh F1 0,598529, sehingga F1 transfer terbalik pada ambang 0,5 berada di "
+                "bawah baseline tersebut; perbandingan ini tidak berlaku untuk semua metrik atau semua ambang. Hasil ini "
+                "tidak memisahkan kontribusi perubahan diskriminasi dari ketidaksesuaian kalibrasi, dan tidak menetapkan "
+                "penyebab kegagalan transfer maupun menjamin bahwa kalibrasi ulang akan memulihkannya. Tumpang tindih URL "
+                "persis antara blok latih dan target hanya 137 baris (0,058 %), sedangkan tumpang tindih registrable domain "
+                "mencapai 21,6 % baris target; angka terakhir membatasi interpretasi dan tidak menyelamatkan kinerja. "
+                "Interval bootstrap domain untuk arah balik tersedia pada artefak eksperimen 9 (F1 [0,512634; 0,586764], "
+                "FPR [0,895279; 0,900180], MCC [−0,137850; −0,042795]; 1.000 replikasi, RNG seed 42, 175.509 domain). "
+                "Eksperimen ini bukan evaluasi temporal karena PhiUSIIL tidak memiliki penanda waktu.")
     # keep the (now longer) Table 7 caption on the same page as its table
     cap7 = doc.paragraphs[find_unique_para(doc, "Tabel 7. Transfer A2 seed 42")]
     cap7.paragraph_format.keep_with_next = True
@@ -763,20 +781,26 @@ def build() -> dict:
          "Pada seed 13: acak 141.222 latih / 47.074 val / 47.074 uji; site-disjoint 143.800 / 48.280 / 43.290."],
         ["Snapshot PhreshPhish",
          "77 shard parquet (train-000... dan test-000...), 666.315 baris, 36,58 GB; SHA-256 per berkas tercatat pada "
-         "input_manifest.json. Split resmi train/test dipakai apa adanya, bukan dibentuk ulang. Penanda tanggal "
-         "diperlakukan sebagai tanggal pada berkas sumber."],
+         "input_manifest.json. Keanggotaan split resmi train/test dipakai sebagai kerangka, bukan dibentuk ulang, tetapi "
+         "blok temporal tetap melewati penyaringan: 681 baris latih pada atau setelah cutoff dikeluarkan sebelum blok fit "
+         "dibentuk. Penanda tanggal diperlakukan sebagai tanggal pada berkas sumber."],
         ["Ledger eksklusi",
          "921 baris dikeluarkan dengan alasan tercatat: 681 setelah cutoff, 214 duplikat URL latih, 22 duplikat URL uji, "
          "3 URL uji terlihat di latih, dan 1 URL tak dapat diparse. Latih 498.255 menjadi 497.359; uji 168.060 menjadi 168.035."],
         ["Label",
-         "Nilai sumber berupa string benign/phish dan dipetakan ke 0/1; pipeline menolak nilai label di luar himpunan itu, "
-         "sehingga tidak ada label di luar domain yang masuk."],
+         "Untuk PhreshPhish, nilai sumber berupa string benign/phish dan dipetakan ke 0/1; pipeline temporal dan ambang "
+         "menolak nilai di luar himpunan itu. PhiUSIIL memakai pengodean numerik sumber 1 = legitim dan 0 = phishing, "
+         "lalu dipetakan menjadi phishing = 1 pada analisis. Eksperimen 9 hanya membandingkan label PhreshPhish dengan "
+         "string phish dan mencetak domain label, tanpa penolakan eksplisit; keluarannya hanya benign dan phish."],
         ["Konfigurasi fitur",
          "A0 47 fitur, A1 41 fitur, A2 18 fitur. Daftar ketiganya didefinisikan pada src/data.py; A2 mengikuti urutan "
          "feature_schema.json dengan sumber deterministic URL-only dan tanpa target encoding."],
         ["Ekstraktor A2",
-         "src/features.py dengan SHA-256 c98b119c72c77df225bd21b7f803c367b71a934630622b3349ddecf349dc5864; "
-         "dihitung deterministik per URL tanpa fitur halaman."],
+         "Dua salinan dipakai pada eksperimen berbeda. Eksperimen 7 memakai src/features.py dengan SHA-256 "
+         "c98b119c72c77df225bd21b7f803c367b71a934630622b3349ddecf349dc5864; eksperimen 5 dan 9 memakai salinan "
+         "dengan SHA-256 81822b4fac8b50cdf93371651e3c94680628ef189d64c32429ec15cc51cd48e6. Keduanya dihitung "
+         "deterministik per URL tanpa fitur halaman. Kesetaraan nilai fitur antar kedua salinan tidak diperiksa "
+         "pada artikel ini; yang dinyatakan adalah kontrak 18 fitur dan urutan yang sama."],
         ["Model",
          "LightGBM 300 estimator, learning rate 0,05, 63 daun. XGBoost 300 estimator, learning rate 0,05, max_depth 8, "
          "eval_metric logloss, tree_method hist. Tidak ada penyetelan hiperparameter pada korpus target."],
@@ -795,8 +819,9 @@ def build() -> dict:
          "dan 10 domain shortener; kategori biner: host_is_ip, host_punycode, query_present, scheme_https, "
          "domain_seen, shortener, platform."],
         ["Waktu komputasi",
-         "Spesifikasi perangkat keras dan jumlah thread tidak dicatat pada artefak; angka waktu adalah log eksekusi, "
-         "bukan pembandingan biaya komputasi."],
+         "Metadata run mencatat 16 CPU logis, konfigurasi n_jobs = -1, dan identifikasi CPU generik; jumlah thread efektif, "
+         "RAM, dan kondisi beban sistem tidak dicatat. Angka waktu karena itu adalah log eksekusi, bukan pembandingan "
+         "biaya komputasi."],
     ]
     last_ref = doc.paragraphs[find_unique_para(doc, "[24] T. Ahamed")]
     head_ref_tpl = doc.paragraphs[find_unique_para(doc, "REFERENCES")]
