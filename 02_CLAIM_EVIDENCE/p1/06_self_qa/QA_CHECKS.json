@@ -1,13 +1,13 @@
 {
-  "candidate_sha256": "769f264ee61bb188302eef8286b7213a6223755c1ba2b417913861669e7259fa",
+  "candidate_sha256": "3d3430985a09693c8ad823bad4ecdd7dd84e9c2f6caad2926c030a901c7efc89",
   "baseline_sha256": "16478b6e2844dfcaa5c1599238d18dab37b943be12963c3565a15168512362ec",
   "paragraphs_v9": 181,
-  "paragraphs_v10": 215,
+  "paragraphs_v10": 216,
   "checks": [
     {
       "check": "paragraph count",
       "verdict": "PASS",
-      "detail": "v9=181 v10=215 delta=34"
+      "detail": "v9=181 v10=216 delta=35"
     },
     {
       "check": "table count",
@@ -47,17 +47,17 @@
     {
       "check": "reference count",
       "verdict": "PASS",
-      "detail": "list=31"
+      "detail": "list=32"
     },
     {
       "check": "reference numbering contiguous",
       "verdict": "PASS",
-      "detail": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]"
+      "detail": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]"
     },
     {
       "check": "no dangling citation",
       "verdict": "PASS",
-      "detail": "cited=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] max_ref=31"
+      "detail": "cited=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32] max_ref=32"
     },
     {
       "check": "no uncited reference",
@@ -92,7 +92,7 @@
     {
       "check": "document.xml well-formed",
       "verdict": "PASS",
-      "detail": "335608 bytes"
+      "detail": "338566 bytes"
     },
     {
       "check": "title metadata current",
@@ -117,7 +117,7 @@
     {
       "check": "Table 1 rows",
       "verdict": "PASS",
-      "detail": "rows=14"
+      "detail": "rows=15"
     },
     {
       "check": "config caption present",
