@@ -1,5 +1,5 @@
 action_id,criterion,verdict,evidence,note
-A01,Source polarity stated and current mapping stated; legacy E3 not used as phishing-positive,PASS,paras 67/67/67: 'legitim=1' ; 'legitim=0 dan phishing=1' ; 'bukan metrik positif-phishing',
+A01,Source polarity stated and current mapping stated; legacy E3 not used as phishing-positive,PASS,paras 68/68/68: 'legitim=1' ; 'legitim=0 dan phishing=1' ; 'bukan metrik positif-phishing',
 A02,Saturation language descriptive; no causal mechanism; no 'ceiling effect' anywhere,PASS,'saturasi benchmark' x9; 'ceiling effect' x0 in text and OOXML,
 A03,Bootstrap RNG seed 42 distinguished from model seed 13,PASS,"'seed bootstrap 42'; 'seed model, bukan seed RNG bootstrap'",
 A04,Unverified platform-cluster interval removed; uncertainty labelled unverified,PASS,"legacy '[1,6%; 66,7%]' absent; 'ketidakpastian klaster tidak terverifikasi' present",
