@@ -54,7 +54,7 @@ APPENDS = [
      "[13]"),
     ("P1-002", "A16", "Pembagian acak pada tingkat baris", "APPEND",
      "Karena itu, protokol dan granularitas kelompok harus diperlakukan sebagai bagian dari klaim penelitian, bukan sekadar detail implementasi [3], [5].",
-     " Pada sisi waktu, deteksi drift konsep menunjukkan bahwa model dapat menua selama penerapan sebelum penurunan kinerja terukur [14], dan evaluasi ulang terhadap pendekatan itu menegaskan bahwa kesimpulan tentang drift bergantung pada protokol pemisahan waktu [15].",
+     " Pada sisi waktu, deteksi drift konsep menunjukkan bahwa model dapat menua selama penerapan sebelum penurunan kinerja terukur [14], dan evaluasi ulang terhadap pendekatan itu menegaskan bahwa kesimpulan tentang drift bergantung pada protokol pemisahan waktu [15]. Tinjauan metodologis terbaru menempatkan drift, evolusi label tertunda, dan pergeseran distribusi sebagai sumber masalah utama dalam evaluasi keamanan berbasis pembelajaran mesin, bukan sebagai detail implementasi [29].",
      "Menambahkan landasan bahwa unit pembagian dan waktu bersama-sama menentukan arti skor.",
      "[14], [15]"),
     ("P1-009", "A16", "Tiga konfigurasi fitur digunakan.", "APPEND",
@@ -248,6 +248,10 @@ SUBSREPLACE = [
      "Taksonomi galat yang dapat direproduksi dari prediksi tersimpan",
      "Taksonomi galat deskriptif yang diturunkan dari prediksi tersimpan",
      "Prediksi per baris tidak dibundel, sehingga 'dapat direproduksi' melampaui apa yang dapat diverifikasi pembaca dari paket."),
+    ("P1-091", "ref-modernisation",
+     "evaluasi pada dataset yang beragam [4]. Dalam konteks phishing, validitas temporal dan pilihan dataset turut membatasi arti angka evaluasi yang dilaporkan [7], [8].",
+     "evaluasi pada dataset yang beragam [4]. Tinjauan sistematis terbaru atas taksonomi deteksi situs phishing menegaskan bahwa kategori berbasis URL, konten, dan visual memiliki batas masing-masing, dan bahwa celah penelitian utama terletak pada konsistensi evaluasi [28]. Dalam konteks phishing, validitas temporal dan pilihan dataset turut membatasi arti angka evaluasi yang dilaporkan [7], [8].",
+     "Menambahkan survei 2024 sebagai penopang klaim tentang batas kategori deteksi."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -384,10 +388,10 @@ NEW_SECTION_HEADING = "1.2 Tinjauan Tematik: Waktu, Representasi, dan Ambang Ope
 NEW_SECTION_ANCHOR_PREFIX = "Kesenjangan yang dituju karena itu bukan ketiadaan penelitian"
 NEW_SECTION_PARAS = [
     "Literatur evaluasi keamanan berbasis pembelajaran mesin merumuskan dua sumber bias yang relevan bagi penelitian ini. Bias spasial muncul ketika distribusi data latih dan uji tidak mewakili kondisi penerapan, sedangkan bias temporal muncul ketika pemisahan waktu tidak menghormati urutan kejadian [13]. Kerangka TESSERACT menunjukkan bahwa keduanya dapat menaikkan skor secara sistematis: F1 yang dilaporkan mendekati 0,99 pada klasifikasi malware sebagian berasal dari rancangan eksperimen, bukan dari kemampuan model [13]. Pada penerapan, penurunan kinerja akibat perubahan distribusi dipantau melalui deteksi drift konsep yang membandingkan sampel penerapan dengan sampel latih [14], dan evaluasi ulang terhadap pendekatan tersebut menunjukkan bahwa kesimpulan tentang drift bergantung pada protokol evaluasi serta pada cara model menolak prediksi yang berisiko [15]. Ketiga temuan itu tidak memindahkan besaran efek ke domain phishing URL; yang dipindahkan adalah prinsip bahwa unit pembagian, urutan waktu, dan definisi kohort harus dinyatakan sebagai bagian dari klaim.",
-    "Pada domain phishing URL, laporan kinerja tinggi merupakan hal yang umum. Tinjauan sistematis atas 80 makalah mengelompokkan pendekatan deteksi situs phishing menjadi berbasis daftar, kemiripan visual, heuristik, pembelajaran mesin, dan pembelajaran mendalam [16]. Pendekatan hibrida berbasis fitur URL melaporkan kinerja deteksi yang sangat tinggi pada korpus masing-masing [17], pendekatan leksikal dengan reduksi fitur ditujukan untuk lingkungan waktu nyata [18], dan studi kasus pada URL login menunjukkan bahwa komposisi himpunan uji mengubah laju positif palsu secara material [19]. Model berbasis karakter pada URL mentah juga menunjukkan bahwa representasi URL-saja dapat mencapai kinerja tinggi tanpa fitur halaman [20]. Protokol evaluasi terbaru pada korpus PhiUSIIL melaporkan akurasi 0,9962 sampai 0,9984 pada himpunan uji domain-disjoint untuk empat keluarga model, dan protokol yang sama juga memuat evaluasi eksternal lintas sumber pada Subbagian 4.6 artikel tersebut; kinerjanya turun tajam ketika URL dimutasi secara realistis [24]. Pola semacam ini konsisten dengan saturasi benchmark yang bersifat deskriptif: ketika banyak model berbeda mencapai skor hampir identik pada satu korpus, daya pembeda pada konfigurasi yang dievaluasi tampak terbatas untuk pertanyaan pemilihan model, dan artikel ini tidak menetapkan penyebabnya. Studi independen terbaru memperkuat pola ini pada korpus yang sama: dengan empat dataset yang mencakup PhiUSIIL, Ahmed et al. [25] juga melaporkan kinerja mendekati plafon pada PhiUSIIL dan menandainya sebagai peringatan, karena satu fitur, yaitu URLSimilarityIndex, mendominasi atribusi SHAP dan dinilai lebih dekat ke proksi label berbasis kemiripan daripada indikator phishing yang independen. Kesimpulan itu selaras dengan audit yang dilaporkan di sini, tetapi protokolnya berbeda: [25] mereplikasi pipeline yang sama pada setiap dataset secara terpisah, bukan mentransfer model yang dibekukan dari satu korpus ke korpus lain, dan tidak melakukan pemisahan berbasis waktu.",
+    "Pada domain phishing URL, laporan kinerja tinggi merupakan hal yang umum. Tinjauan sistematis atas 80 makalah mengelompokkan pendekatan deteksi situs phishing menjadi berbasis daftar, kemiripan visual, heuristik, pembelajaran mesin, dan pembelajaran mendalam [16]. Pendekatan hibrida berbasis fitur URL melaporkan kinerja deteksi yang sangat tinggi pada korpus masing-masing [17], pendekatan ringan berbasis fitur leksikal dan metadata dilaporkan tetap berdaya pada kondisi evasi sederhana [18], dan studi kasus pada URL login menunjukkan bahwa komposisi himpunan uji mengubah laju positif palsu secara material [19]. Model berbasis LSTM dengan fitur karakter dan TF-IDF pada URL mentah juga melaporkan kinerja tinggi tanpa menggunakan fitur halaman [20]. Protokol evaluasi terbaru pada korpus PhiUSIIL melaporkan akurasi 0,9962 sampai 0,9984 pada himpunan uji domain-disjoint untuk empat keluarga model, dan protokol yang sama juga memuat evaluasi eksternal lintas sumber pada Subbagian 4.6 artikel tersebut; kinerjanya turun tajam ketika URL dimutasi secara realistis [24]. Studi terbaru juga menunjukkan bahwa robustness terhadap serangan adversarial adalah sumbu terpisah yang tidak tercakup oleh akurasi bersih [31]; sumbu itu tidak diuji dalam artikel ini. Pola semacam ini konsisten dengan saturasi benchmark yang bersifat deskriptif: ketika banyak model berbeda mencapai skor hampir identik pada satu korpus, daya pembeda pada konfigurasi yang dievaluasi tampak terbatas untuk pertanyaan pemilihan model, dan artikel ini tidak menetapkan penyebabnya. Studi independen terbaru memperkuat pola ini pada korpus yang sama: dengan empat dataset yang mencakup PhiUSIIL, Ahmed et al. [25] juga melaporkan kinerja mendekati plafon pada PhiUSIIL dan menandainya sebagai peringatan, karena satu fitur, yaitu URLSimilarityIndex, mendominasi atribusi SHAP dan dinilai lebih dekat ke proksi label berbasis kemiripan daripada indikator phishing yang independen. Kesimpulan itu selaras dengan audit yang dilaporkan di sini, tetapi protokolnya berbeda: [25] mereplikasi pipeline yang sama pada setiap dataset secara terpisah, bukan mentransfer model yang dibekukan dari satu korpus ke korpus lain, dan tidak melakukan pemisahan berbasis waktu.",
     "Kegagalan portabilitas lintas korpus bukan temuan baru pada domain ini, dan artikel ini tidak mengklaimnya sebagai demikian. Studi lintas dataset menunjukkan bahwa keandalan fitur tidak otomatis berpindah antar korpus [9]; evaluasi leave-one-family-out pada korpus yang sama menunjukkan transfer yang buruk ke keluarga serangan yang tidak terlihat [24]; dan Rashid et al. [27] melaporkan bahwa empat model deteksi URL terkemuka turun 10–32% F1 ketika diuji pada dataset yang berbeda dari dataset latihnya, lalu mengusulkan kerangka Unsupervised Domain Adaptation yang memulihkan sekitar 0,06 F1 secara rata-rata. Yang membedakan artikel ini adalah apa yang diukur dan bagaimana: [27] mengadaptasi model agar dapat berpindah, sedangkan di sini model, ekstraktor, urutan fitur, dan ambang dibekukan sepenuhnya dan penerapan pada korpus target dilakukan dua arah tanpa penyesuaian apa pun, sehingga yang dilaporkan adalah batas portabilitas apa adanya, bukan sejauh mana adaptasi dapat memulihkannya. Selain itu [27] tidak mengevaluasi sumbu temporal maupun ambang yang dipilih pada validasi, sedangkan kedua sumbu itu diukur di sini pada pasangan korpus PhiUSIIL dan PhreshPhish. Kontribusi artikel ini pada sumbu tersebut karena itu bersifat diagnostik: menyediakan bukti empiris yang dapat diaudit tentang di mana dan seberapa dalam transfer gagal, dibaca bersama evaluasi temporal dalam korpus dan trade-off ambang yang dipilih pada validasi; bukan pengajuan metode adaptasi baru.",
     "Tinjauan sistematis terbaru atas 55 pendekatan deteksi situs phishing berbasis AI menyimpulkan bahwa evaluasi yang berpusat pada akurasi meninggalkan blind spot: tidak ada studi yang memenuhi seluruh persyaratan fungsionalitas dan keamanan, sebagian besar pendekatan tidak memiliki mekanisme untuk menghadapi drift, dan banyak berisiko menaikkan alarm palsu karena pengujian pada halaman benign yang beragam masih terbatas [26]. Tinjauan itu merekomendasikan evaluasi yang sadar waktu dan pengujian benign yang lebih beragam. Kedua rekomendasi tersebut adalah dua sumbu yang diuji secara empiris dalam artikel ini, yaitu evaluasi temporal dalam-korpus dan pelaporan FPR benign beserta taksonomi galat; artikel ini tidak mengklaim memenuhi seluruh persyaratan pada tinjauan tersebut.",
-    "Pada sisi operasional, literatur sistem deteksi telah lama menunjukkan bahwa ketika peristiwa yang dicari jarang, laju positif palsu yang kecil tetap menghasilkan proporsi alarm palsu yang besar di antara seluruh alarm [21]. Untuk data yang tidak seimbang, analisis precision-recall lebih informatif daripada ROC karena sensitif terhadap prevalensi kelas positif [22]. Karena itu artikel ini melaporkan FPR bersama proyeksi nilai prediksi positif pada prevalensi asumsi, dan memperlakukan proyeksi tersebut sebagai skenario aritmetika, bukan pengamatan penerapan.",
+    "Pada sisi operasional, literatur sistem deteksi telah lama menunjukkan bahwa ketika peristiwa yang dicari jarang, laju positif palsu yang kecil tetap menghasilkan proporsi alarm palsu yang besar di antara seluruh alarm [21]. Untuk data yang tidak seimbang, analisis precision-recall lebih informatif daripada ROC karena sensitif terhadap prevalensi kelas positif [22]. Karena itu artikel ini melaporkan FPR bersama proyeksi nilai prediksi positif pada prevalensi asumsi, dan memperlakukan proyeksi tersebut sebagai skenario aritmetika, bukan pengamatan penerapan. Analisis empiris atas metrik klasifikasi tidak seimbang menyarankan pelaporan beberapa metrik yang berbeda secara mendasar sekaligus, dan secara khusus menyebut kurva precision-recall serta koefisien korelasi Matthews sebagai pilihan yang lebih baik daripada F1 atau geometric mean ketika label berpotensi berisik [30].",
     "Perkembangan mutakhir juga mencakup penggunaan model bahasa besar, dengan perbandingan antara rekayasa prompt dan fine-tuning untuk deteksi URL phishing [23]. Arah tersebut tidak diuji dalam artikel ini karena kebutuhan utamanya adalah rantai evaluasi yang dapat dibekukan dan diaudit pada tingkat artefak, bukan pemilihan keluarga model.",
 ]
 
@@ -408,15 +412,15 @@ NEW_REFS = [
     ("17", 'A. Karim, M. Shahroz, K. Mustofa, S. B. Belhouari, and S. R. K. Joga, "Phishing detection system through hybrid machine learning based on URL," ',
      "IEEE Access",
      ", vol. 11, pp. 36805–36822, 2023, doi: 10.1109/ACCESS.2023.3252366."),
-    ("18", 'B. B. Gupta, K. Yadav, I. Razzak, K. E. Psannis, A. Castiglione, and X. Chang, "A novel approach for phishing URLs detection using lexical based machine learning in a real-time environment," ',
-     "Computer Communications",
-     ", vol. 175, pp. 47–57, 2021, doi: 10.1016/j.comcom.2021.04.023."),
+    ("18", 'A. Chaudhuri and B. Mohankumar, "Adversarial-resilient lightweight phishing URL detection: Evaluating lexical and metadata features under evasion techniques," ',
+     "Scientific Reports",
+     ", vol. 16, 2026, doi: 10.1038/s41598-026-60046-3."),
     ("19", 'M. Sánchez-Paniagua, E. Fidalgo, E. Alegre, W. Al-Nabki, and V. González-Castro, "Phishing URL detection: A real-case scenario through login URLs," ',
      "IEEE Access",
      ", vol. 10, pp. 42949–42960, 2022, doi: 10.1109/ACCESS.2022.3168681."),
-    ("20", 'A. Aljofey, Q. Jiang, Q. Qu, M. Huang, and J.-P. Niyigena, "An effective phishing detection model based on character level convolutional neural network from URL," ',
-     "Electronics",
-     ", vol. 9, no. 9, Art. no. 1514, 2020, doi: 10.3390/electronics9091514."),
+    ("20", 'S. Aslam, H. Aslam, A. Manzoor, C. Hui, and A. Rasool, "AntiPhishStack: LSTM-based stacked generalization model for optimized phishing URL detection," ',
+     "Symmetry",
+     ", vol. 16, no. 2, Art. no. 248, 2024, doi: 10.3390/sym16020248."),
     ("21", 'S. Axelsson, "The base-rate fallacy and the difficulty of intrusion detection," ',
      "ACM Transactions on Information and System Security",
      ", vol. 3, no. 3, pp. 186–205, 2000, doi: 10.1145/357830.357849."),
@@ -438,6 +442,18 @@ NEW_REFS = [
     ("27", 'F. Rashid, B. Doyle, S. C. Han, and S. Seneviratne, "Phishing URL detection generalisation using Unsupervised Domain Adaptation," ',
      "Computer Networks",
      ", vol. 245, Art. no. 110398, 2024, doi: 10.1016/j.comnet.2024.110398."),
+    ("28", 'A. Kulkarni, V. Balachandran, and T. Das, "Phishing webpage detection: Unveiling the threat landscape and investigating detection techniques," ',
+     "IEEE Communications Surveys & Tutorials",
+     ", vol. 26, 2024, doi: 10.1109/COMST.2024.3441752."),
+    ("29", 'F. Ceschin, M. Botacin, A. Bifet, B. Pfahringer, L. S. Oliveira, H. M. Gomes, and A. Grégio, "Machine learning (in) security: A stream of problems," ',
+     "Digital Threats: Research and Practice",
+     ", vol. 4, no. 1, 2023, doi: 10.1145/3617897."),
+    ("30", 'J.-G. Gaudreault and P. Branco, "Empirical analysis of performance assessment for imbalanced classification," ',
+     "Machine Learning",
+     ", vol. 113, pp. 5533–5575, 2024, doi: 10.1007/s10994-023-06497-5."),
+    ("31", 'A. Kulkarni, V. Balachandran, D. M. Divakaran, and T. Das, "From ML to LLM: Evaluating the robustness of phishing web page detection models against adversarial attacks," ',
+     "Digital Threats: Research and Practice",
+     ", 2025, doi: 10.1145/3737295."),
 ]
 
 # Table renumbering: the feature-configuration table gains a number, so all later
@@ -476,7 +492,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 17
-WORD_WORDS = 11460
+WORD_WORDS = 11693
 
 
 # --------------------------------------------------------------------------- #
