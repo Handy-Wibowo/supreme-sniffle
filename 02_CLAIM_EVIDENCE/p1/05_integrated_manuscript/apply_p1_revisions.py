@@ -252,6 +252,18 @@ SUBSREPLACE = [
      "evaluasi pada dataset yang beragam [4]. Dalam konteks phishing, validitas temporal dan pilihan dataset turut membatasi arti angka evaluasi yang dilaporkan [7], [8].",
      "evaluasi pada dataset yang beragam [4]. Tinjauan sistematis terbaru atas taksonomi deteksi situs phishing menegaskan bahwa kategori berbasis URL, konten, dan visual memiliki batas masing-masing, dan bahwa celah penelitian utama terletak pada konsistensi evaluasi [28]. Dalam konteks phishing, validitas temporal dan pilihan dataset turut membatasi arti angka evaluasi yang dilaporkan [7], [8].",
      "Menambahkan survei 2024 sebagai penopang klaim tentang batas kategori deteksi."),
+    ("P1-092", "causal-boundary",
+     "Karena keenamnya dihapus bersama, A1 mengukur efek kelompok fitur konten, bukan efek masing-masing fitur.",
+     "Karena keenamnya dihapus bersama, A1 membandingkan konfigurasi tanpa kelompok fitur konten dengan A0, bukan mengisolasi efek masing-masing fitur; rancangan ini tidak menetapkan kontribusi kausal.",
+     "Frasa 'mengukur efek' adalah bahasa kausal, sedangkan batas yang dinyatakan adalah tanpa klaim kausal."),
+    ("P1-093", "causal-boundary",
+     "Penghapusan enam fitur konten menurunkan F1 secara terukur, dan interval bootstrap F1 berpasangan untuk LightGBM maupun XGBoost tidak memuat nol; besar efeknya sekitar seperseribu F1.",
+     "Pada protokol yang diuji, A1 memiliki F1 lebih rendah daripada A0, dan interval bootstrap F1 berpasangan untuk LightGBM maupun XGBoost tidak memuat nol; besar selisihnya sekitar seperseribu F1. Rancangan ini tidak menetapkan bahwa penghapusan fitur menyebabkan penurunan tersebut.",
+     "Kalimat mengatribusikan penurunan F1 kepada penghapusan fitur, melampaui batas tanpa klaim kausal."),
+    ("P1-094", "causal-boundary",
+     "Pola yang tampak konsisten: penurunan jumlah fitur menaikkan FPR pada kelas benign lebih cepat daripada menurunkan recall pada kelas phishing.",
+     "Dalam perbandingan deskriptif ini, A2 memiliki recall lebih rendah dan FPR lebih tinggi daripada A0; perbedaan tersebut tidak mengisolasi pengaruh jumlah fitur karena sumber dan representasi fiturnya juga berbeda.",
+     "A2 bukan sekadar A0 dengan fitur lebih sedikit; sumber dan representasi fiturnya berbeda, sehingga tidak dapat diatribusikan kepada jumlah fitur."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -492,7 +504,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 17
-WORD_WORDS = 11693
+WORD_WORDS = 11725
 
 
 # --------------------------------------------------------------------------- #
