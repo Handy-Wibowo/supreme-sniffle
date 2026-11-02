@@ -238,7 +238,7 @@ SUBSREPLACE = [
      "Frasa 'sepanjang' tidak wajar untuk panjang URL."),
     ("P1-090", "round-3 prose",
      "sebagai referensi dalam-domain.",
-     "sebagai referensi dalam-domain. Tiga istilah dipakai konsisten di seluruh naskah: dalam-korpus berarti evaluasi temporal latih-lalu-uji di dalam PhreshPhish; dalam-sumber berarti evaluasi pada blok uji korpus sumber di dalam eksperimen transfer; dan dalam-domain berarti evaluasi referensi pada PhiUSIIL.",
+     "sebagai referensi dalam-domain. Pada Tabel 7, tiga label dipakai dengan arti berikut: dalam-sumber berarti evaluasi pada blok uji korpus sumber di dalam eksperimen transfer, dan dalam-domain berarti evaluasi referensi pada PhiUSIIL. Istilah dalam-korpus dipakai di seluruh naskah untuk evaluasi temporal latih-lalu-uji di dalam PhreshPhish, termasuk pada Tabel 1 dan Gambar 1.",
      "Tiga label 'dalam' dipakai berdampingan tanpa definisi, sehingga pembaca dapat membacanya sebagai sinonim."),
     ("P1-091", "round-3 prose",
      "Ablasi kelompok fitur konten menunjukkan penurunan F1 terukur dengan interval bootstrap F1 berpasangan yang tidak memuat nol untuk LightGBM maupun XGBoost; besar efeknya sekitar seperseribu F1. Pada rata-rata partisi uji 44.213,6 baris, jumlah kesalahan A0→A1 meningkat dari 12,8 menjadi 32,2 pada LightGBM dan dari 10,4 menjadi 39,0 pada XGBoost. Perbandingan ini menunjukkan perbedaan antara keterdeteksian statistik dan besar efek. Skor A0 mendekati satu pada benchmark ini, tetapi kontras kelompok tersebut tidak mengidentifikasi mengapa benchmark tersaturasi.",
@@ -264,6 +264,10 @@ SUBSREPLACE = [
      "Pola yang tampak konsisten: penurunan jumlah fitur menaikkan FPR pada kelas benign lebih cepat daripada menurunkan recall pada kelas phishing.",
      "Dalam perbandingan deskriptif ini, A2 memiliki recall lebih rendah dan FPR lebih tinggi daripada A0; perbedaan tersebut tidak mengisolasi pengaruh jumlah fitur karena sumber dan representasi fiturnya juga berbeda.",
      "A2 bukan sekadar A0 dengan fitur lebih sedikit; sumber dan representasi fiturnya berbeda, sehingga tidak dapat diatribusikan kepada jumlah fitur."),
+    ("P1-095", "review-4 precision",
+     "Interval yang dilaporkan di sini menggambarkan ketidakpastian sampling domain pada satu model tetap dan satu kohort tertentu.",
+     "Interval bootstrap domain yang dilaporkan di sini menggambarkan ketidakpastian sampling domain pada satu model tetap dan satu kohort tertentu; interval ini tidak mencakup interval t lintas seed pada Subbagian 2.6.",
+     "Kalimat menyebut semua interval yang dilaporkan sebagai sampling domain, sehingga menutupi perbedaan jenis interval t dan bootstrap."),
     ("P1-061", "re-review C3",
      "Jumlah kecocokan model utama yang dilaporkan adalah 85 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus (2 model × 5 seed), dan 5 kecocokan LightGBM untuk evaluasi ambang operasional. Angka 85 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
      "Jumlah kecocokan model utama yang dilaporkan adalah 90 kecocokan terpilih: 60 kecocokan benchmark PhiUSIIL, 10 kecocokan evaluasi temporal PhreshPhish, 10 kecocokan transfer lintas-korpus arah maju (2 model × 5 seed), 5 kecocokan LightGBM untuk evaluasi ambang operasional, dan 5 kecocokan LightGBM untuk transfer arah balik pada eksperimen 9. Angka 90 adalah cakupan kecocokan yang dipilih untuk dilaporkan,",
@@ -369,13 +373,13 @@ TABLE1_ROWS = [
      "Malware Android dan Windows [14]; Android saja pada [15]",
      "Deteksi drift saat penerapan; penolakan prediksi berisiko",
      "Tidak memberi protokol ambang lintas korpus untuk phishing URL"],
-    ["Safi dan Singh [16]; Karim et al. [17]; Gupta et al. [18]; Sanchez-Paniagua et al. [19]; Aljofey et al. [20]",
+    ["Safi dan Singh [16]; Karim et al. [17]; Chaudhuri dan Mohankumar [18]; Sanchez-Paniagua et al. [19]; Aslam et al. [20]",
      "Phishing website dan URL; korpus berbeda-beda; komposisi uji mengubah FPR [19]",
      "Umumnya evaluasi dalam-korpus; representasi URL-saja atau hibrida",
      "Perbandingan angka tidak dilakukan karena korpus dan protokol berbeda"],
     ["Ahamed et al. [24]",
      "PhiUSIIL 235.370 URL tervalidasi; validasi eksternal memakai 49.121 URL PhishTank, dengan kelas benign diambil dari split uji PhiUSIIL yang dipegang",
-     "Robustness adversarial, generalisasi leave-one-family-out, stabilitas penjelasan, dan validasi eksternal yang hanya eksternal pada sisi phishing (Subbagian 4.6 pada [24]), karena kelas benign diambil dari PhiUSIIL",
+     "Robustness adversarial, generalisasi leave-one-family-out, stabilitas penjelasan, dan dua evaluasi eksternal pada Subbagian 4.6: komposit PhishTank dengan benign dari split uji PhiUSIIL, serta evaluasi dual-source PhishTank dengan benign independen dari Majestic Million",
      "Sumbu pembandingnya robustness; evaluasi temporal berbasis waktu dan ambang berbasis validasi tidak dilaporkan di sana"],
     ["Ahmed et al. [25]",
      "Empat dataset fitur URL/halaman: tolok ukur 2015–2017, PhiUSIIL 2023, URL-Phish 2026, LegitPhish 2025; pembagian 60:20:20 dengan seed 42 di dalam setiap dataset",
@@ -391,7 +395,7 @@ TABLE1_ROWS = [
      "Tidak melakukan evaluasi temporal; tidak memilih ambang pada validasi; korpus tidak mencakup PhiUSIIL maupun PhreshPhish; pendekatannya mengadaptasi, bukan membekukan model"],
     ["Henry et al. [32]",
      "Dua dataset dengan nol tumpang tindih fitur: UCI (11.055 sampel, 31 fitur) dan PhiUSIIL (235.795 sampel, 56 fitur)",
-     "Harmonisasi PCA ke 20 dimensi dan fusi probabilitas berbobot; transfer satu arah UCI→PhiUSIIL; tanpa pemisahan berbasis waktu dan tanpa ambang yang dipilih pada validasi",
+     "Harmonisasi PCA ke 20 dimensi, model target, dan fusi probabilitas berbobot dengan arah PhiUSIIL→UCI sebagai konfigurasi utama, diuji pada kedua arah; tanpa pemisahan berbasis waktu dan tanpa ambang yang dipilih pada validasi",
      "Bukan transfer beku dua arah; akurasi lintas dataset dilaporkan setelah harmonisasi fitur, sehingga tidak mengukur portabilitas tanpa penyesuaian"],
     ["Axelsson [21]; Saito dan Rehmsmeier [22]; Trad dan Chehab [23]",
      "Sistem deteksi, klasifikasi tidak seimbang, dan model bahasa besar",
@@ -434,7 +438,7 @@ NEW_REFS = [
     ("19", 'M. Sánchez-Paniagua, E. Fidalgo, E. Alegre, W. Al-Nabki, and V. González-Castro, "Phishing URL detection: A real-case scenario through login URLs," ',
      "IEEE Access",
      ", vol. 10, pp. 42949–42960, 2022, doi: 10.1109/ACCESS.2022.3168681."),
-    ("20", 'S. Aslam, H. Aslam, A. Manzoor, C. Hui, and A. Rasool, "AntiPhishStack: LSTM-based stacked generalization model for optimized phishing URL detection," ',
+    ("20", 'S. Aslam, H. Aslam, A. Manzoor, H. Chen, and A. Rasool, "AntiPhishStack: LSTM-based stacked generalization model for optimized phishing URL detection," ',
      "Symmetry",
      ", vol. 16, no. 2, Art. no. 248, 2024, doi: 10.3390/sym16020248."),
     ("21", 'S. Axelsson, "The base-rate fallacy and the difficulty of intrusion detection," ',
@@ -451,19 +455,19 @@ NEW_REFS = [
      ", vol. 8, 2026, doi: 10.3389/fcomp.2026.1834407."),
     ("25", 'S. M. N. Ahmed, A. H. Khan, and M. M. Rashid, "Explainable gradient boosting for transparent phishing URL detection: A cross-dataset, statistically validated SHAP analysis of XGBoost, LightGBM, and CatBoost," ',
      "Journal of Cyber Security",
-     ", vol. 8, pp. 668–703, 2026, doi: 10.32604/jcs.2026.089357."),
+     ", vol. 8, no. 1, pp. 667–703, 2026, doi: 10.32604/jcs.2026.089357."),
     ("26", 'M. Alam, M. L. Rahman, S. K. Paul, A. W. Hays, A. Hussain, M. I. Huq, and N. Saxena, "SoK: PHILTER: Uncovering security and functional gaps in AI-based phishing website detection literature via an LLM-based reasoning framework," in ',
      "Proc. USENIX Security Symposium (USENIX Security 26)",
-     ", 2026. [Preprint]."),
+     ", 2026, pp. 4981–5000."),
     ("27", 'F. Rashid, B. Doyle, S. C. Han, and S. Seneviratne, "Phishing URL detection generalisation using Unsupervised Domain Adaptation," ',
      "Computer Networks",
      ", vol. 245, Art. no. 110398, 2024, doi: 10.1016/j.comnet.2024.110398."),
     ("28", 'A. Kulkarni, V. Balachandran, and T. Das, "Phishing webpage detection: Unveiling the threat landscape and investigating detection techniques," ',
      "IEEE Communications Surveys & Tutorials",
-     ", vol. 26, 2024, doi: 10.1109/COMST.2024.3441752."),
+     ", vol. 27, no. 2, pp. 974–1007, 2024, doi: 10.1109/COMST.2024.3441752."),
     ("29", 'F. Ceschin, M. Botacin, A. Bifet, B. Pfahringer, L. S. Oliveira, H. M. Gomes, and A. Grégio, "Machine learning (in) security: A stream of problems," ',
      "Digital Threats: Research and Practice",
-     ", vol. 4, no. 1, 2023, doi: 10.1145/3617897."),
+     ", vol. 5, no. 1, Art. no. 9, 2024, doi: 10.1145/3617897."),
     ("30", 'J.-G. Gaudreault and P. Branco, "Empirical analysis of performance assessment for imbalanced classification," ',
      "Machine Learning",
      ", vol. 113, pp. 5533–5575, 2024, doi: 10.1007/s10994-023-06497-5."),
@@ -498,7 +502,7 @@ AVAILABILITY_NEW = (
     "OMITTED_LICENSE_PRIVACY, atau NOT_REQUIRED. Karena itu paket ini adalah bundel bukti yang dapat diaudit, bukan "
     "bundel yang dapat direproduksi penuh di lingkungan bersih tanpa mengambil data dari penyedia aslinya. "
     "Salinan paket tersedia pada repositori publik https://github.com/Handy-Wibowo/supreme-sniffle dan diarsipkan dengan DOI konsep 10.5281/zenodo.23847784, dengan MANIFEST.sha256 untuk verifikasi independen; DOI konsep tersebut selalu menunjuk rilis terbaru. "
-    "Artefak yang dikecualikan tidak dihasilkan oleh satu skrip tunggal, dan pemetaan berikut menyebut artefak yang benar-benar tersedia. Pembersihan dan pembagian PhiUSIIL disiapkan oleh notebook tahap awal, dengan split_random.csv dan split_sitedisjoint.csv sebagai manifest ID-fold yang menjadi masukan setiap arm. Benchmark A0/A1/A2 dan ablasi dibangkitkan oleh paired_bootstrap_E4/src/run_experiment.py dan diringkas oleh paired_bootstrap_E4/src/summarize.py; nama folder historis E4 tidak berarti notebook E3 menghasilkan benchmark final, dan notebook 03_evaluation_pipeline_v2_run_complete.ipynb memakai keluarga fitur serta konvensi label yang berbeda sehingga tidak dipakai untuk metrik positif-phishing. Evaluasi temporal memakai temporal_scripts/run_temporal.py untuk jalur kanonik, sedangkan interval yang dikutip Tabel 6 berasal dari paired_bootstrap_E4/bootstrap_temporal.csv. Transfer maju dijalankan oleh Exp6_Cross_Corpus/transfer.executed.ipynb; evaluasi ambang oleh Exp7_Operational_Threshold/01_operational_thresholds.executed.ipynb dengan paket src eksperimen 7; taksonomi galat oleh Exp8_Error_Taxonomy/error_taxonomy.executed.ipynb; dan transfer balik oleh Exp9_reverse_transfer/reverse_transfer.ipynb. Kedua manifest split memuat 1.176.850 baris, yaitu lima seed kali 235.370 URL; yang tidak dibundel adalah data mentah, biner model, dan prediksi per baris, bukan manifest ID-fold. Snapshot arsip yang dirujuk adalah DOI versi 10.5281/zenodo.23860185 di bawah DOI konsep 10.5281/zenodo.23847784."
+    "Artefak yang dikecualikan tidak dihasilkan oleh satu skrip tunggal, dan pemetaan berikut menyebut artefak yang benar-benar tersedia. Pembersihan dan pembagian PhiUSIIL disiapkan oleh notebook tahap awal, dengan split_random.csv dan split_sitedisjoint.csv sebagai manifest ID-fold yang menjadi masukan setiap arm. Benchmark A0/A1/A2 dan ablasi dibangkitkan oleh paired_bootstrap_E4/src/run_experiment.py dan diringkas oleh paired_bootstrap_E4/src/summarize.py; nama folder historis E4 tidak berarti notebook E3 menghasilkan benchmark final, dan notebook 03_evaluation_pipeline_v2_run_complete.ipynb memakai keluarga fitur serta konvensi label yang berbeda sehingga tidak dipakai untuk metrik positif-phishing. Evaluasi temporal memakai temporal_scripts/run_temporal.py untuk jalur kanonik, sedangkan interval yang dikutip Tabel 6 berasal dari paired_bootstrap_E4/bootstrap_temporal.csv. Transfer maju dijalankan oleh Exp6_Cross_Corpus/transfer.executed.ipynb; evaluasi ambang oleh Exp7_Operational_Threshold/01_operational_thresholds.executed.ipynb dengan paket src eksperimen 7; taksonomi galat oleh Exp8_Error_Taxonomy/error_taxonomy.executed.ipynb; dan transfer balik oleh Exp9_reverse_transfer/reverse_transfer.ipynb. Kedua manifest split memuat 1.176.850 baris, yaitu lima seed kali 235.370 URL; yang tidak dibundel adalah data mentah, biner model, dan prediksi per baris, bukan manifest ID-fold. Snapshot arsip yang dirujuk adalah DOI konsep 10.5281/zenodo.23847784, yang selalu menunjuk ke rilis terakhir di repositori tersebut; DOI versi spesifik diterbitkan untuk setiap rilis dan dicatat pada catatan rilis. Paket yang diperiksa untuk artikel ini adalah rilis yang DOCX-nya identik dengan berkas ini, dan setiap berkas di dalamnya terdaftar pada MANIFEST.sha256 beserta checksum-nya."
 )
 
 CORE_SUBJECT_NEW = "Manuskrip v10 P1 dengan transfer lintas-korpus, evaluasi ambang, dan taksonomi galat"
@@ -511,7 +515,7 @@ FIG_PIC_NAME_NEW = "figure_1_research_pipeline_v10.png"
 # refreshed here so that docProps/app.xml does not keep the stale v8 values
 # (Pages 4 / Words 1998). Re-measured by 06_self_qa/render_candidate.py.
 WORD_PAGES = 17
-WORD_WORDS = 11862
+WORD_WORDS = 11955
 
 
 # --------------------------------------------------------------------------- #
@@ -994,7 +998,14 @@ def build() -> dict:
          "RAM, dan kondisi beban sistem tidak dicatat. Angka waktu karena itu adalah log eksekusi, bukan pembandingan "
          "biaya komputasi."],
     ]
-    last_ref = doc.paragraphs[find_unique_para(doc, "[24] T. Ahamed")]
+    _last_ref_prefix = "[24] T. Ahamed"
+    for _cand in ("[32] S. Henry", "[31] A. Kulkarni", "[30] J.-G. Gaudreault",
+                  "[29] F. Ceschin", "[28] A. Kulkarni", "[27] F. Rashid",
+                  "[26] M. Alam", "[25] S. M. N. Ahmed"):
+        if any(q.text.strip().startswith(_cand) for q in doc.paragraphs):
+            _last_ref_prefix = _cand
+            break
+    last_ref = doc.paragraphs[find_unique_para(doc, _last_ref_prefix)]
     head_ref_tpl = doc.paragraphs[find_unique_para(doc, "REFERENCES")]
     _tmp: list = []
     cur = clone_para_after(last_ref, head_ref_tpl, "Lampiran A. Ringkasan Protokol untuk Replikasi", _tmp)
